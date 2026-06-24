@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocean Clinik La Palma · Landings (vista previa)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#273B88;--sky:#37ABDD;--navy:#0e1f33;--cream:#F5FAFC;--sky-soft:#e9f5fb;--ink:#1F2933;--gris:#5a6b76;--line:#e3edf2}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);min-height:100vh;position:relative;padding:48px 20px}
+  body::before{content:"";position:fixed;inset:0;background:var(--navy) url("assets/sea-dark.jpg") center/cover no-repeat;z-index:-2}
+  body::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(14,31,51,.6),rgba(14,31,51,.82));z-index:-1}
+  .wrap{max-width:880px;margin:0 auto}
+  .head{text-align:center;color:#fff;margin-bottom:38px}
+  .head img{height:74px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.4));margin-bottom:18px}
+  .head h1{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+  .head p{color:#cfe0ea}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{background:#fff;border-radius:18px;padding:26px;text-decoration:none;color:inherit;box-shadow:0 18px 50px -22px rgba(0,0,0,.5);transition:transform .15s,box-shadow .15s;display:flex;flex-direction:column;gap:8px}
+  .card:hover{transform:translateY(-4px);box-shadow:0 24px 60px -20px rgba(0,0,0,.6)}
+  .card .tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--sky);background:var(--sky-soft);padding:5px 12px;border-radius:50px;width:fit-content}
+  .card h2{font-size:1.18rem;color:var(--blue);font-weight:700}
+  .card p{font-size:.92rem;color:var(--gris)}
+  .card .go{margin-top:6px;color:var(--blue);font-weight:700;font-size:.92rem}
+  .note{text-align:center;color:#9fc1d2;font-size:.82rem;margin-top:32px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}.head h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <img src="assets/logo-white.png" alt="Ocean Clinik · Estudio Dental">
+      <h1>Landings · Vista previa</h1>
+      <p>Ocean Clinik La Palma · Dirección clínica: Dr. Claudio Vázquez y equipo</p>
+    </div>
+    <div class="grid">
+      <a class="card" href="01-landing-captacion.html">
+        <span class="tag">Captación</span>
+        <h2>Solicita tu valoración</h2>
+        <p>Landing de captación de leads con formulario.</p>
+        <span class="go">Ver página →</span>
+      </a>
+      <a class="card" href="02-landing-aplicacion.html">
+        <span class="tag">Aplicación</span>
+        <h2>Tratamientos high-ticket</h2>
+        <p>Aplicación con preguntas de cualificación.</p>
+        <span class="go">Ver página →</span>
+      </a>
+      <a class="card" href="03-landing-llamada.html">
+        <span class="tag">Llamada</span>
+        <h2>Reserva una llamada</h2>
+        <p>Agenda con hueco para Calendly/GHL.</p>
+        <span class="go">Ver página →</span>
+      </a>
+      <a class="card" href="04-pagina-ventas-vsl.html">
+        <span class="tag">VSL</span>
+        <h2>Página de ventas (vídeo)</h2>
+        <p>Problema, método, oferta y FAQs.</p>
+        <span class="go">Ver página →</span>
+      </a>
+      <a class="card" href="05-quiz-funnel.html">
+        <span class="tag">Quiz</span>
+        <h2>Test de 6 preguntas</h2>
+        <p>Segmenta al paciente y captura sus datos.</p>
+        <span class="go">Ver página →</span>
+      </a>
+    </div>
+    <p class="note">Vista previa privada para revisión · Pendiente: WhatsApp real, enlace de reseñas, foto del Dr. Claudio Vázquez, calendario y vídeo.</p>
+  </div>
+</body>
+</html>
