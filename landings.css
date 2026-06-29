@@ -176,3 +176,14 @@ footer ul{list-style:none}footer li{padding:4px 0}
 
 @media(max-width:880px){.testi .grid3{grid-template-columns:1fr}}
 @media(max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr;gap:22px 18px}}
+
+/* selector de intención (PDF: cita rápida / primera visita / urgencia / que me llamen) */
+.intent{padding:46px 0 6px}
+.intent .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.intent a{display:flex;flex-direction:column;gap:5px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;box-shadow:var(--shadow-sm);transition:transform .15s,border-color .15s}
+.intent a:hover{border-color:var(--sky);transform:translateY(-3px)}
+.intent .icbox{width:44px;height:44px;border-radius:12px;background:var(--sky-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.intent b{color:var(--blue);font-size:1.02rem}
+.intent span{font-size:.88rem;color:var(--gris)}
+@media(max-width:880px){.intent .grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.intent .grid4{grid-template-columns:1fr}}
