@@ -578,7 +578,8 @@ def build(p):
 
 # ====== ESCRIBIR ======
 slugs=[]
-for p in PAGES:
+ACTIVE=[x for x in PAGES if x["city"]=="tenerife-sur"]   # solo clínica de Tenerife Sur (Abades)
+for p in ACTIVE:
     d=os.path.join(ROOT,p["slug"])
     os.makedirs(d,exist_ok=True)
     with open(os.path.join(d,"index.html"),"w",encoding="utf-8") as f:
