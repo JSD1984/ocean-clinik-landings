@@ -309,6 +309,10 @@ def build(p):
     # related = otras páginas de la misma ciudad
     rel = [x for x in PAGES if x["city"]==p["city"] and x["slug"]!=p["slug"]]
     related = "".join(f'<a href="/{x["slug"]}/">{x["service"]} en {CITIES[x["city"]]["name"]}</a>' for x in rel)
+    treat = "".join(
+        f'<a class="tcard-img" href="/{x["slug"]}/"><div class="ph"><img src="/assets/fotos/{x["img"]}" alt="{x["service"]} en {CITIES[x["city"]]["name"]}" loading="lazy" width="380" height="285"></div>'
+        f'<div class="b"><h3>{x["service"]}</h3><span class="go"><svg class="ico"><use href="#ic-arrow"/></svg></span></div></a>'
+        for x in rel[:3])
 
     # JSON-LD @graph
     biz = {
@@ -349,7 +353,7 @@ def build(p):
 <meta property="og:url" content="{canonical}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/landings.css">
 <script type="application/ld+json">
 {jsonld}
@@ -374,8 +378,8 @@ def build(p):
 <main>
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
-      <span class="rating"><span class="st">{STARS}</span> 4,9 · pacientes que nos recomiendan</span>
+    <div class="hero-copy">
+      <span class="rating"><span class="st">{STARS}</span> 4,9 · valoración de pacientes</span>
       <h1>{p["h1"]}</h1>
       <p class="sub">{p["sub"]}</p>
       <div class="hero-cta">
@@ -383,14 +387,13 @@ def build(p):
         <a class="btn wa btn-lg" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a>
       </div>
       <div class="promesas">{promesas}</div>
-      <div class="social"><span class="st">{STARS}</span> <span><b>+5.000 pacientes</b> ya confían en Ocean Clinik · <a href="{REVIEWS}" target="_blank" rel="noopener">ver reseñas</a></span></div>
+      <div class="social"><span class="avatars"><span>M</span><span>J</span><span>L</span><span>+</span></span> <span><b>+5.000 pacientes</b> ya confían en Ocean Clinik</span></div>
     </div>
-    <div class="hero-photo">
-      <img src="/assets/fotos/{p["img"]}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="400" fetchpriority="high">
-      <div class="hero-nap">
-        <b><svg class="ico"><use href="#ic-map"/></svg> {c["addr"]}</b>
-        <span>{c["locality"]} {c["pc"]} · {c["hours"]}{nap_note}</span>
-      </div>
+    <div class="hero-art">
+      <div class="main"><img src="/assets/fotos/{p["img"]}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="560" fetchpriority="high"></div>
+      <div class="glass rate"><span class="st">{STARS}</span><div><div class="big">4,9</div><small>en Google</small></div></div>
+      <div class="glass nap"><b><svg class="ico"><use href="#ic-map"/></svg> {c["addr"]}</b><span>{c["locality"]} {c["pc"]} · {c["hours"]}{nap_note}</span></div>
+      <div class="dr-chip"><img src="/assets/fotos/foto-doctor.jpg" alt="Dr. Claudio Vázquez"><div><b>Dr. Claudio Vázquez</b><span>Dirección clínica</span></div></div>
     </div>
   </div>
 </section>
@@ -416,17 +419,9 @@ def build(p):
   </div>
 </section>
 
-<section class="trustbar">
-  <div class="wrap">
-    <div><svg class="ico"><use href="#ic-search"/></svg> Diagnóstico claro</div>
-    <div><svg class="ico"><use href="#ic-card"/></svg> Presupuesto por escrito</div>
-    <div><svg class="ico"><use href="#ic-shield"/></svg> Criterio clínico</div>
-    <div><svg class="ico"><use href="#ic-heart"/></svg> Trato cercano</div>
-  </div>
-</section>
-
 <section>
   <div class="wrap prose">
+    <span class="eyebrow">{p["service"]} · {c['name']}</span>
     <h2>{p["service"]} en {c['name']}</h2>
     {intro}
   </div>
@@ -434,8 +429,28 @@ def build(p):
 
 <section class="soft">
   <div class="wrap">
-    <div class="sec-head"><h2>Qué encontrarás en Ocean Clinik</h2></div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-shield"/></svg> Por qué Ocean Clinik</span><h2>Qué encontrarás en Ocean Clinik</h2></div>
     <div class="cards">{cards}</div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="wrap grid">
+    <div class="ph">
+      <img src="/assets/fotos/foto-doctor.jpg" alt="Dr. Claudio Vázquez, dirección clínica de Ocean Clinik" loading="lazy" width="520" height="650">
+      <div class="badge"><b>Dr. Claudio Vázquez</b><span>Dirección clínica · Ocean Clinik {c['name']}</span></div>
+    </div>
+    <div>
+      <span class="eyebrow"><svg class="ico"><use href="#ic-award"/></svg> Quién te atiende</span>
+      <h2>Un equipo que te explica todo con claridad</h2>
+      <p>En Ocean Clinik cada tratamiento se planifica con criterio clínico. El Dr. Claudio Vázquez y su equipo estudian tu caso, te enseñan lo que ven y te proponen un plan claro, sin prisas y sin promesas irreales.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Diagnóstico individual antes de recomendar nada.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Presupuesto claro por escrito y opciones de financiación.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Trato cercano y seguimiento durante todo el proceso.</span></li>
+      </ul>
+      <p style="margin-top:18px"><a class="btn" href="#cita">Pedir mi cita <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
+    </div>
   </div>
 </section>
 
@@ -500,10 +515,11 @@ def build(p):
   </div>
 </section>
 
-<section class="related soft">
+<section class="treat soft">
   <div class="wrap">
-    <div class="sec-head"><h2>Otros tratamientos en {c['name']}</h2></div>
-    <div class="links">{related}</div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-tooth"/></svg> Más tratamientos</span><h2>Otros tratamientos en {c['name']}</h2></div>
+    <div class="grid3">{treat}</div>
+    <div class="related" style="margin-top:26px"><div class="links">{related}</div></div>
   </div>
 </section>
 </main>
