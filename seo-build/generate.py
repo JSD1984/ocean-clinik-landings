@@ -139,7 +139,7 @@ PAGES = [
           ("¿Ofrecen financiación?","Si procede, te explicamos las opciones de pago disponibles para adaptar el plan a tu situación."),
           ("¿Cómo pido cita?","Rellena el formulario o escríbenos por WhatsApp y te confirmamos tu cita.")]},
 
- {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg","mid_img":"foto-implantes-guiada.jpg","mid_caption":"Planificamos cada implante por ordenador: cirugía guiada con estudio 3D para más precisión y seguridad.",
+ {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg","mid_img":"foto-paciente.jpg","mid_caption":"Pacientes que vuelven a sonreír y a masticar con seguridad gracias a los implantes dentales.",
   "kw":"implantes dentales Tenerife Sur","service":"Implantes dentales",
   "title":"Implantes dentales en Tenerife Sur | Ocean Clinik",
   "desc":"Implantes dentales en Tenerife Sur con diagnóstico previo y plan claro. También casos complejos. Pide tu valoración de implantes en Ocean Clinik.",
