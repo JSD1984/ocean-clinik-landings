@@ -268,3 +268,9 @@ footer ul{list-style:none}footer li{padding:4px 0}
 /* chip del doctor clicable */
 .dr-chip{text-decoration:none;cursor:pointer;transition:transform .18s,box-shadow .18s}
 .dr-chip:hover{transform:scale(1.04);box-shadow:0 18px 36px -16px rgba(11,27,51,.55)}
+
+/* imagen de contenido (bajo el texto) */
+.midimg figure{max-width:900px;margin:0 auto;text-align:center}
+.midimg .ph{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.midimg .ph img{width:100%;height:100%;object-fit:cover}
+.midimg figcaption{margin-top:14px;color:var(--gris);font-size:.98rem;font-style:italic;max-width:680px;margin-left:auto;margin-right:auto}

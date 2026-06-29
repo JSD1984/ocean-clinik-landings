@@ -131,7 +131,7 @@ PAGES = [
           ("¿Ofrecen financiación?","Si procede, te explicamos las opciones de pago disponibles para adaptar el plan a tu situación."),
           ("¿Cómo pido cita?","Rellena el formulario o escríbenos por WhatsApp y te confirmamos tu cita.")]},
 
- {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-implantes-guiada.jpg",
+ {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-tratamiento.jpg","mid_img":"foto-implantes-guiada.jpg","mid_caption":"Planificamos cada implante por ordenador: cirugía guiada con estudio 3D para más precisión y seguridad.",
   "kw":"implantes dentales Tenerife Sur","service":"Implantes dentales",
   "title":"Implantes dentales en Tenerife Sur | Ocean Clinik",
   "desc":"Implantes dentales en Tenerife Sur con diagnóstico previo y plan claro. También casos complejos. Pide tu valoración de implantes en Ocean Clinik.",
@@ -321,6 +321,11 @@ def build(p):
     cards = "".join(card(*x) for x in p["cards"])
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     prose_h2 = p.get("prose_h2", f'{p["service"]} en {c["name"]}')
+    mid_block = ""
+    if p.get("mid_img"):
+        mid_block = (f'<section class="midimg soft"><div class="wrap"><figure>'
+                     f'<div class="ph"><img src="/assets/fotos/{p["mid_img"]}" alt="{p.get("mid_caption","")}" loading="lazy" width="880" height="550"></div>'
+                     f'<figcaption>{p.get("mid_caption","")}</figcaption></figure></div></section>')
     faqs_html = "".join(f'<details><summary>{q}</summary><div class="ans">{a}</div></details>' for q,a in p["faqs"])
     testi = testi_html()
 
@@ -444,7 +449,7 @@ def build(p):
     {intro}
   </div>
 </section>
-
+{mid_block}
 <section class="soft">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-shield"/></svg> Por qué Ocean Clinik</span><h2>Qué encontrarás en Ocean Clinik</h2></div>
