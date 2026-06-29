@@ -17,19 +17,27 @@ CITIES = {
     "tel": TEL_LP,
     "addr": "Avda. El Puente 41",
     "locality": "Santa Cruz de La Palma",
+    "region": "Santa Cruz de Tenerife",
     "pc": "38700",
     "area": ["Santa Cruz de La Palma","Los Llanos de Aridane","El Paso","Breña Alta","Breña Baja"],
     "hours": "Lun–Vie 9:00–20:00",
+    "ohs": [{"d":["Monday","Tuesday","Wednesday","Thursday","Friday"],"o":"09:00","c":"20:00"}],
     "nap_note": "",
   },
   "tenerife-sur": {
     "name": "Tenerife Sur",
-    "tel": TEL_TF,
-    "addr": "Abades (Arico)",
+    "tel": "922 41 71 95",
+    "addr": "C. 16 de Mayo, C.C. Abades, Local 5",
     "locality": "Abades",
+    "region": "Santa Cruz de Tenerife",
     "pc": "38588",
     "area": ["Abades","Arico","El Médano","Los Abrigos","Granadilla de Abona","San Miguel de Abona","Adeje","Arona"],
-    "hours": "Lun–Vie 9:00–20:00",
+    "hours": "Lun–Vie 10:00–14:00 y 15:00–19:00 · Sáb 10:00–14:00",
+    "ohs": [
+      {"d":["Monday","Tuesday","Wednesday","Thursday","Friday"],"o":"10:00","c":"14:00"},
+      {"d":["Monday","Tuesday","Wednesday","Thursday","Friday"],"o":"15:00","c":"19:00"},
+      {"d":["Saturday"],"o":"10:00","c":"14:00"},
+    ],
     "nap_note": "Con aparcamiento",
   },
 }
@@ -324,9 +332,9 @@ def build(p):
       "url": canonical,
       "telephone": c["tel"],
       "priceRange": "€€",
-      "address": {"@type":"PostalAddress","streetAddress":c["addr"],"addressLocality":c["locality"],"postalCode":c["pc"],"addressCountry":"ES"},
+      "address": {"@type":"PostalAddress","streetAddress":c["addr"],"addressLocality":c["locality"],"addressRegion":c.get("region",""),"postalCode":c["pc"],"addressCountry":"ES"},
       "areaServed": [{"@type":"City","name":a} for a in c["area"]],
-      "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"20:00"}],
+      "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":x["d"],"opens":x["o"],"closes":x["c"]} for x in c["ohs"]],
       "sameAs": ["https://CAMBIAR-perfil-google-business"]
     }
     faqpage = {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in p["faqs"]]}
