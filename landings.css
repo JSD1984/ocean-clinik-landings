@@ -25,7 +25,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,.display{font-family:'Fraunces','Source Sans 3',Georgia,serif;color:var(--blue);line-height:1.08;font-weight:600;letter-spacing:-.01em}
+h1,h2,h3,.display{font-family:'Optima','Source Sans 3',Georgia,sans-serif;color:var(--blue);line-height:1.08;font-weight:600;letter-spacing:-.01em}
 p{color:var(--gris)}
 a{color:var(--blue2)}
 img{max-width:100%;height:auto;display:block}
@@ -100,7 +100,7 @@ section{padding:84px 0;position:relative}
 .hero-art .main img{width:100%;height:100%;object-fit:cover}
 .glass{position:absolute;background:rgba(255,255,255,.72);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);border-radius:18px;box-shadow:var(--shadow-sm);padding:14px 16px}
 .glass.rate{top:2%;left:-2%;display:flex;align-items:center;gap:10px}
-.glass.rate .big{font-family:'Fraunces';font-size:1.5rem;color:var(--blue);font-weight:600;line-height:1}
+.glass.rate .big{font-family:'Optima','Source Sans 3';font-size:1.5rem;color:var(--blue);font-weight:600;line-height:1}
 .glass.rate small{color:var(--gris);font-size:.74rem;display:block}
 .glass.nap{bottom:2%;right:-2%;max-width:230px}
 .glass.nap b{color:var(--blue);display:flex;align-items:center;gap:7px;font-family:'Source Sans 3';font-size:.92rem}
@@ -126,7 +126,7 @@ section{padding:84px 0;position:relative}
 .stats{background:var(--blue);position:relative;overflow:hidden}
 .stats::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 120% at 80% 0,rgba(55,171,221,.35),transparent 60%)}
 .stats .wrap{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:42px 22px;text-align:center}
-.stat .n{font-family:'Fraunces';font-size:2.6rem;font-weight:600;color:#fff;line-height:1}
+.stat .n{font-family:'Optima','Source Sans 3';font-size:2.6rem;font-weight:600;color:#fff;line-height:1}
 .stat .l{font-size:.9rem;color:#bcd6e8;margin-top:8px}
 
 /* ===== PROSE ===== */
@@ -169,7 +169,7 @@ section{padding:84px 0;position:relative}
 /* ===== PASOS ===== */
 .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
 .paso{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative}
-.paso .n{width:46px;height:46px;border-radius:14px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Fraunces';margin-bottom:12px}
+.paso .n{width:46px;height:46px;border-radius:14px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Optima','Source Sans 3';margin-bottom:12px}
 .paso h3{font-family:'Source Sans 3';font-size:1.05rem;margin-bottom:5px}.paso p{font-size:.92rem}
 
 /* ===== FORM ===== */
@@ -184,7 +184,7 @@ section{padding:84px 0;position:relative}
 .form-sec li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;color:#cfe0ea}
 .form-sec li .ico{width:22px;height:22px;color:var(--sky);flex:0 0 22px}
 .form-card{background:#fff;border-radius:24px;padding:32px;box-shadow:var(--shadow)}
-.form-card h3{font-family:'Fraunces';font-size:1.5rem;margin-bottom:3px}
+.form-card h3{font-family:'Optima','Source Sans 3';font-size:1.5rem;margin-bottom:3px}
 .form-card .intro{font-size:.95rem;margin-bottom:14px}
 label{display:block;font-weight:600;color:var(--blue);margin:12px 0 5px;font-size:.86rem}
 input,select{width:100%;padding:13px 15px;border:1.6px solid var(--line);border-radius:12px;font-size:1rem;font-family:inherit;color:var(--ink);background:#fbfdfe;transition:border-color .15s,box-shadow .15s}
@@ -198,7 +198,7 @@ input:focus,select:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 4
 /* ===== TESTIMONIOS ===== */
 .testi .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow-xs);position:relative}
-.tcard::before{content:"\201C";position:absolute;top:6px;right:20px;font-family:'Fraunces';font-size:4rem;color:var(--sky-soft);line-height:1}
+.tcard::before{content:"\201C";position:absolute;top:6px;right:20px;font-family:'Optima','Source Sans 3';font-size:4rem;color:var(--sky-soft);line-height:1}
 .tcard .st{margin-bottom:10px}.tcard .st svg{width:18px;height:18px;fill:var(--gold);stroke:none}
 .tcard p{color:var(--ink);font-size:1rem;margin-bottom:14px;position:relative;z-index:1}
 .tcard .who{display:flex;align-items:center;gap:10px}

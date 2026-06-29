@@ -25,12 +25,12 @@ CITIES = {
   "tenerife-sur": {
     "name": "Tenerife Sur",
     "tel": TEL_TF,
-    "addr": "[Dirección en Tenerife Sur — completar]",
-    "locality": "Adeje",
-    "pc": "38670",
-    "area": ["Adeje","Costa Adeje","Arona","Los Cristianos","San Miguel de Abona","Granadilla de Abona"],
+    "addr": "Abades (Arico)",
+    "locality": "Abades",
+    "pc": "38588",
+    "area": ["Abades","Arico","El Médano","Los Abrigos","Granadilla de Abona","San Miguel de Abona","Adeje","Arona"],
     "hours": "Lun–Vie 9:00–20:00",
-    "nap_note": "Próxima apertura / completar dirección",
+    "nap_note": "Con aparcamiento",
   },
 }
 
@@ -84,16 +84,17 @@ PAGES = [
  # ---------- TENERIFE SUR ----------
  {"slug":"dentista-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"dentista Tenerife Sur","service":"Dentista",
-  "title":"Dentista en Tenerife Sur | Ocean Clinik · Cita sin esperas",
-  "desc":"Dentista en Tenerife Sur con diagnóstico claro, presupuesto por escrito y cita sin esperas. Pide tu primera valoración en Ocean Clinik.",
-  "h1":"Dentista en <span class=\"accent\">Tenerife Sur</span> con diagnóstico claro y cita sin esperas",
-  "sub":"Tu dentista de confianza en Tenerife Sur. Te explicamos qué necesitas y por qué, con un presupuesto claro y opciones de pago. Primera valoración sin compromiso.",
-  "promesas":["Primera valoración","Presupuesto por escrito","Opciones de financiación"],
-  "intro":["En Ocean Clinik somos tu <strong>dentista en Tenerife Sur</strong>: odontología general y especializada con un trato cercano y explicaciones claras. Atendemos a pacientes de Adeje, Costa Adeje, Arona, Los Cristianos y alrededores.",
-           "Nuestro objetivo es que entiendas tu boca y decidas con tranquilidad. Por eso empezamos siempre por una valoración: revisamos, te enseñamos lo que vemos y te proponemos un plan adaptado a tu caso, según diagnóstico."],
-  "cards":[("ic-search","Diagnóstico claro","Te enseñamos lo que vemos y te lo explicamos sin tecnicismos."),
-           ("ic-card","Presupuesto por escrito","Sabes qué incluye y cuánto cuesta antes de empezar."),
-           ("ic-team","Equipo especializado","Odontología general, implantes, ortodoncia y estética en un mismo centro.")],
+  "title":"Dentista en Tenerife Sur (Abades) | Ocean Clinik · Casos complejos",
+  "desc":"Dentista en Tenerife Sur, en Abades. Cirugía de implantes guiada por ordenador, casos complejos y craneógrafo propio. Aparcamiento y primera valoración. Pide cita en Ocean Clinik.",
+  "h1":"Dentista en <span class=\"accent\">Tenerife Sur</span> con tecnología de última generación",
+  "sub":"Tu dentista en Tenerife Sur, en Abades. Tecnología de última generación, cirugía guiada por ordenador y experiencia en casos complejos. Aparcamiento fácil y primera valoración sin compromiso.",
+  "promesas":["Tecnología de última generación","Casos complejos","Aparcamiento fácil"],
+  "intro":["En Ocean Clinik somos tu <strong>dentista en Tenerife Sur</strong>, en <strong>Abades (Arico)</strong>, a pocos minutos de El Médano, Los Abrigos, Granadilla y San Miguel de Abona. Y muy pronto, también en <strong>Puerto Santiago</strong>. Venir es fácil y cómodo: <strong>disponemos de aparcamiento</strong> para que tu visita empiece sin agobios.",
+           "No somos una clínica más. Unimos la <strong>experiencia</strong> de nuestro equipo con <strong>tecnología de última generación</strong>: cirugías de implantes <strong>guiadas por ordenador</strong>, ortodoncia de última generación y un <strong>diagnóstico de máxima precisión</strong>. Somos, además, la <strong>única clínica del sur con craneógrafo propio</strong>.",
+           "Tratamos también los casos más complejos: si en otra clínica te han dicho que <em>“no se puede”</em>, pide que valoremos tu caso. Miles de pacientes ya confían en nosotros; ven a comprobarlo con una primera valoración, según diagnóstico y sin compromiso."],
+  "cards":[("ic-search","Cirugía guiada por ordenador","Planificamos tus implantes en 3D para mayor precisión, seguridad y comodidad."),
+           ("ic-shield","Casos complejos","Resolvemos cirugías de mayor complejidad, incluso cuando en otra clínica te han dicho que no se puede."),
+           ("ic-tooth","Únicos en el sur con craneógrafo","Diagnóstico de máxima precisión con tecnología que no encontrarás en otra clínica del sur.")],
   "faqs":[("¿Cuánto cuesta la primera visita?","Te lo confirmamos al reservar. El objetivo es revisar tu caso y orientarte sobre las opciones adecuadas."),
           ("¿Atendéis urgencias dentales en Tenerife Sur?","Llámanos y te orientamos sobre la mejor forma de atenderte lo antes posible."),
           ("¿Puedo pedir cita si vengo de otra clínica?","Sí. Muchos pacientes acuden buscando una segunda opinión; valoramos tu caso y te explicamos las opciones.")]},
@@ -353,7 +354,7 @@ def build(p):
 <meta property="og:url" content="{canonical}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/landings.css">
 <script type="application/ld+json">
 {jsonld}
