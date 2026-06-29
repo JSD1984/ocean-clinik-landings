@@ -97,7 +97,7 @@ PAGES = [
   "kw":"dentista Tenerife Sur","service":"Dentista",
   "title":"Dentista en Tenerife Sur (Abades) | Ocean Clinik · Casos complejos",
   "desc":"Dentista en Tenerife Sur, en Abades. Cirugía de implantes guiada por ordenador, casos complejos y craneógrafo propio. Aparcamiento y primera valoración. Pide cita en Ocean Clinik.",
-  "h1":"Dentista en <span class=\"accent\">Tenerife Sur</span> con tecnología de última generación",
+  "h1":"Dentista en <span class=\"accent\">Tenerife Sur</span> para recuperar tu sonrisa con seguridad, tecnología 3D y un plan claro desde la primera visita",
   "sub":"Tu dentista en Tenerife Sur, en Abades. Tecnología de última generación, cirugía guiada por ordenador y experiencia en casos complejos. Aparcamiento fácil y primera valoración sin compromiso.",
   "promesas":["Tecnología de última generación","Casos complejos","Aparcamiento fácil"],
   "intro":["En Ocean Clinik somos tu <strong>dentista en Tenerife Sur</strong>, en <strong>Abades (Arico)</strong>, a pocos minutos de El Médano, Los Abrigos, Granadilla y San Miguel de Abona. Y muy pronto, también en <strong>Puerto Santiago</strong>. Venir es fácil y cómodo: <strong>disponemos de aparcamiento</strong> para que tu visita empiece sin agobios.",

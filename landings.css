@@ -78,7 +78,7 @@ section{padding:84px 0;position:relative}
 .hero-copy>*:nth-child(3){animation-delay:.25s}.hero-copy>*:nth-child(4){animation-delay:.35s}
 .hero-copy>*:nth-child(5){animation-delay:.45s}
 @keyframes rise{to{opacity:1;transform:none}}
-.hero h1{font-size:3.4rem;margin-bottom:18px}
+.hero h1{font-size:2.8rem;margin-bottom:18px;letter-spacing:-.02em}
 .hero p.sub{font-size:1.2rem;margin-bottom:26px;max-width:520px}
 .hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
 .promesas{display:flex;gap:10px 20px;flex-wrap:wrap;margin-bottom:18px}
