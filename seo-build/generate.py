@@ -143,11 +143,14 @@ PAGES = [
   "kw":"implantes dentales Tenerife Sur","service":"Implantes dentales",
   "title":"Implantes dentales en Tenerife Sur | Ocean Clinik",
   "desc":"Implantes dentales en Tenerife Sur con diagnóstico previo y plan claro. También casos complejos. Pide tu valoración de implantes en Ocean Clinik.",
-  "h1":"Implantes dentales en <span class=\"accent\">Tenerife Sur</span>, planificados con criterio",
-  "sub":"Recupera tus dientes fijos con un plan basado en tu diagnóstico. Estudiamos hueso, mordida y estética antes de proponerte nada. También tratamos casos complejos.",
-  "promesas":["Valoración con diagnóstico","Plan paso a paso","Financiación si procede"],
-  "intro":["Si te faltan una o varias piezas, los <strong>implantes dentales en Tenerife Sur</strong> pueden devolverte la función y la seguridad al sonreír. En Ocean Clinik no empezamos por el precio, sino por tu diagnóstico.",
-           "Valoramos la cantidad de hueso, la mordida y la estética para proponerte la mejor opción para tu caso. Y si te dijeron que “no tienes hueso”, también valoramos técnicas para casos complejos."],
+  "h1":"¿Te han dicho que necesitas implantes o que tu caso es <span class=\"accent\">complicado</span>?",
+  "sub":"<strong>Implantes dentales en Tenerife Sur</strong>, para casos simples y complejos. Estudiamos tu caso antes de proponerte nada, según diagnóstico.",
+  "cta":"Quiero valorar mi caso de implantes",
+  "promesas":["Tecnología 3D y cirugía guiada","Casos simples y complejos","Materiales de alta calidad"],
+  "prose_h2":"Implantes dentales en Tenerife Sur, para casos simples y complejos",
+  "intro":["En Ocean Clinik Abades valoramos casos de <strong>implantología avanzada, cirugía oral y rehabilitación dental</strong> con tecnología 3D, cirugía guiada y materiales de alta calidad.",
+           "Estudiamos tu <strong>hueso, encía, mordida y estética</strong> antes de proponerte nada. Después te explicamos con claridad qué opciones tienes, qué solución recomendamos y cómo podemos ayudarte a recuperar tus dientes con seguridad.",
+           "<strong>Implantes dentales en Tenerife Sur</strong> para casos simples y complejos."],
   "cards":[("ic-search","Estudio previo","Valoración de hueso, encía y mordida antes de decidir."),
            ("ic-shield","Casos complejos","Soluciones para pacientes con poco hueso o rechazados en otras clínicas."),
            ("ic-tooth","Solución fija","Recupera la mordida y la estética con dientes fijos.")],
@@ -330,6 +333,7 @@ def build(p):
     cards = "".join(card(x[0],x[1],x[2],(x[3] if len(x)>3 else None),wa_base) for x in p["cards"])
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     prose_h2 = p.get("prose_h2", f'{p["service"]} en {c["name"]}')
+    cta_text = p.get("cta", "Quiero valorar mi caso")
     mid_block = ""
     if p.get("mid_img"):
         mid_block = (f'<section class="midimg soft"><div class="wrap"><figure>'
@@ -415,7 +419,7 @@ def build(p):
       <h1>{p["h1"]}</h1>
       <p class="sub">{p["sub"]}</p>
       <div class="hero-cta">
-        <a class="btn btn-lg" href="#cita">Quiero valorar mi caso <svg class="ico"><use href="#ic-arrow"/></svg></a>
+        <a class="btn btn-lg" href="#cita">{cta_text} <svg class="ico"><use href="#ic-arrow"/></svg></a>
         <a class="btn wa btn-lg" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a>
       </div>
       <div class="promesas">{promesas}</div>
