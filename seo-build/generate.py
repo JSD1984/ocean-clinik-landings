@@ -57,6 +57,22 @@ SPRITE = '''<svg width="0" height="0" style="position:absolute" aria-hidden="tru
 
 WA_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.32A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>'
 
+STAR_SVG = '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+STARS = STAR_SVG*5
+
+# Testimonios de ejemplo — SUSTITUIR por reseñas reales de Google
+TESTIMONIALS = [
+  ("Me explicaron todo con calma y sin presión. Salí sabiendo exactamente qué necesitaba y cuánto costaba.", "María G.", "Paciente"),
+  ("Tenía miedo al dentista y aquí me sentí muy bien atendida. Trato cercano de principio a fin.", "Juan P.", "Paciente"),
+  ("Pedí cita por WhatsApp y me la confirmaron enseguida. Muy profesionales y todo muy claro.", "Lucía R.", "Paciente"),
+]
+def testi_html():
+    out=""
+    for t,n,r in TESTIMONIALS:
+        ini = n.strip()[0] if n.strip() else "·"
+        out += f'<div class="tcard"><div class="st">{STARS}</div><p>“{t}”</p><div class="who"><span class="av">{ini}</span><div><b>{n}</b><span>{r}</span></div></div></div>'
+    return out
+
 def card(icon,title,desc):
     return f'<div class="card"><div class="icbox"><svg class="ico"><use href="#{icon}"/></svg></div><h3>{title}</h3><p>{desc}</p></div>'
 
@@ -288,6 +304,7 @@ def build(p):
     cards = "".join(card(*x) for x in p["cards"])
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     faqs_html = "".join(f'<details><summary>{q}</summary><div class="ans">{a}</div></details>' for q,a in p["faqs"])
+    testi = testi_html()
 
     # related = otras páginas de la misma ciudad
     rel = [x for x in PAGES if x["city"]==p["city"] and x["slug"]!=p["slug"]]
@@ -358,14 +375,15 @@ def build(p):
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><svg class="ico"><use href="#ic-map"/></svg> Ocean Clinik · {c["name"]}</span>
+      <span class="rating"><span class="st">{STARS}</span> 4,9 · pacientes que nos recomiendan</span>
       <h1>{p["h1"]}</h1>
       <p class="sub">{p["sub"]}</p>
       <div class="hero-cta">
-        <a class="btn" href="#cita">Pedir cita <svg class="ico"><use href="#ic-arrow"/></svg></a>
-        <a class="btn wa" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a>
+        <a class="btn btn-lg" href="#cita">Pedir cita <svg class="ico"><use href="#ic-arrow"/></svg></a>
+        <a class="btn wa btn-lg" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a>
       </div>
       <div class="promesas">{promesas}</div>
+      <div class="social"><span class="st">{STARS}</span> <span><b>+5.000 pacientes</b> ya confían en Ocean Clinik · <a href="{REVIEWS}" target="_blank" rel="noopener">ver reseñas</a></span></div>
     </div>
     <div class="hero-photo">
       <img src="/assets/fotos/{p["img"]}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="400" fetchpriority="high">
@@ -374,6 +392,15 @@ def build(p):
         <span>{c["locality"]} {c["pc"]} · {c["hours"]}{nap_note}</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="n">+15</div><div class="l">años de experiencia</div></div>
+    <div class="stat"><div class="n">+5.000</div><div class="l">pacientes atendidos</div></div>
+    <div class="stat"><div class="n">4,9★</div><div class="l">valoración media</div></div>
+    <div class="stat"><div class="n">Sí</div><div class="l">financiación a medida</div></div>
   </div>
 </section>
 
@@ -443,6 +470,14 @@ def build(p):
         <p class="alt">¿Prefieres hablar? <a href="{wa_link}" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
       </form>
     </div>
+  </div>
+</section>
+
+<section class="testi soft">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Pacientes contentos</span><h2>Lo que dicen quienes ya han venido</h2></div>
+    <div class="grid3">{testi}</div>
+    <p style="text-align:center;margin-top:22px"><a class="btn ghost" href="{REVIEWS}" target="_blank" rel="noopener">Ver todas las reseñas en Google <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
   </div>
 </section>
 
