@@ -98,17 +98,22 @@ PAGES = [
   "title":"Dentista en Tenerife Sur (Abades) | Ocean Clinik · Casos complejos",
   "desc":"Dentista en Tenerife Sur, en Abades. Cirugía de implantes guiada por ordenador, casos complejos y craneógrafo propio. Aparcamiento y primera valoración. Pide cita en Ocean Clinik.",
   "h1":"Dentista en <span class=\"accent\">Tenerife Sur</span> para recuperar tu sonrisa con seguridad, tecnología 3D y un plan claro desde la primera visita",
-  "sub":"Tu dentista en Tenerife Sur, en Abades. Tecnología de última generación, cirugía guiada por ordenador y experiencia en casos complejos. Aparcamiento fácil y primera valoración sin compromiso.",
-  "promesas":["Tecnología de última generación","Casos complejos","Aparcamiento fácil"],
-  "intro":["En Ocean Clinik somos tu <strong>dentista en Tenerife Sur</strong>, en <strong>Abades (Arico)</strong>, a pocos minutos de El Médano, Los Abrigos, Granadilla y San Miguel de Abona. Y muy pronto, también en <strong>Puerto Santiago</strong>. Venir es fácil y cómodo: <strong>disponemos de aparcamiento</strong> para que tu visita empiece sin agobios.",
-           "No somos una clínica más. Unimos la <strong>experiencia</strong> de nuestro equipo con <strong>tecnología de última generación</strong>: cirugías de implantes <strong>guiadas por ordenador</strong>, ortodoncia de última generación y un <strong>diagnóstico de máxima precisión</strong>. Somos, además, la <strong>única clínica del sur con craneógrafo propio</strong>.",
-           "Tratamos también los casos más complejos: si en otra clínica te han dicho que <em>“no se puede”</em>, pide que valoremos tu caso. Miles de pacientes ya confían en nosotros; ven a comprobarlo con una primera valoración, según diagnóstico y sin compromiso."],
-  "cards":[("ic-search","Cirugía guiada por ordenador","Planificamos tus implantes en 3D para mayor precisión, seguridad y comodidad."),
-           ("ic-shield","Casos complejos","Resolvemos cirugías de mayor complejidad, incluso cuando en otra clínica te han dicho que no se puede."),
-           ("ic-tooth","Únicos en el sur con craneógrafo","Diagnóstico de máxima precisión con tecnología que no encontrarás en otra clínica del sur.")],
-  "faqs":[("¿Cuánto cuesta la primera visita?","Te lo confirmamos al reservar. El objetivo es revisar tu caso y orientarte sobre las opciones adecuadas."),
-          ("¿Atendéis urgencias dentales en Tenerife Sur?","Llámanos y te orientamos sobre la mejor forma de atenderte lo antes posible."),
-          ("¿Puedo pedir cita si vengo de otra clínica?","Sí. Muchos pacientes acuden buscando una segunda opinión; valoramos tu caso y te explicamos las opciones.")]},
+  "sub":"En Ocean Clinik Abades valoramos tu caso con calma, te enseñamos lo que vemos y te explicamos tus opciones sin presión. Implantes, ortodoncia, estética dental y casos complejos con diagnóstico digital, cirugía guiada y financiación a medida.",
+  "promesas":["Diagnóstico digital","Cirugía guiada","Financiación a medida"],
+  "prose_h2":"Clínica dental en Tenerife Sur, en Abades",
+  "intro":["Ocean Clinik está en <strong>Abades, Arico</strong>, a pocos minutos de El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras.",
+           "Somos una <strong>clínica dental en Tenerife Sur</strong> especializada en tratamientos integrales: <strong>implantes dentales</strong>, cirugía guiada, <strong>ortodoncia invisible</strong>, <strong>estética dental</strong>, periodoncia, endodoncia y <strong>urgencias</strong>.",
+           "Nuestro enfoque es sencillo: primero entendemos tu caso, después te explicamos el diagnóstico con imágenes y finalmente te damos un plan claro, por escrito y con opciones de financiación.",
+           "Si te han dicho que tu caso es complicado, si tienes miedo al dentista o si llevas tiempo retrasando un tratamiento, pide una valoración. Muchas veces cuanto antes se actúa, más sencillo y menos agresivo puede ser el tratamiento."],
+  "cards":[("ic-search","Diagnóstico digital para decidir con seguridad","No recomendamos tratamientos a ciegas. Estudiamos tu boca con tecnología digital para que entiendas qué ocurre y qué opciones tienes."),
+           ("ic-tooth","Implantes con cirugía guiada","Planificamos la colocación de implantes en 3D para buscar más precisión, comodidad y seguridad durante el tratamiento."),
+           ("ic-shield","Casos complejos y segundas opiniones","Si te han dicho que «no se puede», revisamos tu caso. Te diremos con claridad qué opciones existen y cuáles no recomendamos."),
+           ("ic-card","Plan claro y financiación","Recibirás una propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.")],
+  "faqs":[("¿Cuánto cuesta un dentista en Tenerife Sur?","Depende del tratamiento y del diagnóstico. No cuesta lo mismo una revisión, una limpieza, una ortodoncia o un tratamiento con implantes. Por eso primero valoramos tu caso y después te damos un presupuesto claro por escrito."),
+          ("¿Puedo financiar mi tratamiento dental?","Sí. En Ocean Clinik ofrecemos opciones de financiación para que puedas empezar el tratamiento sin renunciar a una solución adecuada para tu caso."),
+          ("¿Hacéis implantes dentales en Tenerife Sur?","Sí. Realizamos tratamientos de implantología y cirugía guiada por ordenador, con planificación digital y estudio individual de cada caso."),
+          ("¿Puedo pedir una segunda opinión dental?","Sí. Muchos pacientes vienen porque tienen dudas sobre un diagnóstico o presupuesto anterior. Revisamos tu caso y te explicamos las opciones con claridad."),
+          ("¿Atendéis miedo al dentista?","Sí. Si tienes miedo, lo primero es explicarte todo con calma. El objetivo es que entiendas cada paso y no sientas que pierdes el control.")]},
 
  {"slug":"clinica-dental-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"clínica dental Tenerife Sur","service":"Clínica dental",
@@ -315,6 +320,7 @@ def build(p):
     promesas = "".join(f'<span><svg class="ico"><use href="#ic-check"/></svg> {x}</span>' for x in p["promesas"])
     cards = "".join(card(*x) for x in p["cards"])
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
+    prose_h2 = p.get("prose_h2", f'{p["service"]} en {c["name"]}')
     faqs_html = "".join(f'<details><summary>{q}</summary><div class="ans">{a}</div></details>' for q,a in p["faqs"])
     testi = testi_html()
 
@@ -395,7 +401,7 @@ def build(p):
       <h1>{p["h1"]}</h1>
       <p class="sub">{p["sub"]}</p>
       <div class="hero-cta">
-        <a class="btn btn-lg" href="#cita">Pedir cita <svg class="ico"><use href="#ic-arrow"/></svg></a>
+        <a class="btn btn-lg" href="#cita">Quiero valorar mi caso <svg class="ico"><use href="#ic-arrow"/></svg></a>
         <a class="btn wa btn-lg" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a>
       </div>
       <div class="promesas">{promesas}</div>
@@ -412,12 +418,12 @@ def build(p):
 
 <section class="intent">
   <div class="wrap">
-    <div class="sec-head" style="margin-bottom:22px"><h2>¿Qué necesitas?</h2></div>
+    <div class="sec-head" style="margin-bottom:22px"><h2>¿Qué necesitas solucionar?</h2></div>
     <div class="grid4">
-      <a href="{wa_link}" target="_blank" rel="noopener"><span class="icbox"><svg class="ico"><use href="#ic-chat"/></svg></span><b>Cita rápida</b><span>Te respondemos al momento por WhatsApp.</span></a>
-      <a href="{wa_link}" target="_blank" rel="noopener"><span class="icbox"><svg class="ico"><use href="#ic-chat"/></svg></span><b>Primera visita</b><span>Cuéntanos tu caso por WhatsApp.</span></a>
-      <a href="{tel_href}"><span class="icbox"><svg class="ico"><use href="#ic-phone"/></svg></span><b>Tengo urgencia</b><span>Llámanos ahora mismo.</span></a>
-      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-mail"/></svg></span><b>Déjanos tus datos</b><span>Formulario o email y te contactamos.</span></a>
+      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-tooth"/></svg></span><b>Me falta una pieza o necesito implantes</b><span>Valoramos si puedes llevar dientes fijos, con planificación digital y opciones de financiación.</span></a>
+      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-smile"/></svg></span><b>Quiero mejorar mi sonrisa</b><span>Ortodoncia invisible, carillas, blanqueamiento y estética dental según tu caso.</span></a>
+      <a href="{tel_href}"><span class="icbox"><svg class="ico"><use href="#ic-phone"/></svg></span><b>Tengo dolor o una urgencia</b><span>Te orientamos rápido y buscamos el primer hueco disponible.</span></a>
+      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-search"/></svg></span><b>Vengo de otra clínica y quiero una segunda opinión</b><span>Revisamos tu caso y te explicamos alternativas con claridad.</span></a>
     </div>
   </div>
 </section>
@@ -434,7 +440,7 @@ def build(p):
 <section>
   <div class="wrap prose">
     <span class="eyebrow">{p["service"]} · {c['name']}</span>
-    <h2>{p["service"]} en {c['name']}</h2>
+    <h2>{prose_h2}</h2>
     {intro}
   </div>
 </section>
@@ -454,26 +460,32 @@ def build(p):
     </div>
     <div>
       <span class="eyebrow"><svg class="ico"><use href="#ic-award"/></svg> Quién te atiende</span>
-      <h2>Un equipo que te explica todo con claridad</h2>
-      <p>En Ocean Clinik cada tratamiento se planifica con criterio clínico. El Dr. Claudio Vázquez y su equipo estudian tu caso, te enseñan lo que ven y te proponen un plan claro, sin prisas y sin promesas irreales.</p>
+      <h2>Tratamientos dirigidos por el Dr. Claudio Vázquez</h2>
+      <p>Antes de proponerte un tratamiento, necesitamos entender bien tu caso. El <strong>Dr. Claudio Vázquez</strong>, especialista en implantología, cirugía oral y rehabilitación dental, dirige los casos de implantes, cirugía guiada y tratamientos complejos en Ocean Clinik {c['name']}.</p>
+      <p>Su forma de trabajar se basa en tres cosas: <strong>diagnóstico preciso, planificación digital y explicación clara al paciente</strong> antes de empezar. En la primera valoración revisaremos tu caso, te mostraremos lo que vemos y te explicaremos qué opciones tienes, qué recomendamos y qué puede pasar si lo dejas avanzar.</p>
       <ul class="checks">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Diagnóstico individual antes de recomendar nada.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Presupuesto claro por escrito y opciones de financiación.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Trato cercano y seguimiento durante todo el proceso.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Diagnóstico individual.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Estudio con tecnología digital.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Planificación de implantes y cirugía guiada.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Explicación visual del caso.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Plan de tratamiento por escrito.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Opciones de financiación.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Seguimiento durante todo el proceso.</span></li>
       </ul>
-      <p style="margin-top:18px"><a class="btn" href="#cita">Pedir mi cita <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
+      <p style="margin-top:18px"><a class="btn" href="#cita">Quiero valorar mi caso <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-plan"/></svg> Sin sorpresas</span><h2>Cómo es tu primera visita</h2></div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-plan"/></svg> Sin sorpresas</span><h2>Cómo será tu primera valoración</h2></div>
     <div class="pasos">
-      <div class="paso"><div class="n">1</div><h3>Pides cita</h3><p>Por formulario, WhatsApp o teléfono. Te confirmamos enseguida.</p></div>
-      <div class="paso"><div class="n">2</div><h3>Te valoramos</h3><p>Revisamos tu caso y te explicamos lo que vemos, sin tecnicismos.</p></div>
-      <div class="paso"><div class="n">3</div><h3>Plan y presupuesto</h3><p>Te damos un plan claro por escrito, con opciones de financiación si procede.</p></div>
-      <div class="paso"><div class="n">4</div><h3>Decides con calma</h3><p>Sin prisas y sin compromiso. Tú eliges cuándo empezar.</p></div>
+      <div class="paso"><div class="n">1</div><h3>Nos cuentas qué te preocupa</h3><p>Dolor, estética, falta de piezas, miedo, presupuesto anterior o segunda opinión.</p></div>
+      <div class="paso"><div class="n">2</div><h3>Revisamos tu boca y tu caso</h3><p>Usamos pruebas diagnósticas si son necesarias para entender bien el problema.</p></div>
+      <div class="paso"><div class="n">3</div><h3>Te explicamos lo que vemos</h3><p>Sin tecnicismos innecesarios. Queremos que entiendas tu situación antes de decidir.</p></div>
+      <div class="paso"><div class="n">4</div><h3>Te damos un plan claro</h3><p>Con fases, opciones y presupuesto por escrito.</p></div>
+      <div class="paso"><div class="n">5</div><h3>Decides sin presión</h3><p>Te resolvemos dudas y puedes valorar la mejor opción para ti.</p></div>
     </div>
   </div>
 </section>
@@ -481,18 +493,22 @@ def build(p):
 <section class="form-sec" id="cita">
   <div class="wrap form-grid">
     <div>
-      <span class="eyebrow"><svg class="ico"><use href="#ic-calendar"/></svg> Pide tu cita</span>
-      <h2>Reserva tu cita de {p["service"].lower()} en {c['name']}</h2>
-      <p class="lead">Déjanos tus datos y te confirmamos por WhatsApp o teléfono. Sin compromiso.</p>
+      <span class="eyebrow"><svg class="ico"><use href="#ic-calendar"/></svg> Pide tu valoración</span>
+      <h2>Pide tu valoración dental en {c['name']}</h2>
+      <p class="lead">Déjanos tus datos y te contactamos por WhatsApp o teléfono para buscar el mejor hueco.</p>
+      <p style="color:#fff;font-weight:700;margin-bottom:8px">Ideal si necesitas:</p>
       <ul>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Te contactamos solo para gestionar tu cita.</li>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Si hay hueco, te lo proponemos cuanto antes.</li>
-        <li><svg class="ico"><use href="#ic-star"/></svg> <a href="{REVIEWS}" target="_blank" rel="noopener" style="color:#cfe9f6;font-weight:700">Ver reseñas de pacientes en Google</a></li>
+        <li><svg class="ico"><use href="#ic-check"/></svg> Implantes dentales</li>
+        <li><svg class="ico"><use href="#ic-check"/></svg> Ortodoncia invisible</li>
+        <li><svg class="ico"><use href="#ic-check"/></svg> Estética dental</li>
+        <li><svg class="ico"><use href="#ic-check"/></svg> Dolor o urgencia</li>
+        <li><svg class="ico"><use href="#ic-check"/></svg> Segunda opinión</li>
+        <li><svg class="ico"><use href="#ic-check"/></svg> Presupuesto claro</li>
       </ul>
     </div>
     <div class="form-card">
-      <h3>Pedir cita</h3>
-      <p class="intro">Te confirmamos por WhatsApp o teléfono.</p>
+      <h3>Pide tu valoración</h3>
+      <p class="intro">Te contactamos por WhatsApp o teléfono.</p>
       <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Solicitud enviada';">
         <label for="nombre">Nombre</label>
         <input id="nombre" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
@@ -507,8 +523,8 @@ def build(p):
           <option>Hoy</option><option>Mañana</option><option>Esta semana</option><option>Me da igual</option>
         </select>
         <label class="consent"><input type="checkbox" required> He leído la <a href="/politica-privacidad/" style="color:var(--blue);font-weight:700">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar mi cita.</label>
-        <button type="submit" class="btn">Pedir cita</button>
-        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Cita%20Ocean%20Clinik%20Tenerife%20Sur">Enviar email</a></p>
+        <button type="submit" class="btn">Quiero que valoren mi caso</button>
+        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20Tenerife%20Sur">Enviar email</a></p>
       </form>
     </div>
   </div>
@@ -516,7 +532,7 @@ def build(p):
 
 <section class="testi soft">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Pacientes contentos</span><h2>Lo que dicen quienes ya han venido</h2></div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Opiniones reales</span><h2>Pacientes que ya confiaron en Ocean Clinik</h2><p>Antes de decidir, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han venido a Ocean Clinik.</p></div>
     <!-- WIDGET DE RESEÑAS DE GOOGLE (en vivo): pega aquí el embed de tu proveedor
          (Trustindex / Elfsight / EmbedSocial) conectado a la ficha de Google de Ocean Clinik.
          Sustituye el bloque .rw-ph por el <script>+<div> del widget. -->
