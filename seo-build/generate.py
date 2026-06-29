@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Generador de las 13 landings SEO de Ocean Clinik. Edita CONFIG y PAGES y ejecuta."""
-import json, os
+import json, os, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -84,8 +84,16 @@ def testi_html():
         out += f'<div class="tcard"><div class="st">{STARS}</div><p>“{t}”</p><div class="who"><span class="av">{ini}</span><div><b>{n}</b><span>{r}</span></div></div></div>'
     return out
 
-def card(icon,title,desc):
-    return f'<div class="card"><div class="icbox"><svg class="ico"><use href="#{icon}"/></svg></div><h3>{title}</h3><p>{desc}</p></div>'
+def card(icon,title,desc,wa_msg=None,wa_base="#"):
+    msg = wa_msg or title.lower()
+    if wa_base and wa_base!="#":
+        text = urllib.parse.quote(f"Hola, estaría interesado/a en {msg}.")
+        attrs = f'href="{wa_base}?text={text}" target="_blank" rel="noopener"'
+    else:
+        attrs = 'href="#cita"'
+    return (f'<a class="card" {attrs}><div class="icbox"><svg class="ico"><use href="#{icon}"/></svg></div>'
+            f'<h3>{title}</h3><p>{desc}</p>'
+            f'<span class="card-wa">{WA_SVG} Consultar por WhatsApp</span></a>')
 
 def bullet(t):
     return f'<li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>{t}</li>'
@@ -105,10 +113,10 @@ PAGES = [
            "Somos una <strong>clínica dental en Tenerife Sur</strong> especializada en tratamientos integrales: <strong>implantes dentales</strong>, cirugía guiada, <strong>ortodoncia invisible</strong>, <strong>estética dental</strong>, periodoncia, endodoncia y <strong>urgencias</strong>.",
            "Nuestro enfoque es sencillo: primero entendemos tu caso, después te explicamos el diagnóstico con imágenes y finalmente te damos un plan claro, por escrito y con opciones de financiación.",
            "Si te han dicho que tu caso es complicado, si tienes miedo al dentista o si llevas tiempo retrasando un tratamiento, pide una valoración. Muchas veces cuanto antes se actúa, más sencillo y menos agresivo puede ser el tratamiento."],
-  "cards":[("ic-search","Diagnóstico digital para decidir con seguridad","No recomendamos tratamientos a ciegas. Estudiamos tu boca con tecnología digital para que entiendas qué ocurre y qué opciones tienes."),
-           ("ic-tooth","Implantes con cirugía guiada","Planificamos la colocación de implantes en 3D para buscar más precisión, comodidad y seguridad durante el tratamiento."),
-           ("ic-shield","Casos complejos y segundas opiniones","Si te han dicho que «no se puede», revisamos tu caso. Te diremos con claridad qué opciones existen y cuáles no recomendamos."),
-           ("ic-card","Plan claro y financiación","Recibirás una propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.")],
+  "cards":[("ic-search","Diagnóstico digital para decidir con seguridad","No recomendamos tratamientos a ciegas. Estudiamos tu boca con tecnología digital para que entiendas qué ocurre y qué opciones tienes.","un diagnóstico digital"),
+           ("ic-tooth","Implantes con cirugía guiada","Planificamos la colocación de implantes en 3D para buscar más precisión, comodidad y seguridad durante el tratamiento.","implantes con cirugía guiada"),
+           ("ic-shield","Casos complejos y segundas opiniones","Si te han dicho que «no se puede», revisamos tu caso. Te diremos con claridad qué opciones existen y cuáles no recomendamos.","una segunda opinión para mi caso"),
+           ("ic-card","Plan claro y financiación","Recibirás una propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.","un plan de tratamiento con financiación")],
   "faqs":[("¿Cuánto cuesta un dentista en Tenerife Sur?","Depende del tratamiento y del diagnóstico. No cuesta lo mismo una revisión, una limpieza, una ortodoncia o un tratamiento con implantes. Por eso primero valoramos tu caso y después te damos un presupuesto claro por escrito."),
           ("¿Puedo financiar mi tratamiento dental?","Sí. En Ocean Clinik ofrecemos opciones de financiación para que puedas empezar el tratamiento sin renunciar a una solución adecuada para tu caso."),
           ("¿Hacéis implantes dentales en Tenerife Sur?","Sí. Realizamos tratamientos de implantología y cirugía guiada por ordenador, con planificación digital y estudio individual de cada caso."),
@@ -318,7 +326,8 @@ def build(p):
     wa_link = f"https://wa.me/{c.get('wa', WA)}?text=" + ("Hola%2C%20quiero%20pedir%20cita%20de%20"+p['service']+"%20en%20"+c['name']).replace(" ","%20")
 
     promesas = "".join(f'<span><svg class="ico"><use href="#ic-check"/></svg> {x}</span>' for x in p["promesas"])
-    cards = "".join(card(*x) for x in p["cards"])
+    wa_base = f"https://wa.me/{c.get('wa', WA)}"
+    cards = "".join(card(x[0],x[1],x[2],(x[3] if len(x)>3 else None),wa_base) for x in p["cards"])
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     prose_h2 = p.get("prose_h2", f'{p["service"]} en {c["name"]}')
     mid_block = ""
