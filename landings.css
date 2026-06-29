@@ -264,3 +264,7 @@ footer ul{list-style:none}footer li{padding:4px 0}
 
 /* foto real del doctor: el mini-avatar enfoca la cara */
 .dr-chip img{object-position:50% 22%}
+
+/* chip del doctor clicable */
+.dr-chip{text-decoration:none;cursor:pointer;transition:transform .18s,box-shadow .18s}
+.dr-chip:hover{transform:scale(1.04);box-shadow:0 18px 36px -16px rgba(11,27,51,.55)}
