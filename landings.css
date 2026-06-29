@@ -253,3 +253,11 @@ footer ul{list-style:none}footer li{padding:4px 0}
 }
 @media(max-width:480px){.pasos,.intent .grid4{grid-template-columns:1fr}.topbar .tellink span{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== Hueco widget reseñas Google ===== */
+.reviews-widget{max-width:880px;margin:0 auto}
+.rw-ph{border:2px dashed var(--sky);border-radius:var(--r);background:#fff;padding:40px 28px;text-align:center;box-shadow:var(--shadow-xs)}
+.rw-ph .st{justify-content:center;margin-bottom:10px}
+.rw-ph .st svg{width:24px;height:24px;fill:var(--gold);stroke:none}
+.rw-ph b{display:block;color:var(--blue);font-family:'Optima','Source Sans 3';font-size:1.25rem;margin-bottom:6px}
+.rw-ph .note{display:block;color:var(--gris);font-size:.9rem;max-width:520px;margin:0 auto}

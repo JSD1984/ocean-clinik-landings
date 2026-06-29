@@ -504,7 +504,16 @@ def build(p):
 <section class="testi soft">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Pacientes contentos</span><h2>Lo que dicen quienes ya han venido</h2></div>
-    <div class="grid3">{testi}</div>
+    <!-- WIDGET DE RESEÑAS DE GOOGLE (en vivo): pega aquí el embed de tu proveedor
+         (Trustindex / Elfsight / EmbedSocial) conectado a la ficha de Google de Ocean Clinik.
+         Sustituye el bloque .rw-ph por el <script>+<div> del widget. -->
+    <div class="reviews-widget" id="resenas-google">
+      <div class="rw-ph">
+        <span class="st">{STARS}</span>
+        <b>Aquí se mostrarán vuestras reseñas reales de Google</b>
+        <span class="note">Widget en vivo (se actualiza solo). El programador pega aquí el código de Trustindex o Elfsight conectado a vuestra ficha de Google.</span>
+      </div>
+    </div>
     <p style="text-align:center;margin-top:22px"><a class="btn ghost" href="{REVIEWS}" target="_blank" rel="noopener">Ver todas las reseñas en Google <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
   </div>
 </section>
