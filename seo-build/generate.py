@@ -8,6 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_URL = "https://www.oceanclinik.es"          # dominio final (cambiar)
 WA       = "34600000000"                          # WhatsApp real (cambiar)
 REVIEWS  = "https://g.page/r/CAMBIAR-POR-TU-ENLACE-GOOGLE"  # enlace reseñas Google (cambiar)
+EMAIL    = "info@theoceanclinik.com"               # email de contacto (confirmar)
 TEL_LP   = "+34 600 000 000"                       # teléfono La Palma (cambiar)
 TEL_TF   = "+34 600 000 000"                       # teléfono Tenerife Sur (cambiar)
 
@@ -62,6 +63,7 @@ SPRITE = '''<svg width="0" height="0" style="position:absolute" aria-hidden="tru
 <symbol id="ic-clinic" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="6" x2="12" y2="11"/><line x1="9.5" y1="8.5" x2="14.5" y2="8.5"/><path d="M9 22v-4h6v4"/></symbol>
 <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></symbol>
 <symbol id="ic-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+<symbol id="ic-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></symbol>
 </svg>'''
 
 WA_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.05-1.32A9.95 9.95 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>'
@@ -412,10 +414,10 @@ def build(p):
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:22px"><h2>¿Qué necesitas?</h2></div>
     <div class="grid4">
-      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-calendar"/></svg></span><b>Cita rápida</b><span>Reserva tu hueco en pocos pasos.</span></a>
-      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-search"/></svg></span><b>Primera visita</b><span>Valoración y plan claro.</span></a>
+      <a href="{wa_link}" target="_blank" rel="noopener"><span class="icbox"><svg class="ico"><use href="#ic-chat"/></svg></span><b>Cita rápida</b><span>Te respondemos al momento por WhatsApp.</span></a>
+      <a href="{wa_link}" target="_blank" rel="noopener"><span class="icbox"><svg class="ico"><use href="#ic-chat"/></svg></span><b>Primera visita</b><span>Cuéntanos tu caso por WhatsApp.</span></a>
       <a href="{tel_href}"><span class="icbox"><svg class="ico"><use href="#ic-phone"/></svg></span><b>Tengo urgencia</b><span>Llámanos ahora mismo.</span></a>
-      <a href="{wa_link}" target="_blank" rel="noopener"><span class="icbox"><svg class="ico"><use href="#ic-chat"/></svg></span><b>Que me llamen</b><span>Escríbenos por WhatsApp.</span></a>
+      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-mail"/></svg></span><b>Déjanos tus datos</b><span>Formulario o email y te contactamos.</span></a>
     </div>
   </div>
 </section>
@@ -497,6 +499,8 @@ def build(p):
         <label for="tel">Teléfono móvil</label>
         <input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="600 000 000" required>
         <p class="microcopy">Solo te contactaremos para gestionar tu cita.</p>
+        <label for="email">Email <span style="color:#9aa6af;font-weight:400">(opcional)</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="tucorreo@email.com">
         <label for="pref">¿Cuándo te viene mejor?</label>
         <select id="pref" name="pref" required>
           <option value="" selected disabled>Selecciona</option>
@@ -504,7 +508,7 @@ def build(p):
         </select>
         <label class="consent"><input type="checkbox" required> He leído la <a href="/politica-privacidad/" style="color:var(--blue);font-weight:700">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar mi cita.</label>
         <button type="submit" class="btn">Pedir cita</button>
-        <p class="alt">¿Prefieres hablar? <a href="{wa_link}" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
+        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Cita%20Ocean%20Clinik%20Tenerife%20Sur">Enviar email</a></p>
       </form>
     </div>
   </div>
@@ -554,7 +558,8 @@ def build(p):
       <h4>Contacto</h4>
       <ul>
         <li><a href="{tel_href}">Teléfono: {c["tel"]}</a></li>
-        <li><a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="{wa_link}" target="_blank" rel="noopener">WhatsApp: {c.get("wa","").replace("34"," +34 ",1).strip()}</a></li>
+        <li><a href="mailto:{EMAIL}">Email: {EMAIL}</a></li>
         <li><a href="{REVIEWS}" target="_blank" rel="noopener">Reseñas en Google</a></li>
       </ul>
     </div>
