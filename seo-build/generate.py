@@ -139,7 +139,7 @@ PAGES = [
           ("¿Ofrecen financiación?","Si procede, te explicamos las opciones de pago disponibles para adaptar el plan a tu situación."),
           ("¿Cómo pido cita?","Rellena el formulario o escríbenos por WhatsApp y te confirmamos tu cita.")]},
 
- {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg","mid_img":"foto-implante-feliz.jpg","mid_caption":"Pacientes que vuelven a sonreír y a masticar con seguridad gracias a los implantes dentales.",
+ {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"implantes dentales Tenerife Sur","service":"Implantes dentales",
   "title":"Implantes dentales en Tenerife Sur | Ocean Clinik",
   "desc":"Implantes dentales en Tenerife Sur con diagnóstico previo y plan claro. También casos complejos. Pide tu valoración de implantes en Ocean Clinik.",
@@ -155,7 +155,7 @@ PAGES = [
           ("¿Y si me han dicho que no tengo hueso?","Pide una segunda opinión: existen técnicas para casos con poco hueso que valoramos según tu situación."),
           ("¿Duele ponerse un implante?","El tratamiento se realiza con anestesia y un protocolo cuidadoso; te explicamos cada fase antes de empezar.")]},
 
- {"slug":"ortodoncia-invisible-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-ortodoncia.jpg",
+ {"slug":"ortodoncia-invisible-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"ortodoncia invisible Tenerife Sur","service":"Ortodoncia invisible",
   "title":"Ortodoncia invisible en Tenerife Sur | Ocean Clinik",
   "desc":"Ortodoncia invisible en Tenerife Sur: alinea tu sonrisa de forma discreta con alineadores transparentes. Pide tu valoración de ortodoncia.",
@@ -171,7 +171,7 @@ PAGES = [
           ("¿Cuánto dura el tratamiento?","Depende de cada caso. Tras el estudio te damos una estimación realista de la duración."),
           ("¿Cuánto cuesta?","El precio depende de la complejidad. Te damos un presupuesto claro tras la valoración.")]},
 
- {"slug":"carillas-dentales-tenerife","city":"tenerife-sur","type":"Dentist","img":"foto-sonrisa.jpg",
+ {"slug":"carillas-dentales-tenerife","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"carillas dentales Tenerife","service":"Carillas dentales",
   "title":"Carillas dentales en Tenerife | Ocean Clinik",
   "desc":"Carillas dentales en Tenerife para mejorar el color y la forma de tu sonrisa con un resultado natural. Pide tu valoración estética.",
