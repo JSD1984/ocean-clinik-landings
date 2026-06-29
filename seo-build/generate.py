@@ -27,6 +27,7 @@ CITIES = {
   "tenerife-sur": {
     "name": "Tenerife Sur",
     "tel": "922 41 71 95",
+    "wa": "34624506503",
     "addr": "C. 16 de Mayo, C.C. Abades, Local 5",
     "locality": "Abades",
     "region": "Santa Cruz de Tenerife",
@@ -307,7 +308,7 @@ def build(p):
     canonical = f"{BASE_URL}/{p['slug']}/"
     og_img = f"{BASE_URL}/assets/fotos/{p['img']}"
     tel_href = "tel:+34" + "".join(ch for ch in c["tel"] if ch.isdigit())[-9:]
-    wa_link = f"https://wa.me/{WA}?text=" + ("Hola%2C%20quiero%20pedir%20cita%20de%20"+p['service']+"%20en%20"+c['name']).replace(" ","%20")
+    wa_link = f"https://wa.me/{c.get('wa', WA)}?text=" + ("Hola%2C%20quiero%20pedir%20cita%20de%20"+p['service']+"%20en%20"+c['name']).replace(" ","%20")
 
     promesas = "".join(f'<span><svg class="ico"><use href="#ic-check"/></svg> {x}</span>' for x in p["promesas"])
     cards = "".join(card(*x) for x in p["cards"])
