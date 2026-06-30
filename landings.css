@@ -248,7 +248,11 @@ footer ul{list-style:none}footer li{padding:4px 0}
   .cards,.treat .grid3,.testi .grid3{grid-template-columns:1fr}
   .pasos{grid-template-columns:1fr 1fr}
   .intent .grid4{grid-template-columns:1fr 1fr}
-  .feature .ph{aspect-ratio:16/10;max-width:520px}
+  .feature .ph{aspect-ratio:4/5;max-width:330px;margin:0 auto}
+  .feature .ph img{object-position:50% 18%}
+  .feature .badge{padding:10px 13px}
+  .feature .badge b{font-size:.92rem}
+  .feature .badge span{font-size:.76rem}
   footer .wrap{grid-template-columns:1fr}
   .brand-lock .dr{display:none}
 }
