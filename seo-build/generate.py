@@ -521,6 +521,7 @@ def build(p):
     promesas = "".join(f'<span><svg class="ico"><use href="#ic-check"/></svg> {x}</span>' for x in p["promesas"])
     wa_base = f"https://wa.me/{c.get('wa', WA)}"
     cards = "".join(card(x[0],x[1],x[2],(x[3] if len(x)>3 else None),wa_base) for x in p["cards"])
+    cards_cls = f"cards cards-n{len(p['cards'])}"
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     prose_h2 = p.get("prose_h2", f'{p["service"]} en {c["name"]}')
     cta_text = p.get("cta", "Quiero valorar mi caso")
@@ -540,6 +541,7 @@ def build(p):
         href = tel_href if h=="tel" else h
         cta_span = f'<span class="intent-cta">{ictcrta} <svg class="ico"><use href="#ic-arrow"/></svg></span>' if ictcrta else ""
         intent_html += f'<a href="{href}"><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span>{cta_span}</a>'
+    intent_cls = f"grid4 grid4-n{len(p.get('intent', default_intent))}"
 
     # --- Stats (configurable: ej. ortodoncia +30 años) ---
     default_stats = [("+15","años de experiencia"),("+5.000","pacientes atendidos"),("4,9★","valoración media"),("Sí","financiación a medida")]
@@ -694,7 +696,7 @@ def build(p):
 <section class="intent">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:22px"><h2>{intent_title}</h2></div>
-    <div class="grid4">{intent_html}</div>
+    <div class="{intent_cls}">{intent_html}</div>
   </div>
 </section>
 
@@ -713,7 +715,7 @@ def build(p):
 <section class="soft">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-shield"/></svg> {cards_kicker}</span><h2>{cards_h2}</h2></div>
-    <div class="cards">{cards}</div>
+    <div class="{cards_cls}">{cards}</div>
   </div>
 </section>
 

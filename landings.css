@@ -154,6 +154,11 @@ section{padding:84px 0;position:relative}
 
 /* ===== "QUÉ ENCONTRARÁS" cards ===== */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+/* 5 tarjetas: una sola fila en escritorio, y baja ordenado (3 / 1) en pantallas menores */
+.cards.cards-n5{grid-template-columns:repeat(5,1fr);gap:16px}
+.intent .grid4.grid4-n5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1080px){.cards.cards-n5,.intent .grid4.grid4-n5{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.cards.cards-n5,.intent .grid4.grid4-n5{grid-template-columns:1fr}}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;box-shadow:var(--shadow-xs);transition:transform .18s,box-shadow .18s}
 .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm)}
 .card .icbox{width:52px;height:52px;border-radius:15px;background:var(--sky-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
