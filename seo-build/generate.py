@@ -148,38 +148,45 @@ PAGES = [
 
  {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"implantes dentales Tenerife Sur","service":"Implantes dentales",
-  "title":"Implantes dentales en Tenerife Sur | Ocean Clinik",
-  "desc":"Implantes dentales en Tenerife Sur con diagnóstico previo y plan claro. También casos complejos. Pide tu valoración de implantes en Ocean Clinik.",
-  "h1":"¿Te han dicho que necesitas implantes o que tu caso es <span class=\"accent\">complicado</span>?",
-  "sub":"<strong>Implantes dentales en Tenerife Sur</strong>, para casos simples y complejos. Estudiamos tu caso antes de proponerte nada, según diagnóstico.",
+  "title":"Implantes dentales en Tenerife Sur | Casos complejos · Ocean Clinik",
+  "desc":"Implantes dentales en Tenerife Sur, también casos complejos: implantes cigomáticos y subperiósticos cuando te han dicho que «no tienes hueso». Última tecnología y cirugía guiada. Pide tu valoración en Ocean Clinik.",
+  "h1":"¿Te han dicho que <span class=\"accent\">no</span> te pueden poner implantes o que tu caso es complicado?",
+  "sub":"<strong>Implantes dentales en Tenerife Sur</strong> para casos simples y complejos. Trabajamos con la última tecnología, incluidos <strong>implantes cigomáticos y subperiósticos</strong> para pacientes a los que han dicho que no se puede. Y si hacemos lo difícil, lo sencillo lo hacemos mejor que nadie.",
   "cta":"Quiero valorar mi caso de implantes",
-  "promesas":["Tecnología 3D y cirugía guiada","Casos simples y complejos","Materiales de alta calidad"],
-  "prose_h2":"Implantes dentales en Tenerife Sur, para casos simples y complejos",
-  "intro":["En Ocean Clinik Abades valoramos casos de <strong>implantología avanzada, cirugía oral y rehabilitación dental</strong> con tecnología 3D, cirugía guiada y materiales de alta calidad.",
+  "promesas":["Cirugía guiada 3D","Cigomáticos y subperiósticos","Lo complejo y lo simple, mejor"],
+  "prose_h2":"Implantes dentales en Tenerife Sur, también cuando te han dicho que no",
+  "intro":["En Ocean Clinik Abades valoramos casos de <strong>implantología avanzada, cirugía oral y rehabilitación dental</strong> con la última tecnología, planificación 3D, cirugía guiada y materiales de alta calidad.",
            "Estudiamos tu <strong>hueso, encía, mordida y estética</strong> antes de proponerte nada. Después te explicamos con claridad qué opciones tienes, qué solución recomendamos y cómo podemos ayudarte a recuperar tus dientes con seguridad.",
-           "Trabajamos también casos que en otros sitios dan por imposibles: pacientes con <strong>poco hueso</strong>, portadores de prótesis o a quienes les han dicho que «no se puede». Si es tu caso, pide una segunda opinión antes de resignarte.",
-           "<strong>Implantes dentales en Tenerife Sur</strong> para casos simples y complejos, siempre con un plan por escrito y opciones de financiación."],
+           "Trabajamos casos que en otros sitios dan por imposibles. Cuando falta hueso y han descartado un implante convencional, valoramos técnicas avanzadas como los <strong>implantes cigomáticos</strong> (anclados en el pómulo) y los <strong>implantes subperiósticos</strong> (a medida, sobre el hueso). Si te han dicho que «no se puede», pide una segunda opinión antes de resignarte.",
+           "Y algo importante: si resolvemos los casos más difíciles, <strong>los casos simples los hacemos aún mejor</strong>. Tanto si te falta una pieza como si necesitas rehabilitar toda la boca, tendrás un plan por escrito y opciones de financiación."],
   "cards":[("ic-search","Estudio previo en 3D","Valoramos hueso, encía y mordida con planificación digital antes de decidir nada.","un estudio de implantes en 3D"),
-           ("ic-shield","Casos complejos y poco hueso","Soluciones para pacientes con poco hueso o rechazados en otras clínicas. Pide una segunda opinión.","implantes aunque me hayan dicho que no tengo hueso"),
+           ("ic-shield","Cigomáticos y subperiósticos","Cuando te han dicho que «no tienes hueso», valoramos técnicas avanzadas para que vuelvas a llevar dientes fijos.","implantes aunque me hayan dicho que no tengo hueso"),
            ("ic-tooth","Dientes fijos otra vez","Recupera la mordida y la estética con una solución fija, sin dentadura removible.","recuperar mis dientes con implantes fijos"),
            ("ic-card","Plan claro y financiación","Propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.","un presupuesto de implantes con financiación")],
   "faqs":[("¿Cuánto cuesta un implante dental?","Depende del diagnóstico y del plan recomendado para tu caso. No es lo mismo un implante unitario que una rehabilitación completa. Te lo explicamos con claridad y por escrito en la valoración."),
-          ("¿Y si me han dicho que no tengo hueso?","Pide una segunda opinión. Existen técnicas para casos con poco hueso que valoramos según tu situación; muchas veces hay solución aunque te hayan dicho que no."),
+          ("¿Y si me han dicho que no tengo hueso?","Pide una segunda opinión. Para casos con poca cantidad de hueso valoramos técnicas como los implantes cigomáticos o subperiósticos; muchas veces hay solución aunque te hayan dicho que no."),
+          ("¿Qué son los implantes cigomáticos y subperiósticos?","Son soluciones para casos complejos con falta de hueso. El cigomático se ancla en el hueso del pómulo y el subperióstico es una estructura a medida que se apoya sobre el hueso. Valoramos si tu caso es candidato."),
           ("¿Duele ponerse un implante?","El tratamiento se realiza con anestesia y un protocolo cuidadoso. Te explicamos cada fase antes de empezar para que sepas en todo momento qué va a pasar."),
-          ("¿Cuánto se tarda en tener los dientes?","Depende del caso y de si hay que regenerar hueso. Tras el estudio te damos una estimación realista de los plazos, sin prometer milagros."),
           ("¿Puedo financiar los implantes?","Sí. Te explicamos las opciones de financiación para que puedas empezar el tratamiento sin renunciar a la mejor solución para tu caso.")]},
 
  {"slug":"ortodoncia-invisible-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"ortodoncia invisible Tenerife Sur","service":"Ortodoncia invisible",
-  "title":"Ortodoncia invisible en Tenerife Sur | Ocean Clinik",
-  "desc":"Ortodoncia invisible en Tenerife Sur: alinea tu sonrisa de forma discreta con alineadores transparentes. Pide tu valoración de ortodoncia.",
-  "h1":"Ortodoncia invisible en <span class=\"accent\">Tenerife Sur</span> para alinear tu sonrisa sin que se note y sin cambiar tu día a día",
-  "sub":"Alineadores transparentes, cómodos y removibles. Antes de empezar valoramos tu caso, te enseñamos cómo quedaría y te damos un plan claro con la duración estimada y opciones de financiación.",
+  "title":"Ortodoncia invisible en Tenerife Sur | +30 años · Ocean Clinik",
+  "desc":"Ortodoncia invisible en Tenerife Sur con más de 30 años de experiencia. Alinea tu sonrisa de forma discreta con alineadores transparentes y un plan claro. Pide tu valoración en Ocean Clinik.",
+  "h1":"Ortodoncia invisible en <span class=\"accent\">Tenerife Sur</span> con más de 30 años de experiencia alineando sonrisas",
+  "sub":"Alineadores transparentes, cómodos y removibles, en manos de un equipo con <strong>más de 30 años de experiencia</strong> en ortodoncia. Antes de empezar valoramos tu caso, te enseñamos cómo quedaría y te damos un plan claro con la duración estimada y opciones de financiación.",
   "cta":"Quiero valorar mi ortodoncia",
-  "promesas":["Discreta y removible","Plan visual del caso","Financiación a medida"],
-  "prose_h2":"Ortodoncia invisible en Tenerife Sur, discreta y cómoda",
+  "promesas":["+30 años de experiencia","Discreta y removible","Financiación a medida"],
+  "stats":[["+30","años de experiencia"],["+5.000","pacientes atendidos"],["4,9★","valoración media"],["Sí","financiación a medida"]],
+  "doctor_kicker":"Quién te trata",
+  "doctor_h2":"Ortodoncia con más de 30 años de experiencia",
+  "doctor_p":["La ortodoncia no va solo de poner alineadores: va de <strong>planificar bien el movimiento de los dientes</strong> y controlar cada fase. En Ocean Clinik tratamos la ortodoncia con un equipo que acumula <strong>más de 30 años de experiencia</strong> alineando sonrisas.",
+              "Antes de empezar estudiamos tu mordida y tus encías, te enseñamos el plan y te explicamos qué se puede conseguir de forma realista. El objetivo es que entiendas tu caso y veas el resultado previsto antes de dar el primer paso."],
+  "doctor_checks":["Más de 30 años de experiencia en ortodoncia.","Estudio de mordida y encías.","Plan visual del caso antes de empezar.","Alineadores transparentes y cómodos.","Revisiones de seguimiento.","Opciones de financiación."],
+  "doctor_badge":"Ortodoncia · Ocean Clinik Tenerife Sur",
+  "prose_h2":"Ortodoncia invisible en Tenerife Sur, con más de 30 años de experiencia",
   "intro":["La <strong>ortodoncia invisible en Tenerife Sur</strong> te permite alinear los dientes sin brackets metálicos, con férulas transparentes que apenas se notan y que puedes quitarte para comer y cepillarte.",
-           "En Ocean Clinik Abades valoramos primero tu <strong>mordida, encías y expectativas</strong>. No todas las sonrisas necesitan lo mismo, así que te explicamos si la ortodoncia invisible es la mejor opción para tu caso.",
+           "En Ocean Clinik Abades tratamos la ortodoncia con un equipo de <strong>más de 30 años de experiencia</strong>. Valoramos primero tu <strong>mordida, encías y expectativas</strong>: no todas las sonrisas necesitan lo mismo, así que te explicamos si la ortodoncia invisible es la mejor opción para tu caso.",
            "Antes de empezar te enseñamos el plan: qué movimientos se buscan, cuánto puede durar de forma realista y cómo será el seguimiento hasta el final.",
            "Tanto si nunca te has tratado como si llevaste ortodoncia de joven y los dientes se han vuelto a mover, pide una valoración y te explicamos tus opciones, con financiación a medida."],
   "cards":[("ic-smile","Casi invisible","Alineadores transparentes que pasan desapercibidos en tu día a día y al hablar.","ortodoncia invisible"),
@@ -234,51 +241,146 @@ PAGES = [
 
  {"slug":"clinica-dental-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"clínica dental La Palma","service":"Clínica dental",
-  "title":"Clínica dental en La Palma | Ocean Clinik",
-  "desc":"Clínica dental en La Palma con todos los tratamientos en un mismo centro: implantes, ortodoncia invisible, estética dental y medicina estética. Pide cita.",
-  "h1":"Clínica dental en <span class=\"accent\">La Palma</span>: tu boca completa en un solo centro",
-  "sub":"Implantes, ortodoncia invisible, estética dental y medicina estética facial bajo un mismo equipo en Santa Cruz de La Palma. Plan claro y financiación.",
-  "promesas":["Todos los tratamientos","Presupuesto claro","Financiación a medida"],
-  "intro":["Ocean Clinik es una <strong>clínica dental en La Palma</strong> donde resuelves tu boca completa y también la estética facial, en el mismo centro y con el mismo equipo.",
-           "Estudiamos tu caso, te damos un plan por fases y te acompañamos en todo el proceso, con criterio clínico y sin promesas irreales."],
-  "cards":[("ic-tooth","Odontología general","Revisiones, limpiezas y cuidado del día a día."),
-           ("ic-shield","Implantes y rehabilitación","Soluciones fijas, también para casos complejos."),
-           ("ic-sparkle","Estética dental y facial","Carillas, blanqueamiento y medicina estética facial.")],
-  "faqs":[("¿Qué tratamientos ofrecéis?","Odontología general, implantes, ortodoncia invisible, estética dental y medicina estética facial."),
-          ("¿Dónde está la clínica?","En Avda. El Puente 41, 38700 Santa Cruz de La Palma."),
-          ("¿Ofrecéis financiación?","Si procede, te explicamos las opciones de pago para adaptar el plan a tu situación.")]},
+  "title":"Clínica dental en La Palma | Ocean Clinik · Santa Cruz de La Palma",
+  "desc":"Clínica dental en La Palma, en Santa Cruz de La Palma, con todos los tratamientos en un mismo centro: implantes, ortodoncia invisible y estética dental. Plan claro y financiación. Pide cita en Ocean Clinik.",
+  "h1":"Clínica dental en <span class=\"accent\">La Palma</span> donde resuelves toda tu boca en un mismo sitio, con un plan claro y sin ir de clínica en clínica",
+  "sub":"En Ocean Clinik, en Santa Cruz de La Palma, reunimos odontología general, implantes, ortodoncia invisible y estética dental bajo un mismo equipo. Valoramos tu caso con calma, te enseñamos lo que vemos y te damos un plan por escrito con opciones de financiación.",
+  "cta":"Quiero valorar mi caso",
+  "promesas":["Todos los tratamientos","Presupuesto por escrito","Financiación a medida"],
+  "prose_h2":"Clínica dental en La Palma, todo en un mismo centro",
+  "intro":["Ocean Clinik está en el centro de <strong>Santa Cruz de La Palma</strong>, fácil de localizar y de acceso cómodo para toda la isla: Los Llanos de Aridane, El Paso, Breña Alta y Breña Baja.",
+           "Somos una <strong>clínica dental en La Palma</strong> donde resuelves tu boca completa en un mismo centro y con un mismo equipo: <strong>odontología general</strong>, <strong>implantes</strong>, cirugía guiada, <strong>ortodoncia invisible</strong>, <strong>estética dental</strong>, periodoncia, endodoncia y <strong>urgencias</strong>.",
+           "Nuestro enfoque es sencillo: primero entendemos tu caso, después te explicamos el diagnóstico con imágenes y finalmente te damos un plan claro, por escrito y con opciones de financiación.",
+           "Si llevas tiempo retrasando ir al dentista o vienes con un presupuesto de otra clínica que no te han explicado bien, pide una valoración. Lo normal es salir sabiendo exactamente qué necesitas y cuánto cuesta."],
+  "cards":[("ic-clinic","Toda tu boca en un mismo centro","No tienes que ir de un sitio a otro. Resolvemos odontología general, implantes, ortodoncia y estética con el mismo equipo.","resolver toda mi boca en una misma clínica en La Palma"),
+           ("ic-tooth","Revisión y prevención","Revisiones, limpiezas, empastes y el cuidado del día a día para que no llegues tarde a los problemas.","una revisión y limpieza dental en La Palma"),
+           ("ic-shield","Implantes y rehabilitación","Soluciones fijas para recuperar dientes y volver a masticar con seguridad, también en casos complejos.","implantes o una rehabilitación dental en La Palma"),
+           ("ic-card","Plan claro y financiación","Recibirás una propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.","un plan de tratamiento con financiación en La Palma")],
+  "faqs":[("¿Tienen todos los tratamientos en la misma clínica?","Sí. Integramos odontología general, implantes, ortodoncia y estética dental para que resuelvas tu caso completo sin desplazarte a varios sitios."),
+          ("¿Dónde está la clínica dental en La Palma?","En el centro de Santa Cruz de La Palma, fácil de localizar y con acceso cómodo desde toda la isla."),
+          ("¿Cuánto cuesta ir a una clínica dental en La Palma?","Depende del tratamiento. No cuesta lo mismo una revisión, una limpieza, una ortodoncia o una rehabilitación con implantes. Por eso primero valoramos tu caso y después te damos un presupuesto claro por escrito."),
+          ("¿Ofrecéis financiación?","Sí. Si procede, te explicamos las opciones de pago disponibles para que puedas empezar el tratamiento adaptándolo a tu situación."),
+          ("¿Cómo pido cita?","Rellena el formulario o escríbenos por WhatsApp y te confirmamos tu cita en el primer hueco disponible.")]},
 
- {"slug":"implantes-dentales-la-palma","city":"la-palma","type":"Dentist","img":"foto-tratamiento.jpg",
+ {"slug":"implantes-dentales-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"implantes dentales La Palma","service":"Implantes dentales",
-  "title":"Implantes dentales en La Palma | Ocean Clinik",
-  "desc":"Implantes dentales en La Palma con diagnóstico previo y plan claro. Especialistas en casos complejos y poco hueso. Pide tu valoración de implantes.",
-  "h1":"Implantes dentales en <span class=\"accent\">La Palma</span>, también en casos complejos",
-  "sub":"Recupera tus dientes fijos con un plan basado en tu diagnóstico. Estudiamos hueso, mordida y estética. Si te dijeron que “no tienes hueso”, pide una segunda opinión.",
-  "promesas":["Valoración con diagnóstico","Casos complejos","Financiación si procede"],
-  "intro":["Los <strong>implantes dentales en La Palma</strong> te permiten recuperar la función y la seguridad al sonreír. En Ocean Clinik empezamos por tu diagnóstico, no por el precio.",
-           "Estamos centrados también en casos complejos: pacientes con poco hueso, portadores de prótesis o que han sido rechazados en otras clínicas. Valoramos técnicas avanzadas según tu situación."],
-  "cards":[("ic-search","Estudio previo","Valoración de hueso, encía y mordida."),
-           ("ic-shield","Casos complejos","Soluciones cuando falta hueso o hay prótesis antigua."),
-           ("ic-tooth","Solución fija","Recupera la mordida y la estética con dientes fijos.")],
-  "faqs":[("¿Cuánto cuesta un implante en La Palma?","Depende del diagnóstico y del plan recomendado. Te lo explicamos con claridad en la valoración."),
-          ("¿Tratáis casos con poco hueso?","Sí, es una de nuestras áreas. Pide una valoración aunque te hayan dicho que no en otro sitio."),
-          ("¿Puedo dejar la dentadura por algo fijo?","En muchos casos sí. Valoramos tu situación y te explicamos las opciones fijas sobre implantes.")]},
+  "title":"Implantes dentales en La Palma | Casos complejos · Ocean Clinik",
+  "desc":"Implantes dentales en La Palma, también casos complejos: implantes cigomáticos y subperiósticos cuando te han dicho que «no tienes hueso». Última tecnología y cirugía guiada. Pide tu valoración en Ocean Clinik.",
+  "h1":"¿Te han dicho que <span class=\"accent\">no</span> te pueden poner implantes o que tu caso es complicado?",
+  "sub":"<strong>Implantes dentales en La Palma</strong> para casos simples y complejos. Trabajamos con la última tecnología, incluidos <strong>implantes cigomáticos y subperiósticos</strong> para pacientes a los que han dicho que no se puede. Y si hacemos lo difícil, lo sencillo lo hacemos mejor que nadie.",
+  "cta":"Quiero valorar mi caso de implantes",
+  "promesas":["Cirugía guiada 3D","Cigomáticos y subperiósticos","Lo complejo y lo simple, mejor"],
+  "prose_h2":"Implantes dentales en La Palma, también cuando te han dicho que no",
+  "intro":["Los <strong>implantes dentales en La Palma</strong> te permiten recuperar la función y la seguridad al sonreír. En Ocean Clinik empezamos por tu diagnóstico, no por el precio, con la última tecnología, planificación 3D y cirugía guiada.",
+           "Estudiamos tu <strong>hueso, encía, mordida y estética</strong> antes de proponerte nada. Después te explicamos con claridad qué opciones tienes, qué solución recomendamos y cómo podemos ayudarte a recuperar tus dientes con seguridad.",
+           "Trabajamos casos que en otros sitios dan por imposibles. Cuando falta hueso y han descartado un implante convencional, valoramos técnicas avanzadas como los <strong>implantes cigomáticos</strong> (anclados en el pómulo) y los <strong>implantes subperiósticos</strong> (a medida, sobre el hueso). Si te han dicho que «no se puede», pide una segunda opinión antes de resignarte.",
+           "Y algo importante: si resolvemos los casos más difíciles, <strong>los casos simples los hacemos aún mejor</strong>. Tanto si te falta una pieza como si necesitas rehabilitar toda la boca, tendrás un plan por escrito y opciones de financiación."],
+  "cards":[("ic-search","Estudio previo en 3D","Valoramos hueso, encía y mordida con planificación digital antes de decidir nada.","un estudio de implantes en 3D en La Palma"),
+           ("ic-shield","Cigomáticos y subperiósticos","Cuando te han dicho que «no tienes hueso», valoramos técnicas avanzadas para que vuelvas a llevar dientes fijos.","implantes aunque me hayan dicho que no tengo hueso"),
+           ("ic-tooth","Dientes fijos otra vez","Recupera la mordida y la estética con una solución fija, sin dentadura removible.","recuperar mis dientes con implantes fijos en La Palma"),
+           ("ic-card","Plan claro y financiación","Propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.","un presupuesto de implantes con financiación en La Palma")],
+  "faqs":[("¿Cuánto cuesta un implante dental en La Palma?","Depende del diagnóstico y del plan recomendado para tu caso. No es lo mismo un implante unitario que una rehabilitación completa. Te lo explicamos con claridad y por escrito en la valoración."),
+          ("¿Y si me han dicho que no tengo hueso?","Pide una segunda opinión. Para casos con poca cantidad de hueso valoramos técnicas como los implantes cigomáticos o subperiósticos; muchas veces hay solución aunque te hayan dicho que no."),
+          ("¿Qué son los implantes cigomáticos y subperiósticos?","Son soluciones para casos complejos con falta de hueso. El cigomático se ancla en el hueso del pómulo y el subperióstico es una estructura a medida que se apoya sobre el hueso. Valoramos si tu caso es candidato."),
+          ("¿Puedo dejar la dentadura por algo fijo?","En muchos casos sí. Valoramos tu situación y te explicamos las opciones fijas sobre implantes."),
+          ("¿Puedo financiar los implantes?","Sí. Te explicamos las opciones de financiación para que puedas empezar el tratamiento sin renunciar a la mejor solución para tu caso.")]},
 
- {"slug":"ortodoncia-invisible-la-palma","city":"la-palma","type":"Dentist","img":"foto-ortodoncia.jpg",
+ {"slug":"ortodoncia-invisible-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"ortodoncia invisible La Palma","service":"Ortodoncia invisible",
-  "title":"Ortodoncia invisible en La Palma | Ocean Clinik",
-  "desc":"Ortodoncia invisible en La Palma con alineadores transparentes para alinear tu sonrisa de forma discreta. Pide tu valoración de ortodoncia.",
-  "h1":"Ortodoncia invisible en <span class=\"accent\">La Palma</span> para alinear tu sonrisa sin que se note",
-  "sub":"Alineadores transparentes, cómodos y removibles en Santa Cruz de La Palma. Corrige la posición de tus dientes de forma discreta, con un plan claro.",
-  "promesas":["Discreta y removible","Plan visual del caso","Revisiones de seguimiento"],
-  "intro":["La <strong>ortodoncia invisible en La Palma</strong> alinea los dientes sin brackets metálicos, con férulas transparentes que apenas se notan y te puedes quitar para comer y cepillarte.",
-           "Antes de empezar valoramos mordida, encías y expectativas, y te explicamos el plan y la duración estimada para tu caso."],
-  "cards":[("ic-smile","Casi invisible","Alineadores transparentes y discretos."),
-           ("ic-plan","Plan claro","Sabes qué se busca desde el principio."),
-           ("ic-heart","Cómoda","Removible para comer y tu higiene diaria.")],
-  "faqs":[("¿Sirve para todos los casos?","Para muchos, pero no todos. Valoramos tu mordida y encías antes de recomendarla."),
-          ("¿Cuánto dura?","Depende del caso; tras el estudio te damos una estimación realista."),
-          ("¿Cuánto cuesta la ortodoncia invisible?","El precio depende de la complejidad. Te damos un presupuesto claro tras la valoración.")]},
+  "title":"Ortodoncia invisible en La Palma | +30 años · Ocean Clinik",
+  "desc":"Ortodoncia invisible en La Palma con más de 30 años de experiencia. Alinea tu sonrisa de forma discreta con alineadores transparentes y un plan claro. Pide tu valoración en Ocean Clinik.",
+  "h1":"Ortodoncia invisible en <span class=\"accent\">La Palma</span> con más de 30 años de experiencia alineando sonrisas",
+  "sub":"Alineadores transparentes, cómodos y removibles en Santa Cruz de La Palma, en manos de un equipo con <strong>más de 30 años de experiencia</strong> en ortodoncia. Antes de empezar valoramos tu caso, te enseñamos cómo quedaría y te damos un plan claro con la duración estimada y opciones de financiación.",
+  "cta":"Quiero valorar mi ortodoncia",
+  "promesas":["+30 años de experiencia","Discreta y removible","Financiación a medida"],
+  "stats":[["+30","años de experiencia"],["+5.000","pacientes atendidos"],["4,9★","valoración media"],["Sí","financiación a medida"]],
+  "doctor_kicker":"Quién te trata",
+  "doctor_h2":"Ortodoncia con más de 30 años de experiencia",
+  "doctor_p":["La ortodoncia no va solo de poner alineadores: va de <strong>planificar bien el movimiento de los dientes</strong> y controlar cada fase. En Ocean Clinik tratamos la ortodoncia con un equipo que acumula <strong>más de 30 años de experiencia</strong> alineando sonrisas.",
+              "Antes de empezar estudiamos tu mordida y tus encías, te enseñamos el plan y te explicamos qué se puede conseguir de forma realista. El objetivo es que entiendas tu caso y veas el resultado previsto antes de dar el primer paso."],
+  "doctor_checks":["Más de 30 años de experiencia en ortodoncia.","Estudio de mordida y encías.","Plan visual del caso antes de empezar.","Alineadores transparentes y cómodos.","Revisiones de seguimiento.","Opciones de financiación."],
+  "doctor_badge":"Ortodoncia · Ocean Clinik La Palma",
+  "prose_h2":"Ortodoncia invisible en La Palma, con más de 30 años de experiencia",
+  "intro":["La <strong>ortodoncia invisible en La Palma</strong> te permite alinear los dientes sin brackets metálicos, con férulas transparentes que apenas se notan y que puedes quitarte para comer y cepillarte.",
+           "En Ocean Clinik, en Santa Cruz de La Palma, tratamos la ortodoncia con un equipo de <strong>más de 30 años de experiencia</strong>. Valoramos primero tu <strong>mordida, encías y expectativas</strong>: no todas las sonrisas necesitan lo mismo, así que te explicamos si la ortodoncia invisible es la mejor opción para tu caso.",
+           "Antes de empezar te enseñamos el plan: qué movimientos se buscan, cuánto puede durar de forma realista y cómo será el seguimiento hasta el final.",
+           "Tanto si nunca te has tratado como si llevaste ortodoncia de joven y los dientes se han vuelto a mover, pide una valoración y te explicamos tus opciones, con financiación a medida."],
+  "cards":[("ic-smile","Casi invisible","Alineadores transparentes que pasan desapercibidos en tu día a día y al hablar.","ortodoncia invisible en La Palma"),
+           ("ic-plan","Plan visual desde el principio","Te enseñamos qué movimientos se buscan y cómo quedaría tu sonrisa antes de empezar.","ver un plan de ortodoncia de mi caso"),
+           ("ic-heart","Cómoda y removible","Te la quitas para comer y mantienes la higiene de siempre, sin renuncias.","ortodoncia con alineadores removibles"),
+           ("ic-card","Financiación a medida","Un presupuesto claro por escrito y opciones de pago para empezar sin agobios.","ortodoncia invisible con financiación")],
+  "faqs":[("¿La ortodoncia invisible sirve para todos los casos?","Es adecuada para muchos casos, pero no para todos. Por eso valoramos tu mordida y tus encías antes de recomendarla y te decimos con sinceridad si es tu mejor opción."),
+          ("¿Cuánto dura el tratamiento?","Depende de cada caso. Tras el estudio te damos una estimación realista de la duración, sin prometer plazos imposibles."),
+          ("¿Se nota al hablar?","Los alineadores son transparentes y se ajustan a tus dientes, así que pasan muy desapercibidos. Es uno de los motivos por los que tantos pacientes los eligen."),
+          ("¿Puedo quitármela para comer?","Sí. Te la quitas para comer y para cepillarte, y vuelves a ponértela después. Por eso mantienes tu higiene de siempre."),
+          ("¿Cuánto cuesta la ortodoncia invisible en La Palma?","El precio depende de la complejidad del caso. Te damos un presupuesto claro por escrito tras la valoración, con opciones de financiación.")]},
+
+ # ---------- ODONTOPEDIATRÍA · OCEAN KIDS ----------
+ {"slug":"odontopediatria-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
+  "kw":"odontopediatría Tenerife Sur","service":"Odontopediatría · Ocean Kids",
+  "title":"Odontopediatría en Tenerife Sur · Ocean Kids | Dentista de niños sin miedo",
+  "desc":"Odontopediatría en Tenerife Sur con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención y revisiones. Pide cita en Ocean Clinik Abades.",
+  "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista en Tenerife Sur sin miedo y con una buena experiencia",
+  "sub":"Odontopediatría en Ocean Clinik Abades pensada para los más peques. Cuidamos especialmente la primera visita para que sea positiva, vamos a su ritmo y le explicamos todo con palabras que entiende, para que coja confianza desde el principio.",
+  "cta":"Quiero pedir cita para mi hijo/a",
+  "promesas":["Sin miedo, en positivo","Trato adaptado a cada edad","Prevención desde pequeños"],
+  "intent_title":"¿Qué necesita tu hijo o hija?",
+  "intent":[("ic-smile","Es su primera visita al dentista","La preparamos en positivo para que sea una buena experiencia y no coja miedo.","#cita"),
+            ("ic-shield","Tiene una caries o le duele","Lo valoramos con cuidado y te explicamos el tratamiento y cómo se lo contamos a tu hijo/a.","#cita"),
+            ("ic-search","Quiero una revisión y prevención","Revisiones, sellados y flúor para prevenir y detectar a tiempo.","#cita"),
+            ("ic-tooth","Me preocupa cómo le salen los dientes","Vigilamos el recambio y la mordida para guiar el crecimiento si hace falta.","#cita")],
+  "doctor_kicker":"Ocean Kids","doctor_badge":"Ocean Kids · Ocean Clinik Tenerife Sur",
+  "doctor_h2":"Ocean Kids: odontología infantil sin miedo",
+  "doctor_p":["Para un niño, la clave no es solo tratar la caries: es que <strong>salga contento y sin miedo</strong> para querer volver. En Ocean Kids cuidamos cada primera visita para que sea una experiencia positiva, explicándole todo con palabras que entiende y a su ritmo.",
+              "Trabajamos la <strong>prevención desde pequeños</strong> (revisiones, sellados, flúor y hábitos) y vigilamos cómo le salen los dientes y la mordida para actuar a tiempo si hace falta. Y tú estás informado en cada paso."],
+  "doctor_checks":["Primera visita en positivo, sin agobios.","Trato adaptado a cada edad.","Explicaciones que el niño entiende.","Prevención: revisiones, sellados y flúor.","Control del recambio y la mordida.","Información clara para los padres."],
+  "prose_h2":"Odontopediatría en Tenerife Sur con Ocean Kids",
+  "intro":["<strong>Ocean Kids</strong> es la odontopediatría de Ocean Clinik en Abades: la odontología infantil pensada para que ir al dentista no dé miedo.",
+           "Sabemos que la primera experiencia lo marca todo. Por eso cuidamos la <strong>primera visita</strong> para que sea positiva: vamos a su ritmo, le enseñamos las cosas poco a poco y se lo explicamos con palabras que entiende.",
+           "Apostamos por la <strong>prevención desde pequeños</strong>: revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para evitar caries y detectar a tiempo cualquier problema.",
+           "Y vigilamos cómo le salen los dientes y cómo cierra la mordida, para guiar el crecimiento si hiciera falta. Tú estás informado en cada paso y decides con tranquilidad."],
+  "cards":[("ic-heart","Primera visita sin miedo","Preparamos la primera cita en positivo para que tu hijo/a coja confianza desde el principio.","la primera visita al dentista de mi hijo/a"),
+           ("ic-shield","Caries y molestias con cuidado","Tratamos caries y pequeñas urgencias con mucho tacto y explicándoselo a su ritmo.","una caries o molestia de mi hijo/a"),
+           ("ic-search","Revisiones y prevención","Revisiones, sellados y flúor para prevenir problemas y detectarlos a tiempo.","una revisión de prevención para mi hijo/a"),
+           ("ic-tooth","Control del crecimiento","Vigilamos cómo le salen los dientes y la mordida para guiar el crecimiento si hace falta.","una valoración de la mordida de mi hijo/a")],
+  "faqs":[("¿A qué edad debe ir mi hijo al dentista por primera vez?","Lo ideal es una primera visita temprana, normalmente alrededor del primer año o cuando salen los primeros dientes, para acostumbrarle y prevenir. Si tu hijo ya es mayor y nunca ha ido, también es buen momento."),
+          ("¿Y si mi hijo tiene miedo al dentista?","Es muy normal. Por eso cuidamos especialmente la primera visita: vamos a su ritmo, le explicamos las cosas con palabras que entiende y buscamos que salga con una experiencia positiva."),
+          ("¿Hacéis revisiones y prevención?","Sí. Revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para prevenir caries y detectar a tiempo cualquier problema."),
+          ("¿Tratáis las caries en dientes de leche?","Sí. Aunque sean dientes de leche, conviene tratarlos para evitar dolor e infecciones y para no afectar a los dientes definitivos. Te explicamos cada caso."),
+          ("¿Vigiláis si necesitará ortodoncia?","Sí. Controlamos el recambio de dientes y la mordida; si vemos que conviene guiar el crecimiento, te lo explicamos y valoramos las opciones a su debido tiempo.")]},
+
+ {"slug":"odontopediatria-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
+  "kw":"odontopediatría La Palma","service":"Odontopediatría · Ocean Kids",
+  "title":"Odontopediatría en La Palma · Ocean Kids | Dentista de niños sin miedo",
+  "desc":"Odontopediatría en La Palma con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención y revisiones. Pide cita en Ocean Clinik.",
+  "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista en La Palma sin miedo y con una buena experiencia",
+  "sub":"Odontopediatría en Ocean Clinik, en Santa Cruz de La Palma, pensada para los más peques. Cuidamos especialmente la primera visita para que sea positiva, vamos a su ritmo y le explicamos todo con palabras que entiende, para que coja confianza desde el principio.",
+  "cta":"Quiero pedir cita para mi hijo/a",
+  "promesas":["Sin miedo, en positivo","Trato adaptado a cada edad","Prevención desde pequeños"],
+  "intent_title":"¿Qué necesita tu hijo o hija?",
+  "intent":[("ic-smile","Es su primera visita al dentista","La preparamos en positivo para que sea una buena experiencia y no coja miedo.","#cita"),
+            ("ic-shield","Tiene una caries o le duele","Lo valoramos con cuidado y te explicamos el tratamiento y cómo se lo contamos a tu hijo/a.","#cita"),
+            ("ic-search","Quiero una revisión y prevención","Revisiones, sellados y flúor para prevenir y detectar a tiempo.","#cita"),
+            ("ic-tooth","Me preocupa cómo le salen los dientes","Vigilamos el recambio y la mordida para guiar el crecimiento si hace falta.","#cita")],
+  "doctor_kicker":"Ocean Kids","doctor_badge":"Ocean Kids · Ocean Clinik La Palma",
+  "doctor_h2":"Ocean Kids: odontología infantil sin miedo",
+  "doctor_p":["Para un niño, la clave no es solo tratar la caries: es que <strong>salga contento y sin miedo</strong> para querer volver. En Ocean Kids cuidamos cada primera visita para que sea una experiencia positiva, explicándole todo con palabras que entiende y a su ritmo.",
+              "Trabajamos la <strong>prevención desde pequeños</strong> (revisiones, sellados, flúor y hábitos) y vigilamos cómo le salen los dientes y la mordida para actuar a tiempo si hace falta. Y tú estás informado en cada paso."],
+  "doctor_checks":["Primera visita en positivo, sin agobios.","Trato adaptado a cada edad.","Explicaciones que el niño entiende.","Prevención: revisiones, sellados y flúor.","Control del recambio y la mordida.","Información clara para los padres."],
+  "prose_h2":"Odontopediatría en La Palma con Ocean Kids",
+  "intro":["<strong>Ocean Kids</strong> es la odontopediatría de Ocean Clinik en Santa Cruz de La Palma: la odontología infantil pensada para que ir al dentista no dé miedo.",
+           "Sabemos que la primera experiencia lo marca todo. Por eso cuidamos la <strong>primera visita</strong> para que sea positiva: vamos a su ritmo, le enseñamos las cosas poco a poco y se lo explicamos con palabras que entiende.",
+           "Apostamos por la <strong>prevención desde pequeños</strong>: revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para evitar caries y detectar a tiempo cualquier problema.",
+           "Y vigilamos cómo le salen los dientes y cómo cierra la mordida, para guiar el crecimiento si hiciera falta. Tú estás informado en cada paso y decides con tranquilidad."],
+  "cards":[("ic-heart","Primera visita sin miedo","Preparamos la primera cita en positivo para que tu hijo/a coja confianza desde el principio.","la primera visita al dentista de mi hijo/a"),
+           ("ic-shield","Caries y molestias con cuidado","Tratamos caries y pequeñas urgencias con mucho tacto y explicándoselo a su ritmo.","una caries o molestia de mi hijo/a"),
+           ("ic-search","Revisiones y prevención","Revisiones, sellados y flúor para prevenir problemas y detectarlos a tiempo.","una revisión de prevención para mi hijo/a"),
+           ("ic-tooth","Control del crecimiento","Vigilamos cómo le salen los dientes y la mordida para guiar el crecimiento si hace falta.","una valoración de la mordida de mi hijo/a")],
+  "faqs":[("¿A qué edad debe ir mi hijo al dentista por primera vez?","Lo ideal es una primera visita temprana, normalmente alrededor del primer año o cuando salen los primeros dientes, para acostumbrarle y prevenir. Si tu hijo ya es mayor y nunca ha ido, también es buen momento."),
+          ("¿Y si mi hijo tiene miedo al dentista?","Es muy normal. Por eso cuidamos especialmente la primera visita: vamos a su ritmo, le explicamos las cosas con palabras que entiende y buscamos que salga con una experiencia positiva."),
+          ("¿Hacéis revisiones y prevención?","Sí. Revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para prevenir caries y detectar a tiempo cualquier problema."),
+          ("¿Tratáis las caries en dientes de leche?","Sí. Aunque sean dientes de leche, conviene tratarlos para evitar dolor e infecciones y para no afectar a los dientes definitivos. Te explicamos cada caso."),
+          ("¿Vigiláis si necesitará ortodoncia?","Sí. Controlamos el recambio de dientes y la mordida; si vemos que conviene guiar el crecimiento, te lo explicamos y valoramos las opciones a su debido tiempo.")]},
 
  {"slug":"medicina-estetica-la-palma","city":"la-palma","type":"MedicalClinic","img":"foto-facial.jpg",
   "kw":"medicina estética La Palma","service":"Medicina estética facial",
@@ -345,6 +447,14 @@ PAGES = [
           ("¿Cuánto cuestan las carillas en La Palma?","Depende del número y el tipo. Te damos un presupuesto claro tras valorar tu caso.")]},
 ]
 
+# Páginas que se publican (4 temas × 2 sedes). El resto quedan en PAGES pero no se generan.
+ACTIVE_SLUGS = {
+  "clinica-dental-la-palma","clinica-dental-tenerife-sur",
+  "implantes-dentales-la-palma","implantes-dentales-tenerife-sur",
+  "ortodoncia-invisible-la-palma","ortodoncia-invisible-tenerife-sur",
+  "odontopediatria-la-palma","odontopediatria-tenerife-sur",
+}
+
 # ====== PLANTILLA ======
 def build(p):
     c = CITIES[p["city"]]
@@ -359,6 +469,37 @@ def build(p):
     intro = "".join(f"<p>{x}</p>" for x in p["intro"])
     prose_h2 = p.get("prose_h2", f'{p["service"]} en {c["name"]}')
     cta_text = p.get("cta", "Quiero valorar mi caso")
+
+    # --- Bloque "¿Qué necesitas solucionar?" (configurable por página) ---
+    default_intent = [
+      ("ic-tooth","Me falta una pieza o necesito implantes","Valoramos si puedes llevar dientes fijos, con planificación digital y opciones de financiación.","#cita"),
+      ("ic-smile","Quiero mejorar mi sonrisa","Ortodoncia invisible, carillas, blanqueamiento y estética dental según tu caso.","#cita"),
+      ("ic-phone","Tengo dolor o una urgencia","Te orientamos rápido y buscamos el primer hueco disponible.","tel"),
+      ("ic-search","Vengo de otra clínica y quiero una segunda opinión","Revisamos tu caso y te explicamos alternativas con claridad.","#cita"),
+    ]
+    intent_title = p.get("intent_title","¿Qué necesitas solucionar?")
+    intent_html = "".join(
+      f'<a href="{tel_href if h=="tel" else h}"><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span></a>'
+      for ic,t,d,h in p.get("intent", default_intent))
+
+    # --- Stats (configurable: ej. ortodoncia +30 años) ---
+    default_stats = [("+15","años de experiencia"),("+5.000","pacientes atendidos"),("4,9★","valoración media"),("Sí","financiación a medida")]
+    stats_html = "".join(f'<div class="stat"><div class="n">{n}</div><div class="l">{l}</div></div>' for n,l in p.get("stats", default_stats))
+
+    # --- Sección del equipo / doctor (configurable: ej. Ocean Kids) ---
+    doc_kicker = p.get("doctor_kicker","Quién te atiende")
+    doc_h2 = p.get("doctor_h2","Tratamientos dirigidos por el Dr. Claudio Vázquez")
+    doc_ps = p.get("doctor_p",[
+      f"Antes de proponerte un tratamiento, necesitamos entender bien tu caso. El <strong>Dr. Claudio Vázquez</strong>, especialista en implantología, cirugía oral y rehabilitación dental, dirige los casos de implantes, cirugía guiada y tratamientos complejos en Ocean Clinik {c['name']}.",
+      "Su forma de trabajar se basa en tres cosas: <strong>diagnóstico preciso, planificación digital y explicación clara al paciente</strong> antes de empezar. En la primera valoración revisaremos tu caso, te mostraremos lo que vemos y te explicaremos qué opciones tienes, qué recomendamos y qué puede pasar si lo dejas avanzar.",
+    ])
+    doc_checks = p.get("doctor_checks",[
+      "Diagnóstico individual.","Estudio con tecnología digital.","Planificación de implantes y cirugía guiada.",
+      "Explicación visual del caso.","Plan de tratamiento por escrito.","Opciones de financiación.","Seguimiento durante todo el proceso."])
+    doc_badge = p.get("doctor_badge", f"Dirección clínica · Ocean Clinik {c['name']}")
+    doc_ps_html = "".join(f"<p>{x}</p>" for x in doc_ps)
+    doc_checks_html = "".join('<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>'+x+'</span></li>' for x in doc_checks)
+
     mid_block = ""
     if p.get("mid_img"):
         mid_block = (f'<section class="midimg soft"><div class="wrap"><figure>'
@@ -368,7 +509,7 @@ def build(p):
     testi = testi_html()
 
     # related = otras páginas de la misma ciudad
-    rel = [x for x in PAGES if x["city"]==p["city"] and x["slug"]!=p["slug"]]
+    rel = [x for x in PAGES if x["city"]==p["city"] and x["slug"]!=p["slug"] and x["slug"] in ACTIVE_SLUGS]
     related = "".join(f'<a href="/{x["slug"]}/">{x["service"]} en {CITIES[x["city"]]["name"]}</a>' for x in rel)
     treat = "".join(
         f'<a class="tcard-img" href="/{x["slug"]}/"><div class="ph"><img src="/assets/fotos/{x["img"]}" alt="{x["service"]} en {CITIES[x["city"]]["name"]}" loading="lazy" width="380" height="285"></div>'
@@ -461,23 +602,13 @@ def build(p):
 
 <section class="intent">
   <div class="wrap">
-    <div class="sec-head" style="margin-bottom:22px"><h2>¿Qué necesitas solucionar?</h2></div>
-    <div class="grid4">
-      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-tooth"/></svg></span><b>Me falta una pieza o necesito implantes</b><span>Valoramos si puedes llevar dientes fijos, con planificación digital y opciones de financiación.</span></a>
-      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-smile"/></svg></span><b>Quiero mejorar mi sonrisa</b><span>Ortodoncia invisible, carillas, blanqueamiento y estética dental según tu caso.</span></a>
-      <a href="{tel_href}"><span class="icbox"><svg class="ico"><use href="#ic-phone"/></svg></span><b>Tengo dolor o una urgencia</b><span>Te orientamos rápido y buscamos el primer hueco disponible.</span></a>
-      <a href="#cita"><span class="icbox"><svg class="ico"><use href="#ic-search"/></svg></span><b>Vengo de otra clínica y quiero una segunda opinión</b><span>Revisamos tu caso y te explicamos alternativas con claridad.</span></a>
-    </div>
+    <div class="sec-head" style="margin-bottom:22px"><h2>{intent_title}</h2></div>
+    <div class="grid4">{intent_html}</div>
   </div>
 </section>
 
 <section class="stats">
-  <div class="wrap">
-    <div class="stat"><div class="n">+15</div><div class="l">años de experiencia</div></div>
-    <div class="stat"><div class="n">+5.000</div><div class="l">pacientes atendidos</div></div>
-    <div class="stat"><div class="n">4,9★</div><div class="l">valoración media</div></div>
-    <div class="stat"><div class="n">Sí</div><div class="l">financiación a medida</div></div>
-  </div>
+  <div class="wrap">{stats_html}</div>
 </section>
 
 <section>
@@ -499,23 +630,14 @@ def build(p):
   <div class="wrap grid">
     <div class="ph">
       <img src="/assets/fotos/foto-doctor.jpg" alt="Dr. Claudio Vázquez, dirección clínica de Ocean Clinik" loading="lazy" width="520" height="650">
-      <div class="badge"><b>Dr. Claudio Vázquez</b><span>Dirección clínica · Ocean Clinik {c['name']}</span></div>
+      <div class="badge"><b>Dr. Claudio Vázquez</b><span>{doc_badge}</span></div>
     </div>
     <div>
-      <span class="eyebrow"><svg class="ico"><use href="#ic-award"/></svg> Quién te atiende</span>
-      <h2>Tratamientos dirigidos por el Dr. Claudio Vázquez</h2>
-      <p>Antes de proponerte un tratamiento, necesitamos entender bien tu caso. El <strong>Dr. Claudio Vázquez</strong>, especialista en implantología, cirugía oral y rehabilitación dental, dirige los casos de implantes, cirugía guiada y tratamientos complejos en Ocean Clinik {c['name']}.</p>
-      <p>Su forma de trabajar se basa en tres cosas: <strong>diagnóstico preciso, planificación digital y explicación clara al paciente</strong> antes de empezar. En la primera valoración revisaremos tu caso, te mostraremos lo que vemos y te explicaremos qué opciones tienes, qué recomendamos y qué puede pasar si lo dejas avanzar.</p>
-      <ul class="checks">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Diagnóstico individual.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Estudio con tecnología digital.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Planificación de implantes y cirugía guiada.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Explicación visual del caso.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Plan de tratamiento por escrito.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Opciones de financiación.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>Seguimiento durante todo el proceso.</span></li>
-      </ul>
-      <p style="margin-top:18px"><a class="btn" href="#cita">Quiero valorar mi caso <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
+      <span class="eyebrow"><svg class="ico"><use href="#ic-team"/></svg> {doc_kicker}</span>
+      <h2>{doc_h2}</h2>
+      {doc_ps_html}
+      <ul class="checks">{doc_checks_html}</ul>
+      <p style="margin-top:18px"><a class="btn" href="#cita">{cta_text} <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
     </div>
   </div>
 </section>
@@ -617,7 +739,7 @@ def build(p):
       <h4>Contacto</h4>
       <ul>
         <li><a href="{tel_href}">Teléfono: {c["tel"]}</a></li>
-        <li><a href="{wa_link}" target="_blank" rel="noopener">WhatsApp: {c.get("wa","").replace("34"," +34 ",1).strip()}</a></li>
+        <li><a href="{wa_link}" target="_blank" rel="noopener">WhatsApp: {("+"+c.get("wa",WA)[:2]+" "+c.get("wa",WA)[2:]) if c.get("wa") else "consultar"}</a></li>
         <li><a href="mailto:{EMAIL}">Email: {EMAIL}</a></li>
         <li><a href="{REVIEWS}" target="_blank" rel="noopener">Reseñas en Google</a></li>
       </ul>
@@ -642,7 +764,7 @@ def build(p):
 
 # ====== ESCRIBIR ======
 slugs=[]
-ACTIVE=[x for x in PAGES if x["city"]=="tenerife-sur"]   # solo clínica de Tenerife Sur (Abades)
+ACTIVE=[x for x in PAGES if x["slug"] in ACTIVE_SLUGS]   # 4 temas × 2 sedes (La Palma + Abades)
 for p in ACTIVE:
     d=os.path.join(ROOT,p["slug"])
     os.makedirs(d,exist_ok=True)

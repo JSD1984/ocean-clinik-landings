@@ -1,6 +1,6 @@
-# Guía para el programador — Ocean Clinik Tenerife Sur (Abades)
+# Guía para el programador — Ocean Clinik (La Palma + Abades)
 
-5 landing pages SEO locales, estáticas (**HTML + CSS**, sin frameworks), responsive (mobile-first).
+8 landing pages SEO locales (4 temas × 2 sedes), estáticas (**HTML + CSS**, sin frameworks), responsive (mobile-first).
 Tu trabajo: revisarlas, completar lo pendiente y subirlas al servidor.
 
 ---
@@ -9,29 +9,35 @@ Tu trabajo: revisarlas, completar lo pendiente y subirlas al servidor.
 
 ```
 /index.html                      ← índice de previsualización (NO subir a producción, o ponle noindex)
-/landings.css                    ← estilos compartidos por las 5 páginas
+/landings.css                    ← estilos compartidos por todas las páginas
 /sitemap.xml  /robots.txt
 /assets/                         ← logos, fondos e imágenes (NO separar de los HTML)
-/seo-build/generate.py           ← generador: todo el contenido vive aquí
+/seo-build/generate.py           ← generador: todo el contenido vive aquí (edita y regenera)
 /GUIA-SEO-PROGRAMADOR.md
 
-/dentista-tenerife-sur/index.html
+# Sede Abades (Tenerife Sur)
 /clinica-dental-tenerife-sur/index.html
 /implantes-dentales-tenerife-sur/index.html
 /ortodoncia-invisible-tenerife-sur/index.html
-/carillas-dentales-tenerife/index.html
+/odontopediatria-tenerife-sur/index.html
+# Sede La Palma
+/clinica-dental-la-palma/index.html
+/implantes-dentales-la-palma/index.html
+/ortodoncia-invisible-la-palma/index.html
+/odontopediatria-la-palma/index.html
 /politica-privacidad/index.html  /aviso-legal/index.html
 ```
 
-Keyword → URL (1 keyword = 1 URL = 1 H1):
+Keyword → URL (1 tema = 1 URL = 1 H1, replicado por sede):
 
-| Keyword | URL |
-|---|---|
-| dentista Tenerife Sur | `/dentista-tenerife-sur/` |
-| clínica dental Tenerife Sur | `/clinica-dental-tenerife-sur/` |
-| implantes dentales Tenerife Sur | `/implantes-dentales-tenerife-sur/` |
-| ortodoncia invisible Tenerife Sur | `/ortodoncia-invisible-tenerife-sur/` |
-| carillas dentales Tenerife | `/carillas-dentales-tenerife/` |
+| Tema | Abades (Tenerife Sur) | La Palma |
+|---|---|---|
+| Clínica dental (posicionamiento de sede) | `/clinica-dental-tenerife-sur/` | `/clinica-dental-la-palma/` |
+| Implantes + casos complejos (cigomáticos/subperiósticos) | `/implantes-dentales-tenerife-sur/` | `/implantes-dentales-la-palma/` |
+| Ortodoncia invisible (+30 años) | `/ortodoncia-invisible-tenerife-sur/` | `/ortodoncia-invisible-la-palma/` |
+| Odontopediatría · Ocean Kids | `/odontopediatria-tenerife-sur/` | `/odontopediatria-la-palma/` |
+
+> El generador tiene en `ACTIVE_SLUGS` qué páginas se publican. En `PAGES` quedan plantillas extra (dentista, carillas, medicina estética…) desactivadas por si en el futuro queréis activarlas.
 
 ---
 
@@ -47,11 +53,17 @@ Keyword → URL (1 keyword = 1 URL = 1 H1):
 
 ---
 
-## 3. Datos reales YA puestos (sede de Abades)
+## 3. Datos por sede
 
+**Abades (Tenerife Sur) — datos reales YA puestos:**
 - Teléfono: **922 41 71 95** · WhatsApp: **+34 624 50 65 03**
 - Dirección: **C. 16 de Mayo, C.C. Abades, Local 5 · 38588 Abades (Arico), Santa Cruz de Tenerife**
 - Horario: **Lun–Vie 10:00–14:00 y 15:00–19:00 · Sáb 10:00–14:00 · Dom cerrado** (en hero, footer y schema)
+
+**La Palma — PENDIENTE de confirmar (ahora con marcador):**
+- Teléfono y WhatsApp: **provisionales** (hay que poner los reales en `CONFIG`/`CITIES["la-palma"]` del generador).
+- Dirección: **Avda. El Puente 41 · 38700 Santa Cruz de La Palma** (confirmar).
+- Horario: **Lun–Vie 9:00–20:00** (confirmar).
 
 ---
 
