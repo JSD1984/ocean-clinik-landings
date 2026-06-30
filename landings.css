@@ -83,7 +83,8 @@ section{padding:84px 0;position:relative}
 .refuerzo{margin:0 0 20px;font-size:1.02rem;color:var(--ink);font-weight:600;border-left:3px solid var(--sky);padding-left:13px;max-width:560px}
 .hero-micro{display:flex;align-items:center;gap:7px;font-size:.85rem;color:var(--gris);margin:0 0 18px;font-weight:600}
 .hero-micro .ico{width:16px;height:16px;color:var(--sky-d);flex:none}
-.hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.hero-cta{display:flex;gap:12px;flex-wrap:nowrap;align-items:stretch;margin-bottom:22px}
+.hero-cta .btn{flex:1 1 0;min-width:0;justify-content:center;text-align:center;padding:15px 16px;font-size:1.02rem;line-height:1.15}
 .promesas{display:flex;gap:10px 20px;flex-wrap:wrap;margin-bottom:18px}
 .promesas span{display:flex;align-items:center;gap:8px;font-size:.92rem;color:var(--ink);font-weight:600}
 .promesas .ico{width:18px;height:18px;color:var(--sky-d)}
