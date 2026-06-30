@@ -584,7 +584,7 @@ def build(p):
 <footer>
   <div class="wrap">
     <div>
-      <img class="logo" src="/assets/logo-white.png" alt="Ocean Clinik · Estudio Dental" width="150" height="58">
+      <img class="logo" src="/assets/logo-blanco.png" alt="Ocean Clinik · Estudio Dental" width="106" height="59">
       <p><b>Ocean Clinik</b> · {c["addr"]}, {c["pc"]} {c["locality"]}</p>
       <p>Dirección clínica: Dr. Claudio Vázquez y equipo</p>
     </div>
