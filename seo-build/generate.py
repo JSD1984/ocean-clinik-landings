@@ -71,6 +71,34 @@ WA_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" ar
 STAR_SVG = '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
 STARS = STAR_SVG*5
 
+# JS del formulario: validación + confirmación + evento de conversión (GA4 dataLayer).
+FORM_SCRIPT = '''<script>
+(function(){
+  var f=document.getElementById('lead-form'); if(!f) return;
+  var tel=f.querySelector('#tel'), cons=f.querySelector('#consent'),
+      nom=f.querySelector('#nombre'), treat=f.querySelector('#treat'), pref=f.querySelector('#pref');
+  function showErr(name,on){var e=f.querySelector('.err[data-for="'+name+'"]'); if(e) e.style.display=on?'block':'none';}
+  function push(ev){ try{ window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:ev}); }catch(e){} }
+  var started=false;
+  f.addEventListener('input',function(){ if(!started){started=true; push('form_start');} });
+  if(treat) treat.addEventListener('change',function(){ push('select_treatment'); });
+  if(pref) pref.addEventListener('change',function(){ push('select_time_preference'); });
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault(); var ok=true;
+    if(!nom.value.trim()){ ok=false; }
+    var digits=(tel.value.match(/[0-9]/g)||[]).length;
+    if(digits<9){ showErr('tel',true); ok=false; } else { showErr('tel',false); }
+    if(treat && !treat.value){ ok=false; }
+    if(pref && !pref.value){ ok=false; }
+    if(cons && !cons.checked){ showErr('consent',true); ok=false; } else { showErr('consent',false); }
+    if(!ok) return;
+    f.style.display='none';
+    var okBox=document.getElementById('form-ok'); if(okBox) okBox.hidden=false;
+    push('form_submit'); push('generate_lead');
+  });
+})();
+</script>'''
+
 # Testimonios de ejemplo — SUSTITUIR por reseñas reales de Google
 TESTIMONIALS = [
   ("Me explicaron todo con calma y sin presión. Salí sabiendo exactamente qué necesitaba y cuánto costaba.", "María G.", "Paciente"),
@@ -125,26 +153,53 @@ PAGES = [
 
  {"slug":"clinica-dental-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"clínica dental Tenerife Sur","service":"Clínica dental",
-  "title":"Clínica dental en Tenerife Sur (Abades) | Ocean Clinik",
-  "desc":"Clínica dental en Tenerife Sur, en Abades, con todos los tratamientos en un mismo centro: implantes, ortodoncia invisible, estética dental y urgencias. Pide cita en Ocean Clinik.",
-  "h1":"Clínica dental en <span class=\"accent\">Tenerife Sur</span> donde resuelves toda tu boca en un mismo sitio, con un plan claro y sin ir de clínica en clínica",
-  "sub":"En Ocean Clinik Abades reunimos odontología general, implantes, ortodoncia invisible y estética dental bajo un mismo equipo. Valoramos tu caso con calma, te enseñamos lo que vemos y te damos un plan por escrito con opciones de financiación.",
+  "title":"Clínica dental en Tenerife Sur | Implantes y cirugía guiada | Ocean Clinik",
+  "desc":"Clínica dental en Tenerife Sur, en Abades. Implantes dentales, cirugía guiada, ortodoncia invisible, estética dental y odontología general. Valoración, presupuesto claro y financiación.",
+  "h1":"¿Llevas tiempo retrasando tu tratamiento dental o te han dicho que tu caso es <span class=\"accent\">complicado</span>?",
+  "sub":"En Ocean Clinik Abades valoramos tu caso con calma y te damos un plan claro para recuperar tu boca con seguridad.<br><br>Implantes dentales, cirugía guiada, rehabilitación oral, ortodoncia invisible, estética dental y odontología general en Tenerife Sur, con tecnología digital, materiales de alta calidad y financiación a medida.",
+  "refuerzo":"Primero estudiamos tu caso. Después te explicamos qué tienes, qué opciones existen y cuál es la solución más segura para ti.",
+  "hero_micro":"Te contactamos por WhatsApp o teléfono para buscar el mejor hueco.",
+  "wa_label":"Hablar por WhatsApp",
   "cta":"Quiero valorar mi caso",
-  "promesas":["Todos los tratamientos","Presupuesto por escrito","Financiación a medida"],
-  "prose_h2":"Clínica dental en Tenerife Sur, todo en un mismo centro",
+  "promesas":["+5.000 pacientes atendidos","4,9★ valoración en Google","Implantes y casos complejos","Presupuesto claro por escrito","Financiación a medida"],
+  "intent_title":"¿Qué necesitas solucionar?",
+  "intent":[("ic-tooth","Me falta una pieza o varios dientes","Valoramos si puedes llevar implantes dentales, dientes fijos o una rehabilitación completa con planificación digital 3D.","#cita","Valorar implantes"),
+            ("ic-shield","Me han dicho que no tengo hueso o que mi caso es difícil","Estudiamos casos complejos con cirugía guiada, regeneración ósea y planificación avanzada antes de proponerte una solución.","#cita","Pedir segunda opinión"),
+            ("ic-smile","Quiero mejorar mi sonrisa","Ortodoncia invisible, carillas, blanqueamiento y estética dental según tu caso, tu boca y el resultado que buscas.","#cita","Valorar mi sonrisa"),
+            ("ic-phone","Tengo dolor o una urgencia","Te orientamos rápido y buscamos el primer hueco disponible para valorar tu caso.","tel","Necesito cita urgente"),
+            ("ic-search","Tengo un presupuesto de otra clínica","Revisamos tu diagnóstico, te explicamos las alternativas y te damos una opinión clara antes de que tomes una decisión.","#cita","Quiero una segunda opinión")],
+  "prose_h2":"Clínica dental en Tenerife Sur, en Abades",
   "intro":["Ocean Clinik está en <strong>Abades, Arico</strong>, a pocos minutos de El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras.",
-           "Somos una <strong>clínica dental en Tenerife Sur</strong> donde resuelves tu boca completa en un mismo centro y con un mismo equipo: <strong>odontología general</strong>, <strong>implantes</strong>, cirugía guiada, <strong>ortodoncia invisible</strong>, <strong>estética dental</strong>, periodoncia, endodoncia y <strong>urgencias</strong>.",
-           "Nuestro enfoque es sencillo: primero entendemos tu caso, después te explicamos el diagnóstico con imágenes y finalmente te damos un plan claro, por escrito y con opciones de financiación.",
-           "Si llevas tiempo retrasando ir al dentista o vienes con un presupuesto de otra clínica que no te han explicado bien, pide una valoración. Lo normal es salir sabiendo exactamente qué necesitas y cuánto cuesta."],
-  "cards":[("ic-clinic","Toda tu boca en un mismo centro","No tienes que ir de un sitio a otro. Resolvemos odontología general, implantes, ortodoncia y estética con el mismo equipo.","resolver toda mi boca en una misma clínica"),
-           ("ic-tooth","Revisión y prevención","Revisiones, limpiezas, empastes y el cuidado del día a día para que no llegues tarde a los problemas.","una revisión y limpieza dental"),
-           ("ic-shield","Implantes y rehabilitación","Soluciones fijas para recuperar dientes y volver a masticar con seguridad, también en casos complejos.","implantes o una rehabilitación dental"),
-           ("ic-card","Plan claro y financiación","Recibirás una propuesta por escrito, con fases, tiempos aproximados y opciones de pago si procede.","un plan de tratamiento con financiación")],
-  "faqs":[("¿Tienen todos los tratamientos en la misma clínica?","Sí. Integramos odontología general, implantes, ortodoncia y estética dental para que resuelvas tu caso completo sin desplazarte a varios sitios."),
-          ("¿Cuánto cuesta ir a una clínica dental en Tenerife Sur?","Depende del tratamiento. No cuesta lo mismo una revisión, una limpieza, una ortodoncia o una rehabilitación con implantes. Por eso primero valoramos tu caso y después te damos un presupuesto claro por escrito."),
-          ("¿Ofrecen financiación?","Sí. Si procede, te explicamos las opciones de pago disponibles para que puedas empezar el tratamiento adaptándolo a tu situación."),
-          ("¿Puedo pedir una segunda opinión?","Sí. Muchos pacientes vienen con dudas sobre un diagnóstico o un presupuesto anterior. Revisamos tu caso y te explicamos las opciones con claridad."),
-          ("¿Cómo pido cita?","Rellena el formulario o escríbenos por WhatsApp y te confirmamos tu cita en el primer hueco disponible.")]},
+           "Somos una <strong>clínica dental en Tenerife Sur</strong> especializada en tratamientos integrales: implantes dentales, cirugía guiada, rehabilitación oral, ortodoncia invisible, estética dental, odontología general, periodoncia, endodoncia y urgencias dentales.",
+           "Nuestro enfoque es sencillo: primero entendemos tu caso, después te mostramos el diagnóstico con imágenes y finalmente te damos un plan claro, por escrito y con opciones de financiación.",
+           "Si llevas tiempo sin ir al dentista, si tienes miedo, si te falta una pieza o si vienes de otra clínica con un presupuesto que no te han explicado bien, pide una valoración. Muchas veces actuar a tiempo evita tratamientos más largos, más incómodos y más costosos."],
+  "cards_h2":"Por qué elegir Ocean Clinik Tenerife Sur",
+  "cards":[("ic-search","Diagnóstico antes de presupuesto","No hacemos presupuestos rápidos sin entender tu boca. Primero valoramos tu caso, revisamos imágenes y te explicamos qué ocurre.","un diagnóstico antes del presupuesto"),
+           ("ic-tooth","Implantes y cirugía guiada","Planificamos los casos de implantología con tecnología digital para buscar más precisión, seguridad y comodidad durante el tratamiento.","implantes con cirugía guiada"),
+           ("ic-shield","Casos complejos y segundas opiniones","Si te han dicho que no tienes hueso, que tu caso es difícil o que necesitas una rehabilitación completa, podemos valorar tus opciones.","una segunda opinión para mi caso complejo"),
+           ("ic-card","Plan completo por escrito","Recibirás una propuesta clara, con fases, tiempos aproximados, opciones de tratamiento y financiación si procede.","un plan de tratamiento por escrito"),
+           ("ic-clinic","Todo tu caso en un mismo centro","Odontología general, implantes, ortodoncia, estética dental y prevención coordinadas por el mismo equipo.","resolver todo mi caso en un mismo centro")],
+  "doctor_h2":"Tu caso será valorado por el Dr. Claudio Vázquez y su equipo",
+  "doctor_badge":"Dirección clínica · Ocean Clinik Tenerife Sur",
+  "doctor_p":["En Ocean Clinik Tenerife Sur, los casos de implantes dentales, cirugía guiada, rehabilitación oral y tratamientos complejos son dirigidos por el <strong>Dr. Claudio Vázquez</strong>, especialista en implantología, cirugía oral y rehabilitación dental.",
+              "Su forma de trabajar se basa en tres pilares: <strong>diagnóstico preciso, planificación digital y explicación clara</strong> antes de empezar.",
+              "Antes de proponerte un tratamiento, revisaremos tu caso, estudiaremos tu hueso, encía, mordida y estética, y te explicaremos qué opciones tienes, cuál recomendamos y qué puede pasar si lo dejas avanzar."],
+  "doctor_checks":["Diagnóstico individual.","Estudio con tecnología digital.","Planificación de implantes y cirugía guiada.","Valoración de casos complejos.","Explicación visual del caso.","Plan de tratamiento por escrito.","Opciones de financiación.","Seguimiento durante todo el proceso."],
+  "pasos":[("Nos cuentas qué te preocupa","Dolor, falta de piezas, miedo, estética, presupuesto anterior o una segunda opinión."),
+           ("Estudiamos tu boca y tu caso","Revisamos tu situación con las pruebas necesarias para entender bien el problema antes de hablar de tratamiento."),
+           ("Te enseñamos lo que vemos","Usamos imágenes y explicaciones claras para que entiendas qué ocurre en tu boca."),
+           ("Te damos un plan por escrito","Con fases, tiempos aproximados, opciones de tratamiento y presupuesto claro."),
+           ("Decides sin presión","Resolvemos tus dudas y te ayudamos a elegir la opción más adecuada para tu caso.")],
+  "pasos_cta":"Pedir mi valoración dental",
+  "form_treatments":["Implantes dentales","Segunda opinión","Ortodoncia invisible","Estética dental","Dolor o urgencia","Revisión general","No lo sé, quiero que me orienten"],
+  "faqs":[("¿Cuál es la mejor clínica dental en Tenerife Sur?","La mejor clínica dental para ti será la que estudie bien tu caso, te explique el diagnóstico con claridad y te dé un plan de tratamiento adaptado a tu boca. En Ocean Clinik Abades trabajamos con diagnóstico digital, planificación de tratamientos y presupuesto por escrito para que puedas decidir con seguridad."),
+          ("¿Hacéis implantes dentales en Tenerife Sur?","Sí. En Ocean Clinik realizamos tratamientos de implantología, cirugía guiada y rehabilitación oral. Valoramos cada caso de forma individual para estudiar el hueso, la encía, la mordida y la estética antes de proponer un tratamiento."),
+          ("¿Puedo pedir una segunda opinión dental?","Sí. Muchos pacientes vienen con dudas sobre un diagnóstico o un presupuesto anterior. Revisamos tu caso, te explicamos las alternativas y te damos una valoración clara antes de que tomes una decisión."),
+          ("¿Qué pasa si me han dicho que no tengo hueso para implantes?","En algunos casos existen alternativas como regeneración ósea, cirugía guiada u otros enfoques de rehabilitación. Para saberlo es necesario estudiar tu caso con pruebas diagnósticas y planificación adecuada."),
+          ("¿Cuánto cuesta un tratamiento dental?","Depende del tratamiento y de la complejidad del caso. No cuesta lo mismo una revisión, una limpieza, una ortodoncia o una rehabilitación con implantes. Por eso primero valoramos tu caso y después te damos un presupuesto claro por escrito."),
+          ("¿Ofrecéis financiación?","Sí. Si el tratamiento lo permite, te explicamos opciones de financiación para que puedas adaptar el pago a tu situación."),
+          ("¿Dónde está Ocean Clinik Tenerife Sur?","Estamos en Abades, Arico, en C. 16 de Mayo, C.C. Abades, Local 5, 38588. Una ubicación cómoda para pacientes de Abades, El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras."),
+          ("¿Cómo puedo pedir cita?","Puedes rellenar el formulario, llamarnos o escribirnos por WhatsApp. Te contactaremos para confirmar el mejor hueco disponible.")]},
 
  {"slug":"implantes-dentales-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"implantes dentales Tenerife Sur","service":"Implantes dentales",
@@ -478,9 +533,13 @@ def build(p):
       ("ic-search","Vengo de otra clínica y quiero una segunda opinión","Revisamos tu caso y te explicamos alternativas con claridad.","#cita"),
     ]
     intent_title = p.get("intent_title","¿Qué necesitas solucionar?")
-    intent_html = "".join(
-      f'<a href="{tel_href if h=="tel" else h}"><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span></a>'
-      for ic,t,d,h in p.get("intent", default_intent))
+    intent_html = ""
+    for it in p.get("intent", default_intent):
+        ic,t,d,h = it[0],it[1],it[2],it[3]
+        ictcrta = it[4] if len(it)>4 else None
+        href = tel_href if h=="tel" else h
+        cta_span = f'<span class="intent-cta">{ictcrta} <svg class="ico"><use href="#ic-arrow"/></svg></span>' if ictcrta else ""
+        intent_html += f'<a href="{href}"><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span>{cta_span}</a>'
 
     # --- Stats (configurable: ej. ortodoncia +30 años) ---
     default_stats = [("+15","años de experiencia"),("+5.000","pacientes atendidos"),("4,9★","valoración media"),("Sí","financiación a medida")]
@@ -499,6 +558,35 @@ def build(p):
     doc_badge = p.get("doctor_badge", f"Dirección clínica · Ocean Clinik {c['name']}")
     doc_ps_html = "".join(f"<p>{x}</p>" for x in doc_ps)
     doc_checks_html = "".join('<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>'+x+'</span></li>' for x in doc_checks)
+
+    # --- Hero extra (refuerzo, microcopy, etiqueta WhatsApp) ---
+    refuerzo_html = f'<p class="refuerzo">{p["refuerzo"]}</p>' if p.get("refuerzo") else ""
+    hero_micro_html = f'<p class="hero-micro"><svg class="ico"><use href="#ic-chat"/></svg> {p["hero_micro"]}</p>' if p.get("hero_micro") else ""
+    wa_label = p.get("wa_label","WhatsApp")
+
+    # --- Sección "Por qué" (título configurable) ---
+    cards_kicker = p.get("cards_kicker","Por qué Ocean Clinik")
+    cards_h2 = p.get("cards_h2","Qué encontrarás en Ocean Clinik")
+
+    # --- Pasos "Cómo será tu primera valoración" (configurable) ---
+    default_pasos = [
+      ("Nos cuentas qué te preocupa","Dolor, estética, falta de piezas, miedo, presupuesto anterior o segunda opinión."),
+      ("Revisamos tu boca y tu caso","Usamos pruebas diagnósticas si son necesarias para entender bien el problema."),
+      ("Te explicamos lo que vemos","Sin tecnicismos innecesarios. Queremos que entiendas tu situación antes de decidir."),
+      ("Te damos un plan claro","Con fases, opciones y presupuesto por escrito."),
+      ("Decides sin presión","Te resolvemos dudas y puedes valorar la mejor opción para ti."),
+    ]
+    pasos_html = "".join(f'<div class="paso"><div class="n">{i+1}</div><h3>{t}</h3><p>{d}</p></div>' for i,(t,d) in enumerate(p.get("pasos", default_pasos)))
+    pasos_cta_html = f'<p style="text-align:center;margin-top:30px"><a class="btn" href="#cita">{p["pasos_cta"]} <svg class="ico"><use href="#ic-arrow"/></svg></a></p>' if p.get("pasos_cta") else ""
+
+    # --- Formulario: opciones del select de tratamiento + microcopy ---
+    default_treatments = ["Implantes dentales","Ortodoncia invisible","Estética dental","Odontología general","Dolor o urgencia","Segunda opinión","No lo sé, quiero que me orienten"]
+    treat_opts = "".join(f"<option>{t}</option>" for t in p.get("form_treatments", default_treatments))
+    form_micro = p.get("form_micro","Solo usaremos tus datos para gestionar tu solicitud de cita.")
+
+    # --- Barra fija móvil ---
+    sticky_left = p.get("sticky_left","Llamar")
+    sticky_right = p.get("sticky_right","Pedir valoración")
 
     mid_block = ""
     if p.get("mid_img"):
@@ -524,6 +612,7 @@ def build(p):
       "image": og_img,
       "url": canonical,
       "telephone": c["tel"],
+      "email": EMAIL,
       "priceRange": "€€",
       "address": {"@type":"PostalAddress","streetAddress":c["addr"],"addressLocality":c["locality"],"addressRegion":c.get("region",""),"postalCode":c["pc"],"addressCountry":"ES"},
       "areaServed": [{"@type":"City","name":a} for a in c["area"]],
@@ -584,10 +673,12 @@ def build(p):
       <span class="rating"><span class="st">{STARS}</span> 4,9 · valoración de pacientes</span>
       <h1>{p["h1"]}</h1>
       <p class="sub">{p["sub"]}</p>
+      {refuerzo_html}
       <div class="hero-cta">
         <a class="btn btn-lg" href="#cita">{cta_text} <svg class="ico"><use href="#ic-arrow"/></svg></a>
-        <a class="btn wa btn-lg" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a>
+        <a class="btn wa btn-lg" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} {wa_label}</a>
       </div>
+      {hero_micro_html}
       <div class="promesas">{promesas}</div>
       <div class="social"><span class="avatars"><span>M</span><span>J</span><span>L</span><span>+</span></span> <span><b>+5.000 pacientes</b> ya confían en Ocean Clinik</span></div>
     </div>
@@ -621,7 +712,7 @@ def build(p):
 {mid_block}
 <section class="soft">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-shield"/></svg> Por qué Ocean Clinik</span><h2>Qué encontrarás en Ocean Clinik</h2></div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-shield"/></svg> {cards_kicker}</span><h2>{cards_h2}</h2></div>
     <div class="cards">{cards}</div>
   </div>
 </section>
@@ -645,13 +736,8 @@ def build(p):
 <section>
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-plan"/></svg> Sin sorpresas</span><h2>Cómo será tu primera valoración</h2></div>
-    <div class="pasos">
-      <div class="paso"><div class="n">1</div><h3>Nos cuentas qué te preocupa</h3><p>Dolor, estética, falta de piezas, miedo, presupuesto anterior o segunda opinión.</p></div>
-      <div class="paso"><div class="n">2</div><h3>Revisamos tu boca y tu caso</h3><p>Usamos pruebas diagnósticas si son necesarias para entender bien el problema.</p></div>
-      <div class="paso"><div class="n">3</div><h3>Te explicamos lo que vemos</h3><p>Sin tecnicismos innecesarios. Queremos que entiendas tu situación antes de decidir.</p></div>
-      <div class="paso"><div class="n">4</div><h3>Te damos un plan claro</h3><p>Con fases, opciones y presupuesto por escrito.</p></div>
-      <div class="paso"><div class="n">5</div><h3>Decides sin presión</h3><p>Te resolvemos dudas y puedes valorar la mejor opción para ti.</p></div>
-    </div>
+    <div class="pasos">{pasos_html}</div>
+    {pasos_cta_html}
   </div>
 </section>
 
@@ -674,23 +760,29 @@ def build(p):
     <div class="form-card">
       <h3>Pide tu valoración</h3>
       <p class="intro">Te contactamos por WhatsApp o teléfono.</p>
-      <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Solicitud enviada';">
+      <form id="lead-form" novalidate>
         <label for="nombre">Nombre</label>
         <input id="nombre" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
         <label for="tel">Teléfono móvil</label>
-        <input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="600 000 000" required>
-        <p class="microcopy">Solo te contactaremos para gestionar tu cita.</p>
-        <label for="email">Email <span style="color:#9aa6af;font-weight:400">(opcional)</span></label>
-        <input id="email" name="email" type="email" autocomplete="email" placeholder="tucorreo@email.com">
+        <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 000 000" required>
+        <p class="err" data-for="tel">Revisa el número: necesitamos un móvil válido para poder confirmar tu cita.</p>
+        <label for="treat">Tratamiento que te interesa</label>
+        <select id="treat" name="treat" required>
+          <option value="" selected disabled>Selecciona</option>
+          {treat_opts}
+        </select>
         <label for="pref">¿Cuándo te viene mejor?</label>
         <select id="pref" name="pref" required>
           <option value="" selected disabled>Selecciona</option>
           <option>Hoy</option><option>Mañana</option><option>Esta semana</option><option>Me da igual</option>
         </select>
-        <label class="consent"><input type="checkbox" required> He leído la <a href="/politica-privacidad/" style="color:var(--blue);font-weight:700">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar mi cita.</label>
+        <label class="consent"><input type="checkbox" id="consent" required> He leído la <a href="/politica-privacidad/" style="color:var(--blue);font-weight:700">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar mi cita.</label>
+        <p class="err" data-for="consent">Debes aceptar la política de privacidad para que podamos gestionar tu solicitud.</p>
         <button type="submit" class="btn">Quiero que valoren mi caso</button>
-        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20Tenerife%20Sur">Enviar email</a></p>
+        <p class="microcopy" style="text-align:center">{form_micro}</p>
+        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20{c['name'].replace(' ','%20')}">Enviar email</a></p>
       </form>
+      <div class="form-ok" id="form-ok" hidden><b>Gracias. Hemos recibido tu solicitud.</b><br>Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible.</div>
     </div>
   </div>
 </section>
@@ -698,17 +790,17 @@ def build(p):
 <section class="testi soft">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Opiniones reales</span><h2>Pacientes que ya confiaron en Ocean Clinik</h2><p>Antes de decidir, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han venido a Ocean Clinik.</p></div>
-    <!-- WIDGET DE RESEÑAS DE GOOGLE (en vivo): pega aquí el embed de tu proveedor
-         (Trustindex / Elfsight / EmbedSocial) conectado a la ficha de Google de Ocean Clinik.
-         Sustituye el bloque .rw-ph por el <script>+<div> del widget. -->
+    <!-- PROGRAMADOR: sustituye el bloque .rw-ph por el widget EN VIVO de Google
+         (Trustindex / Elfsight / EmbedSocial) conectado a la ficha de Ocean Clinik.
+         Mostrar mínimo 6 reseñas, priorizando trato, confianza, implantes, miedo al dentista y explicación clara. -->
     <div class="reviews-widget" id="resenas-google">
       <div class="rw-ph">
         <span class="st">{STARS}</span>
-        <b>Aquí se mostrarán vuestras reseñas reales de Google</b>
-        <span class="note">Widget en vivo (se actualiza solo). El programador pega aquí el código de Trustindex o Elfsight conectado a vuestra ficha de Google.</span>
+        <b>Valoración media 4,9★ en Google</b>
+        <span class="note">Opiniones reales de pacientes que ya han confiado en Ocean Clinik.</span>
       </div>
     </div>
-    <p style="text-align:center;margin-top:22px"><a class="btn ghost" href="{REVIEWS}" target="_blank" rel="noopener">Ver todas las reseñas en Google <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
+    <p style="text-align:center;margin-top:22px"><a class="btn ghost" href="{REVIEWS}" target="_blank" rel="noopener">Ver reseñas en Google <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
   </div>
 </section>
 
@@ -755,9 +847,10 @@ def build(p):
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn tel" href="{tel_href}"><svg class="ico"><use href="#ic-phone"/></svg> Llamar</a>
-  <a class="btn" href="#cita">Pedir cita</a>
+  <a class="btn tel" href="{tel_href}"><svg class="ico"><use href="#ic-phone"/></svg> {sticky_left}</a>
+  <a class="btn" href="#cita">{sticky_right}</a>
 </div>
+{FORM_SCRIPT}
 </body>
 </html>'''
     return html

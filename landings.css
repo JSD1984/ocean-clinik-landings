@@ -80,6 +80,9 @@ section{padding:84px 0;position:relative}
 @keyframes rise{to{opacity:1;transform:none}}
 .hero h1{font-size:2.8rem;margin-bottom:18px;letter-spacing:-.02em;line-height:1.24}
 .hero p.sub{font-size:1.2rem;margin-bottom:26px;max-width:520px}
+.refuerzo{margin:0 0 20px;font-size:1.02rem;color:var(--ink);font-weight:600;border-left:3px solid var(--sky);padding-left:13px;max-width:560px}
+.hero-micro{display:flex;align-items:center;gap:7px;font-size:.85rem;color:var(--gris);margin:0 0 18px;font-weight:600}
+.hero-micro .ico{width:16px;height:16px;color:var(--sky-d);flex:none}
 .hero-cta{display:flex;gap:13px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
 .promesas{display:flex;gap:10px 20px;flex-wrap:wrap;margin-bottom:18px}
 .promesas span{display:flex;align-items:center;gap:8px;font-size:.92rem;color:var(--ink);font-weight:600}
@@ -113,7 +116,9 @@ section{padding:84px 0;position:relative}
 
 /* ===== SELECTOR DE INTENCIÓN ===== */
 .intent{padding:64px 0 18px}
-.intent .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.intent .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.intent .intent-cta{margin-top:auto;padding-top:10px;color:var(--blue);font-weight:700;font-size:.85rem;display:inline-flex;align-items:center;gap:5px}
+.intent .intent-cta .ico{width:15px;height:15px}
 .intent a{position:relative;display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);padding:22px;text-decoration:none;box-shadow:var(--shadow-xs);transition:transform .18s,box-shadow .18s,border-color .18s;overflow:hidden}
 .intent a::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .2s}
 .intent a:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:transparent}
@@ -193,6 +198,9 @@ input:focus,select:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 4
 .consent input{width:auto;margin-top:3px}
 .form-card .btn{width:100%;justify-content:center;margin-top:16px}
 .microcopy{font-size:.78rem;color:#9aa6af;margin-top:4px}
+.form-card .err{display:none;color:#d64545;font-size:.8rem;margin:3px 0 0;font-weight:600}
+.form-ok{background:#eafaf1;border:1px solid #b7e4c7;border-radius:var(--r-sm);padding:28px 22px;color:#176b3a;text-align:center;line-height:1.55}
+.form-ok b{color:#14613a;font-size:1.08rem}
 .form-card .alt{text-align:center;margin-top:12px;font-size:.9rem}.form-card .alt a{color:var(--blue2);font-weight:700}
 
 /* ===== TESTIMONIOS ===== */
@@ -265,7 +273,7 @@ footer ul{list-style:none}footer li{padding:4px 0}
 
 /* ===== Hueco widget reseñas Google ===== */
 .reviews-widget{max-width:880px;margin:0 auto}
-.rw-ph{border:2px dashed var(--sky);border-radius:var(--r);background:#fff;padding:40px 28px;text-align:center;box-shadow:var(--shadow-xs)}
+.rw-ph{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:40px 28px;text-align:center;box-shadow:var(--shadow-xs)}
 .rw-ph .st{justify-content:center;margin-bottom:10px}
 .rw-ph .st svg{width:24px;height:24px;fill:var(--gold);stroke:none}
 .rw-ph b{display:block;color:var(--blue);font-family:'Optima','Source Sans 3';font-size:1.25rem;margin-bottom:6px}
