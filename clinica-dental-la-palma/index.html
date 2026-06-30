@@ -273,25 +273,31 @@
     <div class="form-card">
       <h3>Pide tu valoración</h3>
       <p class="intro">Te contactamos por WhatsApp o teléfono.</p>
-      <form id="lead-form" novalidate>
+      <form id="lead-form" action="https://formsubmit.co/info@theoceanclinik.com" method="POST" data-endpoint="https://formsubmit.co/ajax/info@theoceanclinik.com" novalidate>
+        <input type="hidden" name="_subject" value="Nueva solicitud de cita — Ocean Clinik La Palma">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <input type="hidden" name="Origen" value="Clínica dental · La Palma">
         <label for="nombre">Nombre</label>
-        <input id="nombre" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required>
+        <input id="nombre" name="Nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
         <label for="tel">Teléfono móvil</label>
-        <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 000 000" required>
+        <input id="tel" name="Teléfono" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 000 000" required>
         <p class="err" data-for="tel">Revisa el número: necesitamos un móvil válido para poder confirmar tu cita.</p>
         <label for="treat">Tratamiento que te interesa</label>
-        <select id="treat" name="treat" required>
+        <select id="treat" name="Tratamiento" required>
           <option value="" selected disabled>Selecciona</option>
           <option>Implantes dentales</option><option>Ortodoncia invisible</option><option>Estética dental</option><option>Odontología general</option><option>Dolor o urgencia</option><option>Segunda opinión</option><option>No lo sé, quiero que me orienten</option>
         </select>
         <label for="pref">¿Cuándo te viene mejor?</label>
-        <select id="pref" name="pref" required>
+        <select id="pref" name="Cuándo" required>
           <option value="" selected disabled>Selecciona</option>
           <option>Hoy</option><option>Mañana</option><option>Esta semana</option><option>Me da igual</option>
         </select>
         <label class="consent"><input type="checkbox" id="consent" required> He leído la <a href="/politica-privacidad/" style="color:var(--blue);font-weight:700">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar mi cita.</label>
         <p class="err" data-for="consent">Debes aceptar la política de privacidad para que podamos gestionar tu solicitud.</p>
         <button type="submit" class="btn">Quiero que valoren mi caso</button>
+        <p class="err" data-for="send" style="text-align:center">No hemos podido enviar tu solicitud. Inténtalo de nuevo o escríbenos por WhatsApp.</p>
         <p class="microcopy" style="text-align:center">Solo usaremos tus datos para gestionar tu solicitud de cita.</p>
         <p class="alt">¿Prefieres otra vía? <a href="https://wa.me/34600000000?text=Hola%2C%20quiero%20pedir%20cita%20de%20Clínica%20dental%20en%20La%20Palma" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:info@theoceanclinik.com?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20La%20Palma">Enviar email</a></p>
       </form>
@@ -367,7 +373,8 @@
 (function(){
   var f=document.getElementById('lead-form'); if(!f) return;
   var tel=f.querySelector('#tel'), cons=f.querySelector('#consent'),
-      nom=f.querySelector('#nombre'), treat=f.querySelector('#treat'), pref=f.querySelector('#pref');
+      nom=f.querySelector('#nombre'), treat=f.querySelector('#treat'), pref=f.querySelector('#pref'),
+      btn=f.querySelector('button[type=submit]');
   function showErr(name,on){var e=f.querySelector('.err[data-for="'+name+'"]'); if(e) e.style.display=on?'block':'none';}
   function push(ev){ try{ window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:ev}); }catch(e){} }
   var started=false;
@@ -375,7 +382,7 @@
   if(treat) treat.addEventListener('change',function(){ push('select_treatment'); });
   if(pref) pref.addEventListener('change',function(){ push('select_time_preference'); });
   f.addEventListener('submit',function(ev){
-    ev.preventDefault(); var ok=true;
+    ev.preventDefault(); showErr('send',false); var ok=true;
     if(!nom.value.trim()){ ok=false; }
     var digits=(tel.value.match(/[0-9]/g)||[]).length;
     if(digits<9){ showErr('tel',true); ok=false; } else { showErr('tel',false); }
@@ -383,9 +390,18 @@
     if(pref && !pref.value){ ok=false; }
     if(cons && !cons.checked){ showErr('consent',true); ok=false; } else { showErr('consent',false); }
     if(!ok) return;
-    f.style.display='none';
-    var okBox=document.getElementById('form-ok'); if(okBox) okBox.hidden=false;
-    push('form_submit'); push('generate_lead');
+    var data={}; new FormData(f).forEach(function(v,k){ data[k]=v; });
+    data['Página']=location.href;
+    var url=f.getAttribute('data-endpoint')||f.getAttribute('action');
+    var orig=btn.textContent; btn.disabled=true; btn.textContent='Enviando…';
+    fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ if(!r.ok) throw new Error('http'); return r.json(); })
+      .then(function(){
+        f.style.display='none';
+        var okBox=document.getElementById('form-ok'); if(okBox) okBox.hidden=false;
+        push('form_submit'); push('generate_lead');
+      })
+      .catch(function(){ btn.disabled=false; btn.textContent=orig; showErr('send',true); });
   });
 })();
 </script>
