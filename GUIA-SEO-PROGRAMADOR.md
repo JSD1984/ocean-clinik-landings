@@ -1,158 +1,120 @@
-# Guía SEO para el programador — Ocean Clinik
+# Guía para el programador — Ocean Clinik Tenerife Sur (Abades)
 
-Cómo trabajar el SEO de las 13 landings locales. Resumen accionable basado en la estrategia
-del documento de referencia (web dental que capta y lleva a reservar) y en las keywords objetivo.
+5 landing pages SEO locales, estáticas (**HTML + CSS**, sin frameworks), responsive (mobile-first).
+Tu trabajo: revisarlas, completar lo pendiente y subirlas al servidor.
 
 ---
 
-## 1. Keywords → URL (1 landing por keyword)
+## 1. Qué es y estructura de archivos
 
-| Keyword prioritaria | URL |
+```
+/index.html                      ← índice de previsualización (NO subir a producción, o ponle noindex)
+/landings.css                    ← estilos compartidos por las 5 páginas
+/sitemap.xml  /robots.txt
+/assets/                         ← logos, fondos e imágenes (NO separar de los HTML)
+/seo-build/generate.py           ← generador: todo el contenido vive aquí
+/GUIA-SEO-PROGRAMADOR.md
+
+/dentista-tenerife-sur/index.html
+/clinica-dental-tenerife-sur/index.html
+/implantes-dentales-tenerife-sur/index.html
+/ortodoncia-invisible-tenerife-sur/index.html
+/carillas-dentales-tenerife/index.html
+/politica-privacidad/index.html  /aviso-legal/index.html
+```
+
+Keyword → URL (1 keyword = 1 URL = 1 H1):
+
+| Keyword | URL |
 |---|---|
 | dentista Tenerife Sur | `/dentista-tenerife-sur/` |
 | clínica dental Tenerife Sur | `/clinica-dental-tenerife-sur/` |
 | implantes dentales Tenerife Sur | `/implantes-dentales-tenerife-sur/` |
 | ortodoncia invisible Tenerife Sur | `/ortodoncia-invisible-tenerife-sur/` |
 | carillas dentales Tenerife | `/carillas-dentales-tenerife/` |
-| dentista La Palma | `/dentista-la-palma/` |
-| clínica dental La Palma | `/clinica-dental-la-palma/` |
-| implantes dentales La Palma | `/implantes-dentales-la-palma/` |
-| ortodoncia invisible La Palma | `/ortodoncia-invisible-la-palma/` |
-| medicina estética La Palma | `/medicina-estetica-la-palma/` |
-| botox La Palma | `/botox-la-palma/` |
-| ácido hialurónico La Palma | `/acido-hialuronico-la-palma/` |
-| carillas dentales La Palma | `/carillas-dentales-la-palma/` |
-
-**Regla:** 1 keyword principal = 1 URL = 1 H1. No mezclar dos keywords principales en la misma página
-(evita canibalización). Cada página ya trae su keyword en `title`, `meta description`, `H1`, primer
-párrafo y `<h2>`.
 
 ---
 
-## 2. On-page que ya viene hecho (no romper)
+## 2. CÓMO DESPLEGAR (importante)
 
-- `<title>` único por página con `keyword + ciudad + marca`.
-- `meta description` única (~150–160 car.) con keyword + llamada a la acción.
-- Un solo `<h1>` con la keyword y la ciudad. Jerarquía H2/H3 coherente.
-- `<link rel="canonical">` absoluto en cada página.
-- `robots: index,follow` en las 13 landings. `noindex` en legales y en `index.html` (preview).
-- Open Graph (título, descripción, imagen, url).
-- **Schema JSON-LD** por página: `Dentist`/`MedicalClinic` + `FAQPage` + `BreadcrumbList`.
-- `sitemap.xml` y `robots.txt` en la raíz.
-- Imágenes con `width`/`height` (evita CLS) y `alt` descriptivo; hero con `fetchpriority="high"`.
-- Enlazado interno entre páginas de la misma ciudad (sección "Otros tratamientos" + footer).
+- **Servir desde la RAÍZ del dominio.** Las páginas usan rutas **absolutas** (`/landings.css`, `/assets/...`).
+  Si lo cuelgas en un subdirectorio, no cargarán estilos ni imágenes. Si tiene que ir en subcarpeta,
+  cambia esas rutas a relativas o ajusta el `<base>`.
+- Cada slug es una **carpeta con `index.html`** → URLs limpias (`/dentista-tenerife-sur/`).
+  Asegúrate de que el servidor sirve `index.html` por defecto en cada carpeta.
+- Es **estático**: sirve con cualquier hosting (Apache/Nginx/CDN). No necesita Node ni build en el server.
+- HTTPS obligatorio. Caché larga en `/assets/` y compresión gzip/brotli.
 
 ---
 
-## 3. Lo que el programador DEBE completar
+## 3. Datos reales YA puestos (sede de Abades)
 
-Editar `seo-build/generate.py` (bloque `CONFIG`) y **regenerar** con `python3 seo-build/generate.py`,
-o editar a mano en cada página:
-
-1. `BASE_URL` → dominio final real (ahora `https://www.oceanclinik.es`). Afecta a canonical, OG, sitemap, schema.
-2. `WA` → número de WhatsApp real (ahora `34600000000`).
-3. `REVIEWS` → enlace real de reseñas de Google (ahora placeholder).
-4. `TEL_LP` / `TEL_TF` → teléfonos reales de cada sede.
-5. Dirección de **Tenerife Sur** (en `CITIES["tenerife-sur"]`): falta la dirección real (NAP).
-6. `sameAs` del schema → URL del Perfil de Empresa de Google de cada sede.
-7. Páginas legales (`/politica-privacidad/`, `/aviso-legal/`): redacción por un profesional (RGPD/AEPD).
-
-> **NAP consistente:** Nombre, Dirección y Teléfono deben ser IDÉNTICOS en la web, en Google Business
-> Profile y en directorios. Es un factor de SEO local.
+- Teléfono: **922 41 71 95** · WhatsApp: **+34 624 50 65 03**
+- Dirección: **C. 16 de Mayo, C.C. Abades, Local 5 · 38588 Abades (Arico), Santa Cruz de Tenerife**
+- Horario: **Lun–Vie 10:00–14:00 y 15:00–19:00 · Sáb 10:00–14:00 · Dom cerrado** (en hero, footer y schema)
 
 ---
 
-## 4. SEO local (lo que más mueve el ranking local)
+## 4. PENDIENTE de configurar (antes de publicar)
 
-Según el documento, el ranking local depende de **relevancia, distancia y popularidad**. Acciones:
+Todo lo editable está en `seo-build/generate.py` (bloque `CONFIG`). Edita y **regenera** (`python3 seo-build/generate.py`),
+o edita a mano en los HTML.
 
-- **Google Business Profile** completo y verificado por sede (categoría correcta: "Dentista" / "Clínica
-  dental" / "Médico estético"), horarios actualizados, fotos reales, enlace a la web y a la página de la sede.
-- **Reseñas**: pedirlas de forma sistemática y **responderlas todas**. Enlazar a la ficha desde la web.
-- Una landing por ciudad/servicio con **NAP + schema + FAQ local** (ya hecho).
-- Tenerife Sur: si no hay dirección física verificable, el ranking local del "map pack" será limitado;
-  prioriza primero la sede con dirección real (La Palma) y, para Tenerife Sur, trabaja contenido + GBP cuando exista local.
-
----
-
-## 5. Rendimiento (Core Web Vitals — objetivos de Google)
-
-Medir en p75 (PageSpeed/CrUX/RUM):
-
-- **LCP ≤ 2,5 s** · **INP ≤ 200 ms** · **CLS ≤ 0,1**
-
-Recomendaciones ya aplicadas / a mantener:
-- CSS único compartido (`/styles.css`), sin frameworks pesados, JS mínimo.
-- Imágenes con dimensiones explícitas; convertir las fotos a **WebP/AVIF** y comprimir (mejora LCP).
-- La fuente carga con `display=swap` y `preconnect`. Si se busca LCP máximo, valorar `font-display`
-  o fuente del sistema.
-- `loading="lazy"` en imágenes below-the-fold (la hero NO debe ser lazy).
-- Servir con HTTP/2, caché larga en `assets/` y compresión (gzip/brotli).
+1. **Dominio final** → variable `BASE_URL` (ahora `https://www.oceanclinik.es`). Afecta a canonical, Open Graph, sitemap y schema.
+2. **Reseñas de Google**:
+   - `REVIEWS` → enlace real de la ficha de Google.
+   - Widget en vivo (recomendado): crear en **Trustindex** o **Elfsight** ("Google Reviews"), conectar la ficha y
+     pegar el `<script>` donde está el bloque `.reviews-widget` (marcado en el HTML/plantilla). Lleva cookies → añadir aviso de cookies.
+3. **Email** de contacto → `EMAIL` (ahora `info@theoceanclinik.com`, confirmar).
+4. **Cifras del hero** (`4,9`, `+15 años`, `+5.000 pacientes`) → poner las reales o quitarlas (están en la plantilla).
+5. **Formularios**: ahora solo muestran confirmación visual. Conectar a CRM/agenda. Consentimiento RGPD
+   (casilla desmarcada, info por capas — ya está enlazada a la política).
+6. **Legales**: redactar `política de privacidad` y `aviso legal` (ahora son plantilla).
+7. Convertir imágenes de `/assets/` a **WebP/AVIF** y comprimir (Core Web Vitals).
 
 ---
 
-## 6. Conversión (estructura de la página)
+## 5. SEO técnico que YA viene hecho (no romper)
 
-Cada landing sigue el patrón del documento:
-1. **Hero claro**: `[servicio] en [ciudad]` + subtítulo de confianza.
-2. **CTA primaria única**: "Pedir cita". **CTA secundaria**: WhatsApp.
-3. **Trust bar** antes del scroll largo (diagnóstico, presupuesto, criterio clínico, trato).
-4. Contenido del servicio + "Cómo es tu primera visita" (4 pasos).
-5. **Formulario corto** (modelo "cita rápida"): Nombre, Móvil, Preferencia + consentimiento.
-6. FAQ + enlaces internos + footer con NAP.
-7. **CTA sticky en móvil** (Llamar / Pedir cita).
-
-Microcopy del formulario y consentimiento ya incluidos. Mantener el formulario corto:
-si necesitas más datos, usar un segundo paso, no alargar el primero.
+- 1 solo `<h1>` por página con keyword · jerarquía H2/H3 · HTML semántico.
+- `title` y `meta description` únicas · `<link rel="canonical">` absoluto · Open Graph.
+- **Schema JSON-LD** por página: `Dentist` + `FAQPage` + `BreadcrumbList`.
+- `sitemap.xml` y `robots.txt` en la raíz (regenerar si cambia el dominio).
+- Imágenes con `width`/`height` (evita CLS); hero con `fetchpriority="high"`.
+- Enlazado interno entre las páginas (sección "Otros tratamientos" + footer).
+- CTA `tel:` y WhatsApp · barra fija "Llamar / Pedir cita" en móvil.
+- Responsive verificado en móvil (375px).
 
 ---
 
-## 7. Formularios y captación de lead (conectar backend/CRM)
+## 6. Regenerar las páginas
 
-Ahora los formularios solo muestran confirmación visual. Hay que conectarlos. Recomendación del documento:
-
-- Capa de backend propia con API REST + webhooks; agenda (Google Calendar/Calendly) y CRM desacoplados.
-- Endpoint sugerido `POST /api/leads`. Payload con `source`, `flow`, `clinic_id`, `patient`,
-  `intent` (treatment, urgency), `consent` (versión política + timestamp), `tracking` (utm/gclid).
-- Validación en cliente y servidor; `autocomplete="name"`/`"tel"` (ya puesto); honeypot + rate limiting.
-- Consentimiento: casilla **desmarcada por defecto**, separada, con info por capas (ya enlazada a la política).
-- Datos de salud = categoría especial: **no** pedir síntomas/detalle clínico en el primer formulario.
-- SLA real: si no hay agenda en vivo, el copy promete "te confirmamos por WhatsApp o teléfono" (cumplirlo).
-
----
-
-## 8. Medición (GA4)
-
-Eventos clave a instrumentar:
-- `form_start`, `form_submit` (enhanced measurement) y **`generate_lead`** como evento clave.
-- Eventos custom: `click_to_call`, `click_whatsapp`, `click_pedir_cita`.
-- Marcar conversiones por landing/keyword para optimizar campañas.
-
-Tests A/B sugeridos: titular beneficio vs servicio · "Pedir cita" vs "Reservar cita" ·
-formulario 1 paso vs 2 pasos · CTA secundaria WhatsApp vs "Te llamamos".
-
----
-
-## 9. Cómo regenerar las páginas
-
-Todo el contenido vive en `seo-build/generate.py` (diccionario `PAGES` + `CONFIG`).
-Edita y ejecuta:
+Todo el contenido (textos, tarjetas, FAQ, CONFIG) está en `seo-build/generate.py`. Tras editar:
 
 ```bash
 python3 seo-build/generate.py
 ```
 
-Genera las 13 carpetas `/<slug>/index.html`, `sitemap.xml` y `robots.txt`. Los estilos están en `/styles.css`.
+Genera las 5 carpetas `/<slug>/index.html`, `sitemap.xml` y `robots.txt`.
 
 ---
 
-## 10. Checklist de publicación
+## 7. SEO local (lo que más mueve el ranking)
 
-- [ ] Poner `BASE_URL` con el dominio final y regenerar.
-- [ ] Teléfonos, WhatsApp, dirección de Tenerife Sur y enlace de reseñas reales.
-- [ ] Conectar formularios al CRM/agenda (+ consentimiento registrado).
+- **Google Business Profile** de Abades completo y verificado (categoría correcta, horarios, fotos, enlace a la web).
+- Pedir **reseñas** de forma sistemática y responderlas.
+- **NAP idéntico** en web, Google y directorios.
+
+---
+
+## 8. Checklist de publicación
+
+- [ ] Poner `BASE_URL` con el dominio real y regenerar.
+- [ ] Enlace/widget de reseñas de Google + email real.
+- [ ] Decidir cifras del hero (reales o quitar).
+- [ ] Conectar formularios al CRM/agenda (+ consentimiento).
 - [ ] Redactar política de privacidad y aviso legal.
-- [ ] Convertir imágenes a WebP/AVIF y comprimir.
-- [ ] Subir `sitemap.xml` a Google Search Console; verificar el dominio.
-- [ ] Crear/optimizar Google Business Profile por sede y enlazar a su landing.
-- [ ] Revisar Core Web Vitals en PageSpeed (móvil) y corregir si hace falta.
+- [ ] Imágenes a WebP/AVIF.
+- [ ] Subir a la **raíz** del dominio con HTTPS.
+- [ ] Enviar `sitemap.xml` a Google Search Console.
+- [ ] Revisar Core Web Vitals en PageSpeed (móvil).
