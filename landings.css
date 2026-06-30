@@ -72,7 +72,7 @@ section{padding:84px 0;position:relative}
    linear-gradient(180deg,#fff, #eef6fb)}
 .hero::before{content:"";position:absolute;width:620px;height:620px;right:-180px;top:-220px;border-radius:46% 54% 60% 40%/45% 45% 55% 55%;background:linear-gradient(140deg,rgba(55,171,221,.18),rgba(39,59,136,.10));filter:blur(8px);z-index:0}
 .hero .wrap{position:relative;z-index:2}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:start;padding-top:20px;padding-bottom:54px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:start;padding-top:6px;padding-bottom:54px}
 .hero-copy>*{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
 .hero-copy>*:nth-child(1){animation-delay:.05s}.hero-copy>*:nth-child(2){animation-delay:.15s}
 .hero-copy>*:nth-child(3){animation-delay:.25s}.hero-copy>*:nth-child(4){animation-delay:.35s}
@@ -251,7 +251,7 @@ footer ul{list-style:none}footer li{padding:4px 0}
 /* ===== RESPONSIVE ===== */
 @media(max-width:980px){
   .hero-grid,.form-grid,.feature .grid{grid-template-columns:1fr;gap:30px}
-  .hero-grid{padding-top:14px;padding-bottom:40px}
+  .hero-grid{padding-top:6px;padding-bottom:40px}
   section{padding:54px 0}
   .hero h1{font-size:2.0rem}.sec-head h2{font-size:2rem}
   .hero-art{order:0;min-height:auto;max-width:520px;margin:10px auto 0}
