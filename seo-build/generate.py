@@ -236,33 +236,64 @@ PAGES = [
 
  {"slug":"ortodoncia-invisible-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-ortodoncia-alineador.jpg",
   "kw":"ortodoncia invisible Tenerife Sur","service":"Ortodoncia invisible",
-  "title":"Ortodoncia invisible en Tenerife Sur | +30 años · Ocean Clinik",
-  "desc":"Ortodoncia invisible en Tenerife Sur con más de 30 años de experiencia. Alinea tu sonrisa de forma discreta con alineadores transparentes y un plan claro. Pide tu valoración en Ocean Clinik.",
-  "h1":"Ortodoncia invisible en <span class=\"accent\">Tenerife Sur</span> con más de 30 años de experiencia alineando sonrisas",
-  "sub":"Alineadores transparentes, cómodos y removibles, en manos de un equipo con <strong>más de 30 años de experiencia</strong> en ortodoncia. Antes de empezar valoramos tu caso, te enseñamos cómo quedaría y te damos un plan claro con la duración estimada y opciones de financiación.",
-  "cta":"Quiero valorar mi ortodoncia",
-  "promesas":["+30 años de experiencia","Discreta y removible","Financiación a medida"],
+  "title":"Ortodoncia invisible en Tenerife Sur | Alineadores transparentes | Ocean Clinik",
+  "desc":"Ortodoncia invisible en Tenerife Sur, en Abades. Alineadores transparentes, removibles y cómodos. Valoración, plan visual, presupuesto claro y financiación.",
+  "h1":"¿Quieres alinear tus dientes <span class=\"accent\">sin brackets</span> y sin que casi nadie lo note?",
+  "sub":"En Ocean Clinik Abades valoramos tu caso para saber si la ortodoncia invisible es adecuada para ti.<br><br>Alineadores transparentes, removibles y cómodos para mejorar tu sonrisa con un plan claro, seguimiento profesional y opciones de financiación.",
+  "refuerzo":"Antes de empezar estudiamos tu mordida, tus encías y tus expectativas. Después te enseñamos el plan, la duración estimada y el resultado previsto.",
+  "hero_micro":"Te contactamos por WhatsApp o teléfono para buscar el mejor hueco.",
+  "wa_label":"Hablar por WhatsApp",
+  "cta":"Quiero valorar mi ortodoncia invisible",
+  "promesas":["+30 años de experiencia en ortodoncia","Alineadores transparentes y removibles","Plan visual antes de empezar","Presupuesto claro por escrito","Financiación a medida"],
   "stats":[["+30","años de experiencia"],["+5.000","pacientes atendidos"],["4,9★","valoración media"],["Sí","financiación a medida"]],
+  "intent_title":"¿Qué quieres corregir con ortodoncia invisible?",
+  "intent":[("ic-tooth","Tengo los dientes apiñados","Si notas los dientes montados, torcidos o cada vez más juntos, valoramos si pueden corregirse con alineadores transparentes.","#cita","Valorar mi apiñamiento"),
+            ("ic-plan","Se me han movido los dientes después de llevar ortodoncia","Muchos pacientes llevaron brackets de jóvenes y con los años han notado que los dientes se han vuelto a mover.","#cita","Quiero volver a alinear mi sonrisa"),
+            ("ic-smile","Quiero mejorar mi sonrisa sin brackets","Ortodoncia invisible para adultos que buscan un tratamiento discreto, cómodo y compatible con su día a día.","#cita","Ver si soy candidato"),
+            ("ic-search","Tengo separación entre dientes","Estudiamos si los espacios entre dientes pueden cerrarse con alineadores y cuánto tiempo podría durar el tratamiento.","#cita","Valorar mi caso"),
+            ("ic-chat","No sé si necesito ortodoncia o estética dental","Te explicamos si tu caso necesita alineadores, carillas, blanqueamiento o una combinación de tratamientos.","#cita","Quiero que me orienten")],
+  "prose_h2":"Ortodoncia invisible en Tenerife Sur, en Abades",
+  "intro":["Ocean Clinik está en <strong>Abades, Arico</strong>, a pocos minutos de El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras.",
+           "Realizamos tratamientos de <strong>ortodoncia invisible en Tenerife Sur</strong> para pacientes que quieren alinear sus dientes sin brackets metálicos, con alineadores transparentes, removibles y cómodos.",
+           "Antes de empezar, valoramos tu mordida, tus encías, la posición de tus dientes y el resultado que buscas. No todos los casos necesitan lo mismo, por eso te explicamos si la ortodoncia invisible es la mejor opción para ti o si conviene combinarla con otro tratamiento estético dental.",
+           "Si quieres mejorar tu sonrisa, corregir dientes apiñados, cerrar espacios o volver a alinear los dientes después de una ortodoncia antigua, pide una valoración y te explicaremos tus opciones con claridad."],
+  "cards_h2":"Por qué elegir Ocean Clinik para tu ortodoncia invisible",
+  "cards":[("ic-search","Estudio antes de empezar","Valoramos mordida, encías, posición dental y expectativas para saber si la ortodoncia invisible es adecuada para tu caso.","un estudio de ortodoncia invisible"),
+           ("ic-plan","Plan visual del tratamiento","Te enseñamos qué movimientos se buscan, cómo puede evolucionar tu sonrisa y cuánto puede durar el tratamiento.","ver el plan visual de mi ortodoncia"),
+           ("ic-smile","Alineadores discretos y removibles","Apenas se notan y puedes quitártelos para comer y cepillarte, manteniendo una higiene sencilla.","ortodoncia con alineadores transparentes"),
+           ("ic-shield","Seguimiento profesional","Controlamos la evolución del tratamiento para ajustar el plan si es necesario y acompañarte hasta el resultado final.","el seguimiento de mi ortodoncia"),
+           ("ic-card","Presupuesto y financiación","Te damos un presupuesto claro por escrito y opciones de financiación para empezar sin agobios.","un presupuesto de ortodoncia con financiación")],
   "doctor_kicker":"Quién te trata",
-  "doctor_h2":"Ortodoncia con más de 30 años de experiencia",
-  "doctor_p":["La ortodoncia no va solo de poner alineadores: va de <strong>planificar bien el movimiento de los dientes</strong> y controlar cada fase. En Ocean Clinik tratamos la ortodoncia con un equipo que acumula <strong>más de 30 años de experiencia</strong> alineando sonrisas.",
-              "Antes de empezar estudiamos tu mordida y tus encías, te enseñamos el plan y te explicamos qué se puede conseguir de forma realista. El objetivo es que entiendas tu caso y veas el resultado previsto antes de dar el primer paso."],
-  "doctor_checks":["Más de 30 años de experiencia en ortodoncia.","Estudio de mordida y encías.","Plan visual del caso antes de empezar.","Alineadores transparentes y cómodos.","Revisiones de seguimiento.","Opciones de financiación."],
+  "doctor_h2":"Ortodoncia invisible planificada por un equipo con más de 30 años de experiencia",
+  "doctor_p":["La ortodoncia invisible no consiste solo en llevar alineadores transparentes. El resultado depende de un buen diagnóstico, una planificación correcta y un seguimiento profesional durante todo el tratamiento.",
+              "En Ocean Clinik Tenerife Sur, tu caso será valorado por un equipo con <strong>más de 30 años de experiencia</strong> en ortodoncia y dirigido clínicamente por el <strong>Dr. Claudio Vázquez</strong>.",
+              "Antes de empezar, estudiamos tu mordida, tus encías y la posición de tus dientes. Después te explicamos qué se puede conseguir de forma realista, cuánto puede durar el tratamiento y qué cuidados necesitarás para mantener el resultado."],
+  "doctor_checks":["Más de 30 años de experiencia en ortodoncia.","Estudio de mordida, encías y posición dental.","Plan visual antes de empezar.","Alineadores transparentes y removibles.","Revisiones de seguimiento.","Opciones de financiación.","Retención final para mantener el resultado."],
   "doctor_badge":"Ortodoncia · Ocean Clinik Tenerife Sur",
-  "prose_h2":"Ortodoncia invisible en Tenerife Sur, con más de 30 años de experiencia",
-  "intro":["La <strong>ortodoncia invisible en Tenerife Sur</strong> te permite alinear los dientes sin brackets metálicos, con férulas transparentes que apenas se notan y que puedes quitarte para comer y cepillarte.",
-           "En Ocean Clinik Abades tratamos la ortodoncia con un equipo de <strong>más de 30 años de experiencia</strong>. Valoramos primero tu <strong>mordida, encías y expectativas</strong>: no todas las sonrisas necesitan lo mismo, así que te explicamos si la ortodoncia invisible es la mejor opción para tu caso.",
-           "Antes de empezar te enseñamos el plan: qué movimientos se buscan, cuánto puede durar de forma realista y cómo será el seguimiento hasta el final.",
-           "Tanto si nunca te has tratado como si llevaste ortodoncia de joven y los dientes se han vuelto a mover, pide una valoración y te explicamos tus opciones, con financiación a medida."],
-  "cards":[("ic-smile","Casi invisible","Alineadores transparentes que pasan desapercibidos en tu día a día y al hablar.","ortodoncia invisible"),
-           ("ic-plan","Plan visual desde el principio","Te enseñamos qué movimientos se buscan y cómo quedaría tu sonrisa antes de empezar.","ver un plan de ortodoncia de mi caso"),
-           ("ic-heart","Cómoda y removible","Te la quitas para comer y mantienes la higiene de siempre, sin renuncias.","ortodoncia con alineadores removibles"),
-           ("ic-card","Financiación a medida","Un presupuesto claro por escrito y opciones de pago para empezar sin agobios.","ortodoncia invisible con financiación")],
-  "faqs":[("¿La ortodoncia invisible sirve para todos los casos?","Es adecuada para muchos casos, pero no para todos. Por eso valoramos tu mordida y tus encías antes de recomendarla y te decimos con sinceridad si es tu mejor opción."),
-          ("¿Cuánto dura el tratamiento?","Depende de cada caso. Tras el estudio te damos una estimación realista de la duración, sin prometer plazos imposibles."),
-          ("¿Se nota al hablar?","Los alineadores son transparentes y se ajustan a tus dientes, así que pasan muy desapercibidos. Es uno de los motivos por los que tantos pacientes los eligen."),
-          ("¿Puedo quitármela para comer?","Sí. Te la quitas para comer y para cepillarte, y vuelves a ponértela después. Por eso mantienes tu higiene de siempre."),
-          ("¿Cuánto cuesta la ortodoncia invisible?","El precio depende de la complejidad del caso. Te damos un presupuesto claro por escrito tras la valoración, con opciones de financiación.")]},
+  "doctor_cta":"Quiero saber si puedo llevar ortodoncia invisible",
+  "pasos_h2":"Cómo será tu valoración de ortodoncia invisible",
+  "pasos":[("Nos cuentas qué quieres mejorar","Dientes apiñados, separados, sonrisa desalineada, mordida incómoda o dientes que se han movido con los años."),
+           ("Revisamos tu boca y tu mordida","Valoramos la posición de tus dientes, encías, mordida y salud dental antes de recomendar alineadores."),
+           ("Te explicamos si eres candidato","No todos los casos son iguales. Te diremos si la ortodoncia invisible es adecuada para ti o si hay una opción mejor."),
+           ("Te enseñamos el plan","Te explicamos los movimientos previstos, la duración aproximada y cómo será el seguimiento."),
+           ("Te damos presupuesto y financiación","Recibirás una propuesta clara por escrito, con opciones de pago si quieres empezar el tratamiento.")],
+  "pasos_cta":"Pedir mi valoración de ortodoncia invisible",
+  "form_h2":"Pide tu valoración de ortodoncia invisible en Tenerife Sur",
+  "form_treat_label":"¿Qué quieres corregir?",
+  "form_treatments":["Dientes apiñados","Dientes separados","Dientes que se han movido tras ortodoncia","Quiero mejorar mi sonrisa","No sé si mi caso sirve para alineadores","Quiero una segunda opinión"],
+  "form_ideal":["Corregir dientes apiñados","Cerrar espacios entre dientes","Realinear tras una ortodoncia antigua","Mejorar tu sonrisa sin brackets","Un plan visual antes de empezar","Presupuesto y financiación"],
+  "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Valorar ortodoncia",
+  "reviews_h2":"Pacientes que ya confiaron en Ocean Clinik para mejorar su sonrisa",
+  "reviews_p":"Antes de empezar una ortodoncia, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han confiado en Ocean Clinik.",
+  "faqs":[("¿La ortodoncia invisible sirve para todos los casos?","No siempre. La ortodoncia invisible puede corregir muchos casos de apiñamiento, separación dental o movimientos leves y moderados, pero primero debemos valorar tu mordida, encías y posición dental. En la valoración te diremos si es adecuada para ti o si existe una alternativa mejor."),
+          ("¿Cuánto dura la ortodoncia invisible?","Depende de la complejidad del caso. Algunos tratamientos son más cortos y otros necesitan más meses de planificación y seguimiento. Tras el estudio te daremos una estimación realista de la duración."),
+          ("¿Se nota la ortodoncia invisible al hablar?","Los alineadores son transparentes y se ajustan a tus dientes, por lo que pasan muy desapercibidos. Al principio puede haber un pequeño periodo de adaptación, pero muchos pacientes hacen vida normal desde el primer día."),
+          ("¿Puedo quitarme los alineadores para comer?","Sí. Los alineadores se retiran para comer y para cepillarte los dientes. Después debes volver a colocarlos siguiendo las indicaciones del equipo para que el tratamiento avance correctamente."),
+          ("¿Cuánto cuesta la ortodoncia invisible en Tenerife Sur?","El precio depende de la complejidad del caso, la duración estimada y el número de alineadores necesarios. En Ocean Clinik te damos un presupuesto claro por escrito después de valorar tu caso."),
+          ("¿Se puede financiar la ortodoncia invisible?","Sí. Ofrecemos opciones de financiación para que puedas adaptar el tratamiento a tu situación."),
+          ("¿Puedo hacer ortodoncia invisible si ya llevé brackets antes?","Sí, muchos pacientes vienen porque los dientes se han movido años después de llevar brackets. Valoramos tu caso y te explicamos si puede corregirse con alineadores transparentes."),
+          ("¿Qué pasa al terminar el tratamiento?","Al finalizar, normalmente se indica una fase de retención para ayudar a mantener los dientes en la nueva posición. Te explicaremos cómo cuidarla y cuándo usarla."),
+          ("¿Dónde está Ocean Clinik Tenerife Sur?","Estamos en Abades, Arico, en C. 16 de Mayo, C.C. Abades, Local 5, 38588. Una ubicación cómoda para pacientes de Abades, El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras.")]},
 
  {"slug":"carillas-dentales-tenerife","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"carillas dentales Tenerife","service":"Carillas dentales",
@@ -596,9 +627,26 @@ def build(p):
     treat_opts = "".join(f"<option>{t}</option>" for t in p.get("form_treatments", default_treatments))
     form_micro = p.get("form_micro","Solo usaremos tus datos para gestionar tu solicitud de cita.")
 
-    # --- Barra fija móvil ---
+    # --- CTA de la sección del doctor (opcional) ---
+    doc_cta = p.get("doctor_cta", cta_text)
+    # --- Título de la sección de pasos (opcional) ---
+    pasos_h2 = p.get("pasos_h2", "Cómo será tu primera valoración")
+    # --- Formulario: título, etiqueta del select y lista "Ideal si necesitas" ---
+    form_h2 = p.get("form_h2", f"Pide tu valoración dental en {c['name']}")
+    form_treat_label = p.get("form_treat_label", "Tratamiento que te interesa")
+    default_ideal = ["Implantes dentales","Ortodoncia invisible","Estética dental","Dolor o urgencia","Segunda opinión","Presupuesto claro"]
+    form_ideal_html = "".join(f'<li><svg class="ico"><use href="#ic-check"/></svg> {x}</li>' for x in p.get("form_ideal", default_ideal))
+    # --- Reseñas: título y texto (opcional) ---
+    reviews_h2 = p.get("reviews_h2", "Pacientes que ya confiaron en Ocean Clinik")
+    reviews_p = p.get("reviews_p", "Antes de decidir, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han venido a Ocean Clinik.")
+
+    # --- Barra fija móvil (el botón izquierdo puede ser Llamar o WhatsApp) ---
     sticky_left = p.get("sticky_left","Llamar")
     sticky_right = p.get("sticky_right","Pedir valoración")
+    if p.get("sticky_left_wa"):
+        sticky_left_html = f'<a class="btn wa" href="{wa_link}" target="_blank" rel="noopener">{WA_SVG} {sticky_left}</a>'
+    else:
+        sticky_left_html = f'<a class="btn tel" href="{tel_href}"><svg class="ico"><use href="#ic-phone"/></svg> {sticky_left}</a>'
 
     # --- Envío del formulario por email (FormSubmit; funciona en hosting estático) ---
     form_action = f"https://formsubmit.co/{EMAIL}"          # destino de los leads
@@ -745,14 +793,14 @@ def build(p):
       <h2>{doc_h2}</h2>
       {doc_ps_html}
       <ul class="checks">{doc_checks_html}</ul>
-      <p style="margin-top:18px"><a class="btn" href="#cita">{cta_text} <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
+      <p style="margin-top:18px"><a class="btn" href="#cita">{doc_cta} <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-plan"/></svg> Sin sorpresas</span><h2>Cómo será tu primera valoración</h2></div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-plan"/></svg> Sin sorpresas</span><h2>{pasos_h2}</h2></div>
     <div class="pasos">{pasos_html}</div>
     {pasos_cta_html}
   </div>
@@ -762,17 +810,10 @@ def build(p):
   <div class="wrap form-grid">
     <div>
       <span class="eyebrow"><svg class="ico"><use href="#ic-calendar"/></svg> Pide tu valoración</span>
-      <h2>Pide tu valoración dental en {c['name']}</h2>
+      <h2>{form_h2}</h2>
       <p class="lead">Déjanos tus datos y te contactamos por WhatsApp o teléfono para buscar el mejor hueco.</p>
       <p style="color:#fff;font-weight:700;margin-bottom:8px">Ideal si necesitas:</p>
-      <ul>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Implantes dentales</li>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Ortodoncia invisible</li>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Estética dental</li>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Dolor o urgencia</li>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Segunda opinión</li>
-        <li><svg class="ico"><use href="#ic-check"/></svg> Presupuesto claro</li>
-      </ul>
+      <ul>{form_ideal_html}</ul>
     </div>
     <div class="form-card">
       <h3>Pide tu valoración</h3>
@@ -788,7 +829,7 @@ def build(p):
         <label for="tel">Teléfono móvil</label>
         <input id="tel" name="Teléfono" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 000 000" required>
         <p class="err" data-for="tel">Revisa el número: necesitamos un móvil válido para poder confirmar tu cita.</p>
-        <label for="treat">Tratamiento que te interesa</label>
+        <label for="treat">{form_treat_label}</label>
         <select id="treat" name="Tratamiento" required>
           <option value="" selected disabled>Selecciona</option>
           {treat_opts}
@@ -812,7 +853,7 @@ def build(p):
 
 <section class="testi soft">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Opiniones reales</span><h2>Pacientes que ya confiaron en Ocean Clinik</h2><p>Antes de decidir, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han venido a Ocean Clinik.</p></div>
+    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-star"/></svg> Opiniones reales</span><h2>{reviews_h2}</h2><p>{reviews_p}</p></div>
     <!-- PROGRAMADOR: sustituye el bloque .rw-ph por el widget EN VIVO de Google
          (Trustindex / Elfsight / EmbedSocial) conectado a la ficha de Ocean Clinik.
          Mostrar mínimo 6 reseñas, priorizando trato, confianza, implantes, miedo al dentista y explicación clara. -->
@@ -870,7 +911,7 @@ def build(p):
 </footer>
 
 <div class="sticky-cta">
-  <a class="btn tel" href="{tel_href}"><svg class="ico"><use href="#ic-phone"/></svg> {sticky_left}</a>
+  {sticky_left_html}
   <a class="btn" href="#cita">{sticky_right}</a>
 </div>
 {FORM_SCRIPT}
