@@ -311,3 +311,14 @@ footer ul{list-style:none}footer li{padding:4px 0}
 .card-wa{margin-top:14px;display:inline-flex;align-items:center;gap:7px;color:var(--green);font-weight:700;font-size:.92rem}
 .card-wa svg{width:18px;height:18px;fill:var(--green)}
 .card:hover .card-wa{text-decoration:underline}
+
+/* ===== Tema Ocean Aesthetic: fusión celeste + rosa ===== */
+body.theme-aesthetic{
+  --sky:#e5318a;        /* rosa submarca (acentos, iconos, bordes) */
+  --sky-d:#cf2578;
+  --sky-soft:#fdeaf4;
+  --grad:linear-gradient(120deg,#37ABDD 0%,#8a56b0 52%,#e5318a 100%); /* celeste → rosa */
+}
+body.theme-aesthetic .accent::after{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M2 7c20-8 38-8 58 0s38 8 58 0' fill='none' stroke='%23e5318a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") bottom/contain no-repeat}
+body.theme-aesthetic .hero::before{background:linear-gradient(140deg,rgba(229,49,138,.16),rgba(55,171,221,.12))}
+body.theme-aesthetic .brand-lock .dr b{color:#cf2578}

@@ -688,7 +688,7 @@ PAGES = [
           ("¿Dónde está Ocean Kids en La Palma?","Ocean Kids está dentro de Ocean Clinik La Palma, en Avda. El Puente 41, 38700 Santa Cruz de La Palma.")]},
 
  # ---------- MEDICINA ESTÉTICA · OCEAN AESTHETIC ----------
- {"slug":"arrugas-expresion-tenerife-sur","city":"tenerife-sur","type":"MedicalClinic","img":"foto-estetica-hero.jpg",
+ {"slug":"arrugas-expresion-tenerife-sur","city":"tenerife-sur","type":"MedicalClinic","img":"foto-estetica-hero.jpg","theme":"aesthetic",
   "kw":"tratamiento arrugas de expresión Tenerife Sur","service":"Arrugas de expresión",
   "brand_note":'<span class="dr"><b>Ocean Aesthetic</b>Medicina estética</span>',
   "hero_chip":False,
@@ -835,6 +835,7 @@ def build(p):
     c = CITIES[p["city"]]
     email = c.get("email", EMAIL)
     reviews = c.get("reviews", REVIEWS)
+    body_cls = "theme-aesthetic" if p.get("theme")=="aesthetic" else ""
     canonical = f"{BASE_URL}/{p['slug']}/"
     og_img = f"{BASE_URL}/assets/fotos/{p['img']}"
     tel_href = "tel:+34" + "".join(ch for ch in c["tel"] if ch.isdigit())[-9:]
@@ -1012,7 +1013,7 @@ def build(p):
 {jsonld}
 </script>
 </head>
-<body>
+<body class="{body_cls}">
 {SPRITE}
 
 <header class="topbar">
