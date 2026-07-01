@@ -551,60 +551,67 @@ PAGES = [
   "kw":"odontopediatría Tenerife Sur","service":"Odontopediatría · Ocean Kids",
   "brand_logo":"/assets/logo-ocean-kids-full.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
   "hero_logo":"/assets/logo-ocean-kids-tooth.png",
-  "title":"Odontopediatría en Tenerife Sur · Ocean Kids | Dentista de niños sin miedo",
-  "desc":"Odontopediatría en Tenerife Sur con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención, revisiones y control del crecimiento. Pide cita en Ocean Clinik Abades.",
-  "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista sin miedo y con una buena experiencia",
-  "sub":"Odontopediatría en Ocean Clinik Abades pensada para los más peques.<br><br>Cuidamos especialmente la primera visita para que sea positiva, vamos a su ritmo y le explicamos todo con palabras que entiende, para que coja confianza desde el principio.",
-  "refuerzo":"Primero conocemos a tu hijo/a y vemos su boca sin prisa. Después te explicamos qué necesita y cómo lo haremos para que sea una buena experiencia.",
+  "title":"Dentista infantil en Tenerife Sur | Odontopediatría Ocean Kids",
+  "desc":"Dentista infantil en Tenerife Sur, en Abades. Primera visita sin miedo, revisiones, caries, sellados, flúor y control del crecimiento dental. Pide cita en Ocean Kids.",
+  "h1":"¿Buscas un dentista infantil en Tenerife Sur donde tu hijo vaya <span class=\"accent\">sin miedo</span>?",
+  "sub":"En Ocean Kids, la odontopediatría de Ocean Clinik Abades, cuidamos la boca de los niños con paciencia, prevención y un trato adaptado a cada edad.<br><br>Primera visita, revisiones, caries, sellados, flúor y control del crecimiento dental en un entorno pensado para que tu hijo se sienta tranquilo desde el primer día.",
+  "refuerzo":"Primero conocemos a tu hijo/a sin prisa. Después revisamos su boca, te explicamos qué necesita y te damos un plan claro para cuidarla.",
   "hero_micro":"Te contactamos por WhatsApp o teléfono para buscar el mejor hueco.",
   "wa_label":"Hablar por WhatsApp",
   "cta":"Quiero pedir cita para mi hijo/a",
-  "promesas":["Primera visita en positivo","Trato adaptado a cada edad","Prevención desde pequeños","Padres informados en cada paso","Ambiente pensado para niños"],
-  "intent_title":"¿Qué necesita tu hijo o hija?",
-  "intent":[("ic-smile","Es su primera visita al dentista","La preparamos en positivo para que sea una buena experiencia y no coja miedo.","#cita","Reservar su primera visita"),
-            ("ic-shield","Tiene una caries o le duele","Lo valoramos con cuidado y te explicamos el tratamiento y cómo se lo contamos a tu hijo/a.","#cita","Pedir cita para mi hijo/a"),
-            ("ic-search","Quiero una revisión y prevención","Revisiones, sellados y flúor para prevenir y detectar a tiempo.","#cita","Pedir una revisión"),
-            ("ic-tooth","Me preocupa cómo le salen los dientes","Vigilamos el recambio y la mordida para guiar el crecimiento si hace falta.","#cita","Valorar su mordida"),
-            ("ic-heart","Tiene miedo o ha tenido una mala experiencia","Vamos a su ritmo para que recupere la confianza y el dentista deje de darle miedo.","#cita","Quiero que pierda el miedo")],
+  "promesas":["Primera visita sin miedo","Trato adaptado a cada edad","Prevención de caries","Padres informados en cada paso","Ambiente Ocean Kids para niños"],
+  "intent_title":"¿Qué necesita tu hijo/a?",
+  "intent":[("ic-smile","Es su primera visita al dentista","La preparamos en positivo, sin prisas y a su ritmo, para que conozca la clínica y no coja miedo.","#cita","Reservar su primera visita"),
+            ("ic-shield","Tiene una caries o le duele un diente","Lo valoramos con cuidado, te explicamos qué ocurre y buscamos la forma más tranquila de tratarlo.","#cita","Pedir cita para mi hijo/a"),
+            ("ic-search","Quiero una revisión y prevenir caries","Revisiones, sellados, flúor y consejos de higiene para detectar problemas a tiempo y evitar tratamientos mayores.","#cita","Pedir una revisión"),
+            ("ic-tooth","Me preocupa cómo le salen los dientes","Vigilamos el recambio dental, la mordida y el crecimiento para detectar si necesita seguimiento u ortodoncia infantil.","#cita","Valorar su mordida"),
+            ("ic-heart","Tiene miedo o tuvo una mala experiencia","Vamos poco a poco, le explicamos cada paso y trabajamos para que vuelva a confiar en el dentista.","#cita","Quiero que pierda el miedo")],
   "doctor_kicker":"Ocean Kids","doctor_badge":"Ocean Kids · Ocean Clinik Tenerife Sur",
-  "doctor_h2":"Ocean Kids: odontología infantil sin miedo",
-  "doctor_p":["Para un niño, la clave no es solo tratar la caries: es que <strong>salga contento y sin miedo</strong> para querer volver. En Ocean Kids cuidamos cada primera visita para que sea una experiencia positiva, explicándole todo con palabras que entiende y a su ritmo.",
-              "Trabajamos la <strong>prevención desde pequeños</strong> (revisiones, sellados, flúor y hábitos) y vigilamos cómo le salen los dientes y la mordida para actuar a tiempo si hace falta. Y tú estás informado en cada paso."],
-  "doctor_checks":["Primera visita en positivo, sin agobios.","Trato adaptado a cada edad.","Explicaciones que el niño entiende.","Prevención: revisiones, sellados y flúor.","Control del recambio y la mordida.","Información clara para los padres.","Ambiente pensado para niños."],
+  "doctor_h2":"Ocean Kids: odontología infantil con paciencia, prevención y confianza",
+  "doctor_p":["Para un niño, el dentista no debería ser una experiencia negativa. Por eso en Ocean Kids cuidamos tanto el tratamiento como la forma de vivir la visita.",
+              "Nuestro objetivo es que tu hijo/a se sienta acompañado, entienda lo que ocurre y <strong>no asocie el dentista con miedo</strong>.",
+              "El equipo de Ocean Clinik adapta la explicación a cada edad, permite que el niño se familiarice con el entorno y mantiene a los padres informados en todo momento."],
+  "doctor_checks":["Primera visita en positivo.","Trato adaptado a cada edad.","Explicaciones sencillas para el niño.","Prevención de caries.","Sellados y flúor.","Control del recambio dental.","Valoración de mordida y crecimiento.","Información clara para padres.","Ambiente Ocean Kids pensado para niños."],
   "doctor_cta":"Quiero pedir cita para mi hijo/a",
-  "prose_h2":"Odontopediatría en Tenerife Sur con Ocean Kids",
-  "intro":["<strong>Ocean Kids</strong> es la odontopediatría de Ocean Clinik en Abades: la odontología infantil pensada para que ir al dentista no dé miedo.",
-           "Sabemos que la primera experiencia lo marca todo. Por eso cuidamos la <strong>primera visita</strong> para que sea positiva: vamos a su ritmo, le enseñamos las cosas poco a poco y se lo explicamos con palabras que entiende.",
-           "Apostamos por la <strong>prevención desde pequeños</strong>: revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para evitar caries y detectar a tiempo cualquier problema.",
-           "Y vigilamos cómo le salen los dientes y cómo cierra la mordida, para guiar el crecimiento si hiciera falta. Tú estás informado en cada paso y decides con tranquilidad."],
+  "prose_h2":"Dentista infantil en Tenerife Sur, en Abades",
+  "intro":["<strong>Ocean Kids</strong> es la odontopediatría de Ocean Clinik en <strong>Abades, Tenerife Sur</strong>.",
+           "Atendemos a niños y niñas en sus primeras visitas al dentista, revisiones, prevención de caries, sellados, flúor, caries en dientes de leche y control del crecimiento dental.",
+           "Estamos en <strong>C. 16 de Mayo, C.C. Abades, Local 5</strong>, una ubicación cómoda para familias de Abades, El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras.",
+           "Sabemos que una mala experiencia puede hacer que un niño coja miedo al dentista durante años. Por eso cuidamos especialmente la <strong>primera visita</strong>: vamos a su ritmo, le explicamos todo con palabras sencillas y hacemos que se sienta acompañado.",
+           "También informamos a los padres en cada paso: qué vemos, qué recomendamos, qué se puede prevenir y cuándo conviene volver a revisión."],
   "cards_h2":"Por qué las familias eligen Ocean Kids",
-  "cards":[("ic-heart","Primera visita sin miedo","Preparamos la primera cita en positivo para que tu hijo/a coja confianza desde el principio.","la primera visita al dentista de mi hijo/a"),
-           ("ic-shield","Caries y molestias con cuidado","Tratamos caries y pequeñas urgencias con mucho tacto y explicándoselo a su ritmo.","una caries o molestia de mi hijo/a"),
-           ("ic-search","Revisiones y prevención","Revisiones, sellados y flúor para prevenir problemas y detectarlos a tiempo.","una revisión de prevención para mi hijo/a"),
-           ("ic-tooth","Control del crecimiento","Vigilamos cómo le salen los dientes y la mordida para guiar el crecimiento si hace falta.","una valoración de la mordida de mi hijo/a"),
-           ("ic-team","Padres informados en cada paso","Te explicamos qué tiene, qué haremos y cómo cuidar su boca en casa. Decides con tranquilidad.","información sobre el tratamiento de mi hijo/a")],
+  "cards":[("ic-heart","Primera visita sin miedo","No queremos que el niño entre en la clínica con tensión. Le damos tiempo, le explicamos las cosas y hacemos que la visita sea positiva.","la primera visita al dentista de mi hijo/a"),
+           ("ic-search","Prevención desde pequeños","Revisiones, flúor, sellados y consejos de higiene para evitar caries y detectar problemas antes de que den dolor.","una revisión de prevención para mi hijo/a"),
+           ("ic-shield","Tratamiento de caries con tacto","Si hay una caries o molestia, lo explicamos con calma al niño y a los padres, buscando que el tratamiento sea lo más llevadero posible.","una caries o molestia de mi hijo/a"),
+           ("ic-tooth","Control del crecimiento dental","Vigilamos cómo salen los dientes, el recambio y la mordida para actuar a tiempo si algo no evoluciona bien.","una valoración de la mordida de mi hijo/a"),
+           ("ic-team","Padres informados siempre","Te explicamos lo que vemos, qué opciones existen y qué puedes hacer en casa para cuidar su boca.","información sobre el tratamiento de mi hijo/a")],
   "pasos_h2":"Cómo será la primera visita de tu hijo/a",
-  "pasos":[("Nos cuentas qué necesita","Primera visita, una caries, una revisión, miedo al dentista o dudas sobre cómo le salen los dientes."),
-           ("Le damos la bienvenida sin prisa","Dejamos que se familiarice con la consulta y el equipo, a su ritmo y en positivo."),
-           ("Revisamos su boca con cuidado","Vemos dientes, encías y mordida, y detectamos a tiempo caries o problemas del crecimiento."),
-           ("Te explicamos qué necesita","Con palabras claras para ti y para tu hijo/a: qué tiene, qué haremos y cómo cuidarlo en casa."),
-           ("Plan de prevención y seguimiento","Revisiones, sellados o flúor si hace falta, y seguimiento del recambio de dientes.")],
+  "pasos":[("Nos cuentas qué te preocupa","Primera visita, caries, dolor, miedo al dentista, revisión o dudas sobre cómo le salen los dientes."),
+           ("Le damos la bienvenida sin prisa","Dejamos que conozca la consulta, el equipo y el entorno a su ritmo, sin forzar la experiencia."),
+           ("Revisamos su boca con cuidado","Valoramos dientes, encías, mordida y crecimiento para detectar caries o problemas a tiempo."),
+           ("Te explicamos qué necesita","Hablamos contigo de forma clara y también con tu hijo/a con palabras que pueda entender."),
+           ("Te damos un plan de prevención o tratamiento","Revisión, sellados, flúor, tratamiento de caries o seguimiento de mordida si hace falta.")],
   "pasos_cta":"Pedir cita para mi hijo/a",
   "form_h2":"Pide cita para tu hijo/a en Ocean Kids",
+  "form_name_label":"Nombre del padre/madre",
   "form_treat_label":"¿Qué necesita tu hijo/a?",
   "form_treatments":["Primera visita","Revisión y prevención","Tiene una caries o le duele","Miedo al dentista","Cómo le salen los dientes / mordida","No lo sé, quiero que me orienten"],
   "form_ideal":["Primera visita sin miedo","Revisiones y prevención","Caries en dientes de leche","Control del crecimiento","Sellados y flúor","Trato adaptado a cada edad"],
-  "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Pedir cita",
-  "reviews_h2":"Familias que ya confían en Ocean Kids",
+  "form_btn":"Pedir cita para mi hijo/a",
+  "form_micro":"Solo usaremos tus datos para gestionar la cita.",
+  "form_ok":"Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible en Ocean Kids.",
+  "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Cita para mi hijo/a",
+  "reviews_h2":"Familias que ya confiaron en Ocean Kids",
   "reviews_p":"Antes de llevar a tu hijo/a al dentista, es normal querer saber cómo ha sido la experiencia de otras familias. Aquí puedes ver opiniones reales de pacientes de Ocean Clinik.",
-  "faqs":[("¿A qué edad debe ir mi hijo al dentista por primera vez?","Lo ideal es una primera visita temprana, normalmente alrededor del primer año o cuando salen los primeros dientes, para acostumbrarle y prevenir. Si tu hijo ya es mayor y nunca ha ido, también es buen momento."),
-          ("¿Y si mi hijo tiene miedo al dentista?","Es muy normal. Por eso cuidamos especialmente la primera visita: vamos a su ritmo, le explicamos las cosas con palabras que entiende y buscamos que salga con una experiencia positiva."),
-          ("¿Puedo entrar con mi hijo/a a la consulta?","Sí. Valoramos cada caso, pero lo habitual es que puedas acompañarle para que se sienta seguro, sobre todo en las primeras visitas."),
-          ("¿Hacéis revisiones y prevención?","Sí. Revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para prevenir caries y detectar a tiempo cualquier problema."),
-          ("¿Tratáis las caries en dientes de leche?","Sí. Aunque sean dientes de leche, conviene tratarlos para evitar dolor e infecciones y para no afectar a los dientes definitivos. Te explicamos cada caso."),
-          ("¿Cada cuánto debe revisarse?","Como orientación, una revisión cada 6-12 meses según su riesgo de caries. En la visita te indicamos la frecuencia adecuada para tu hijo/a."),
-          ("¿Vigiláis si necesitará ortodoncia?","Sí. Controlamos el recambio de dientes y la mordida; si vemos que conviene guiar el crecimiento, te lo explicamos y valoramos las opciones a su debido tiempo."),
-          ("¿Dónde está Ocean Clinik Tenerife Sur?","Estamos en Abades, Arico, en C. 16 de Mayo, C.C. Abades, Local 5, 38588. Cómodo para familias de Abades, El Médano, Los Abrigos, Granadilla y San Miguel de Abona.")]},
+  "faqs":[("¿A qué edad debe ir mi hijo al dentista por primera vez?","Lo ideal es hacer una primera visita temprana, normalmente alrededor del primer año o cuando salen los primeros dientes. Sirve para revisar que todo evoluciona bien, prevenir problemas y acostumbrar al niño al dentista desde pequeño."),
+          ("¿Y si mi hijo tiene miedo al dentista?","Es muy normal. En Ocean Kids vamos a su ritmo, le explicamos las cosas con palabras sencillas y buscamos que la visita sea una experiencia positiva. El objetivo es que no asocie el dentista con miedo."),
+          ("¿Puedo entrar con mi hijo/a a la consulta?","Sí, especialmente en las primeras visitas. Valoramos cada caso, pero lo habitual es que puedas acompañarle para que se sienta más seguro."),
+          ("¿Tratáis caries en dientes de leche?","Sí. Aunque sean dientes de leche, conviene tratar las caries para evitar dolor, infecciones y posibles problemas en los dientes definitivos. Te explicaremos qué necesita según su caso."),
+          ("¿Hacéis sellados y flúor para prevenir caries?","Sí. Realizamos revisiones, sellados de fisuras, flúor y consejos de higiene y alimentación para reducir el riesgo de caries."),
+          ("¿Cada cuánto debe revisarse un niño?","Como orientación, suele recomendarse una revisión cada 6-12 meses, según el riesgo de caries y la edad. En la visita te indicaremos la frecuencia adecuada para tu hijo/a."),
+          ("¿Vigiláis si necesitará ortodoncia?","Sí. Controlamos el recambio dental, la mordida y el crecimiento. Si vemos que conviene valorar ortodoncia infantil o guiar el crecimiento, te lo explicaremos."),
+          ("¿Qué hago si mi hijo tiene dolor dental?","Pide cita cuanto antes o escríbenos por WhatsApp. Valoraremos si hay caries, inflamación, golpe o alguna molestia que necesite atención."),
+          ("¿Dónde está Ocean Kids en Tenerife Sur?","Ocean Kids está dentro de Ocean Clinik Abades, en C. 16 de Mayo, C.C. Abades, Local 5, 38588 Abades. Estamos en Tenerife Sur, cerca de El Médano, Los Abrigos, Granadilla, San Miguel de Abona y Las Chafiras.")]},
 
  {"slug":"odontopediatria-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"odontopediatría La Palma","service":"Odontopediatría · Ocean Kids",
@@ -824,6 +831,8 @@ def build(p):
     form_h2 = p.get("form_h2", f"Pide tu valoración dental en {c['name']}")
     form_lead = p.get("form_lead", "Déjanos tus datos y te contactamos por WhatsApp o teléfono para buscar el mejor hueco.")
     form_ok = p.get("form_ok", "Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible.")
+    form_name_label = p.get("form_name_label", "Nombre")
+    form_btn = p.get("form_btn", "Quiero que valoren mi caso")
     form_treat_label = p.get("form_treat_label", "Tratamiento que te interesa")
     default_ideal = ["Implantes dentales","Ortodoncia invisible","Estética dental","Dolor o urgencia","Segunda opinión","Presupuesto claro"]
     form_ideal_html = "".join(f'<li><svg class="ico"><use href="#ic-check"/></svg> {x}</li>' for x in p.get("form_ideal", default_ideal))
@@ -1024,7 +1033,7 @@ def build(p):
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
         <input type="hidden" name="Origen" value="{p['service']} · {c['name']}">
-        <label for="nombre">Nombre</label>
+        <label for="nombre">{form_name_label}</label>
         <input id="nombre" name="Nombre" type="text" autocomplete="name" placeholder="Tu nombre" required>
         <label for="tel">Teléfono móvil</label>
         <input id="tel" name="Teléfono" type="tel" inputmode="tel" autocomplete="tel" placeholder="600 000 000" required>
@@ -1041,7 +1050,7 @@ def build(p):
         </select>
         <label class="consent"><input type="checkbox" id="consent" required> He leído la <a href="/politica-privacidad/" style="color:var(--blue);font-weight:700">política de privacidad</a> y acepto el tratamiento de mis datos para gestionar mi cita.</label>
         <p class="err" data-for="consent">Debes aceptar la política de privacidad para que podamos gestionar tu solicitud.</p>
-        <button type="submit" class="btn">Quiero que valoren mi caso</button>
+        <button type="submit" class="btn">{form_btn}</button>
         <p class="err" data-for="send" style="text-align:center">No hemos podido enviar tu solicitud. Inténtalo de nuevo o escríbenos por WhatsApp.</p>
         <p class="microcopy" style="text-align:center">{form_micro}</p>
         <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20{c['name'].replace(' ','%20')}">Enviar email</a></p>
