@@ -748,6 +748,10 @@ PAGES = [
   "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Pedir valoración",
   "reviews_h2":"Pacientes que ya confiaron en Ocean Clinik",
   "reviews_p":"Antes de decidirte, es normal querer saber cómo ha sido la experiencia de otras personas. Aquí puedes ver opiniones reales de pacientes de Ocean Clinik.",
+  "brand_block":{"eyebrow":"Dentro de Ocean Clinik","h2":"Ocean Aesthetic, medicina estética dentro de los centros Ocean Clinik",
+    "p":["<strong>Ocean Aesthetic</strong> es la línea de <strong>medicina estética</strong> de <strong>Ocean Clinik · Salud y Bienestar</strong>, el grupo que reúne bajo un mismo criterio médico la odontología (<strong>Ocean Clinik · Estudio Dental</strong>), la estética facial (<strong>Ocean Aesthetic</strong>) y la salud y el bienestar general (<strong>Ocean Medic</strong>).",
+         "Nuestra filosofía es sencilla: <strong>salud y bienestar con criterio médico</strong>. Primero valoramos tu caso, te lo explicamos con claridad y solo recomendamos lo que de verdad encaja contigo, buscando siempre un resultado natural y un trato cercano.",
+         "Por eso Ocean Aesthetic no es un centro de estética aislado, sino parte de una <strong>clínica sanitaria</strong>: el mismo rigor, seguridad y seguimiento que esperas de un centro médico."]},
   "faqs":[("¿El resultado queda natural?","Sí. El objetivo es suavizar la expresión, no cambiar tu cara. Buscamos que te veas más descansado/a, no que se note que te has hecho algo."),
           ("¿Cuándo se empiezan a notar los resultados?","La evolución suele ser progresiva durante los días posteriores al tratamiento. En la valoración te explicamos qué puedes esperar en tu caso."),
           ("¿Cuánto dura el efecto?","Depende de cada persona, de la zona tratada y de la respuesta individual. Te lo explicamos en la valoración."),
@@ -930,6 +934,16 @@ def build(p):
     form_ok = p.get("form_ok", "Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible.")
     form_name_label = p.get("form_name_label", "Nombre")
     form_btn = p.get("form_btn", "Quiero que valoren mi caso")
+
+    # --- Bloque de filosofía / marca madre (opcional) ---
+    brand_block_html = ""
+    if p.get("brand_block"):
+        _bb = p["brand_block"]
+        _bps = "".join(f"<p>{x}</p>" for x in _bb.get("p", []))
+        brand_block_html = ('<section class="soft brandphil"><div class="wrap prose" style="max-width:860px;text-align:center">'
+            '<img src="/assets/logo-ocean-clinik.png" alt="Ocean Clinik · Salud y Bienestar" style="height:48px;width:auto;margin:0 auto 18px">'
+            f'<span class="eyebrow" style="justify-content:center">{_bb.get("eyebrow","Ocean Clinik · Salud y Bienestar")}</span>'
+            f'<h2>{_bb.get("h2","")}</h2>{_bps}</div></section>')
     form_treat_label = p.get("form_treat_label", "Tratamiento que te interesa")
     default_ideal = ["Implantes dentales","Ortodoncia invisible","Estética dental","Dolor o urgencia","Segunda opinión","Presupuesto claro"]
     form_ideal_html = "".join(f'<li><svg class="ico"><use href="#ic-check"/></svg> {x}</li>' for x in p.get("form_ideal", default_ideal))
@@ -1175,6 +1189,7 @@ def build(p):
   </div>
 </section>
 
+{brand_block_html}
 <section class="faq">
   <div class="wrap" style="max-width:820px">
     <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-chat"/></svg> Preguntas frecuentes</span><h2>{p["service"]} en {c['name']}: dudas frecuentes</h2></div>
