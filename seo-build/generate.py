@@ -15,15 +15,21 @@ TEL_TF   = "+34 600 000 000"                       # teléfono Tenerife Sur (cam
 CITIES = {
   "la-palma": {
     "name": "La Palma",
-    "tel": TEL_LP,
-    "addr": "Avda. El Puente 41",
+    "tel": "626 09 41 10",
+    "wa": "34626094110",
+    "email": "lapalma@theoceanclinik.com",
+    "addr": "Av. El Puente 41, Bajo, Local 9",
     "locality": "Santa Cruz de La Palma",
     "region": "Santa Cruz de Tenerife",
     "pc": "38700",
-    "area": ["Santa Cruz de La Palma","Los Llanos de Aridane","El Paso","Breña Alta","Breña Baja"],
-    "hours": "Lun–Vie 9:00–20:00",
-    "ohs": [{"d":["Monday","Tuesday","Wednesday","Thursday","Friday"],"o":"09:00","c":"20:00"}],
-    "nap_note": "",
+    "area": ["Santa Cruz de La Palma","Los Llanos de Aridane","El Paso","Breña Alta","Breña Baja","Villa de Mazo","Tazacorte","Tijarafe","Puntagorda","Barlovento","San Andrés y Sauces","Puntallana","Garafía","Fuencaliente"],
+    "hours": "Lun 11:00–19:00 · Mar–Vie 9:00–19:00 · Sáb 10:00–14:00",
+    "ohs": [
+      {"d":["Monday"],"o":"11:00","c":"19:00"},
+      {"d":["Tuesday","Wednesday","Thursday","Friday"],"o":"09:00","c":"19:00"},
+      {"d":["Saturday"],"o":"10:00","c":"14:00"},
+    ],
+    "nap_note": "Atendemos a toda La Palma",
   },
   "tenerife-sur": {
     "name": "Tenerife Sur",
@@ -755,6 +761,7 @@ ACTIVE_SLUGS = {
 # ====== PLANTILLA ======
 def build(p):
     c = CITIES[p["city"]]
+    email = c.get("email", EMAIL)
     canonical = f"{BASE_URL}/{p['slug']}/"
     og_img = f"{BASE_URL}/assets/fotos/{p['img']}"
     tel_href = "tel:+34" + "".join(ch for ch in c["tel"] if ch.isdigit())[-9:]
@@ -863,8 +870,8 @@ def build(p):
         sticky_left_html = f'<a class="btn tel" href="{tel_href}"><svg class="ico"><use href="#ic-phone"/></svg> {sticky_left}</a>'
 
     # --- Envío del formulario por email (FormSubmit; funciona en hosting estático) ---
-    form_action = f"https://formsubmit.co/{EMAIL}"          # destino de los leads
-    form_endpoint = f"https://formsubmit.co/ajax/{EMAIL}"   # endpoint AJAX (sin recargar)
+    form_action = f"https://formsubmit.co/{email}"          # destino de los leads (por sede)
+    form_endpoint = f"https://formsubmit.co/ajax/{email}"   # endpoint AJAX (sin recargar)
     form_subject = f"Nueva solicitud de cita — Ocean Clinik {c['name']}"
 
     mid_block = ""
@@ -891,7 +898,7 @@ def build(p):
       "image": og_img,
       "url": canonical,
       "telephone": c["tel"],
-      "email": EMAIL,
+      "email": email,
       "priceRange": "€€",
       "address": {"@type":"PostalAddress","streetAddress":c["addr"],"addressLocality":c["locality"],"addressRegion":c.get("region",""),"postalCode":c["pc"],"addressCountry":"ES"},
       "areaServed": [{"@type":"City","name":a} for a in c["area"]],
@@ -1058,7 +1065,7 @@ def build(p):
         <button type="submit" class="btn">{form_btn}</button>
         <p class="err" data-for="send" style="text-align:center">No hemos podido enviar tu solicitud. Inténtalo de nuevo o escríbenos por WhatsApp.</p>
         <p class="microcopy" style="text-align:center">{form_micro}</p>
-        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20{c['name'].replace(' ','%20')}">Enviar email</a></p>
+        <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{email}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20{c['name'].replace(' ','%20')}">Enviar email</a></p>
       </form>
       <div class="form-ok" id="form-ok" hidden><b>Gracias. Hemos recibido tu solicitud.</b><br>{form_ok}</div>
     </div>
@@ -1110,7 +1117,7 @@ def build(p):
       <ul>
         <li><a href="{tel_href}">Teléfono: {c["tel"]}</a></li>
         <li><a href="{wa_link}" target="_blank" rel="noopener">WhatsApp: {("+"+c.get("wa",WA)[:2]+" "+c.get("wa",WA)[2:]) if c.get("wa") else "consultar"}</a></li>
-        <li><a href="mailto:{EMAIL}">Email: {EMAIL}</a></li>
+        <li><a href="mailto:{email}">Email: {email}</a></li>
         <li><a href="{REVIEWS}" target="_blank" rel="noopener">Reseñas en Google</a></li>
       </ul>
     </div>
