@@ -549,8 +549,8 @@ PAGES = [
  # ---------- ODONTOPEDIATRÍA · OCEAN KIDS ----------
  {"slug":"odontopediatria-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"odontopediatría Tenerife Sur","service":"Odontopediatría · Ocean Kids",
-  "brand_logo":"/assets/logo-ocean-kids-wordmark-t.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
-  "hero_logo":"/assets/logo-ocean-kids-t.png",
+  "brand_logo":"/assets/logo-ocean-kids-full.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
+  "hero_logo":"/assets/logo-ocean-kids-tooth.png",
   "title":"Odontopediatría en Tenerife Sur · Ocean Kids | Dentista de niños sin miedo",
   "desc":"Odontopediatría en Tenerife Sur con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención, revisiones y control del crecimiento. Pide cita en Ocean Clinik Abades.",
   "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista sin miedo y con una buena experiencia",
@@ -608,8 +608,8 @@ PAGES = [
 
  {"slug":"odontopediatria-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"odontopediatría La Palma","service":"Odontopediatría · Ocean Kids",
-  "brand_logo":"/assets/logo-ocean-kids-wordmark-t.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
-  "hero_logo":"/assets/logo-ocean-kids-t.png",
+  "brand_logo":"/assets/logo-ocean-kids-full.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
+  "hero_logo":"/assets/logo-ocean-kids-tooth.png",
   "title":"Odontopediatría en La Palma · Ocean Kids | Dentista de niños sin miedo",
   "desc":"Odontopediatría en La Palma con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención, revisiones y control del crecimiento. Pide cita en Ocean Clinik La Palma.",
   "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista sin miedo y con una buena experiencia",
