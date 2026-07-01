@@ -690,7 +690,8 @@ PAGES = [
  # ---------- MEDICINA ESTÉTICA · OCEAN AESTHETIC ----------
  {"slug":"arrugas-expresion-tenerife-sur","city":"tenerife-sur","type":"MedicalClinic","img":"foto-estetica-hero.jpg","theme":"aesthetic",
   "kw":"tratamiento arrugas de expresión Tenerife Sur","service":"Arrugas de expresión",
-  "brand_note":'<span class="dr"><b>Ocean Aesthetic</b>Medicina estética</span>',
+  "brand_text":'<span class="brand-txt">Ocean <span style="color:#e5318a">Aesthetic</span></span>',
+  "brand_note":'<span class="dr">Medicina estética</span>',
   "hero_chip":False,
   "title":"Tratamiento para arrugas de expresión en Tenerife Sur | Ocean Clinik",
   "desc":"Suaviza arrugas de frente, entrecejo y patas de gallo con un tratamiento médico-estético personalizado en Ocean Clinik Tenerife Sur. Resultado natural y valoración previa.",
@@ -933,6 +934,7 @@ def build(p):
     brand_logo = p.get("brand_logo","/assets/logo-color.png")
     brand_logo_alt = p.get("brand_logo_alt","Ocean Clinik · Estudio Dental")
     brand_note = p.get("brand_note", '<span class="dr"><b>Dr. Claudio Vázquez</b>Dirección clínica</span>')
+    brand_mark = p.get("brand_text") or f'<img src="{brand_logo}" alt="{brand_logo_alt}" height="44" style="height:44px;width:auto">'
     # --- Hero con logo en lugar de foto (ej. Ocean Kids) ---
     hero_logo = p.get("hero_logo")
     hero_art_cls = "hero-art hero-logo" if hero_logo else "hero-art"
@@ -1019,7 +1021,7 @@ def build(p):
 <header class="topbar">
   <div class="wrap">
     <a class="brand-lock" href="/" aria-label="Ocean Clinik inicio">
-      <img src="{brand_logo}" alt="{brand_logo_alt}" height="44" style="height:44px;width:auto">
+      {brand_mark}
       {brand_note}
     </a>
     <div class="topbar-cta">
