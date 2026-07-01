@@ -324,7 +324,3 @@ body.theme-aesthetic .hero::before{background:linear-gradient(140deg,rgba(229,49
 body.theme-aesthetic .brand-lock .dr b{color:#cf2578}
 .brand-txt{font-family:'Optima','Source Sans 3',Georgia,serif;font-weight:600;font-size:1.3rem;letter-spacing:.02em;color:var(--blue);line-height:1;white-space:nowrap}
 
-/* Logo Ocean Clinik wordmark (ratio ancho): ajustes de tamaño */
-.brand-lock img{height:40px}
-footer img.logo{height:34px;width:auto;margin-bottom:14px}
-@media(max-width:600px){.brand-lock img{height:28px}.brand-lock .dr{display:none}}
