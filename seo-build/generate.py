@@ -549,6 +549,8 @@ PAGES = [
  # ---------- ODONTOPEDIATRÍA · OCEAN KIDS ----------
  {"slug":"odontopediatria-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"odontopediatría Tenerife Sur","service":"Odontopediatría · Ocean Kids",
+  "brand_logo":"/assets/logo-ocean-kids-wordmark-t.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
+  "hero_logo":"/assets/logo-ocean-kids-t.png",
   "title":"Odontopediatría en Tenerife Sur · Ocean Kids | Dentista de niños sin miedo",
   "desc":"Odontopediatría en Tenerife Sur con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención, revisiones y control del crecimiento. Pide cita en Ocean Clinik Abades.",
   "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista sin miedo y con una buena experiencia",
@@ -606,6 +608,8 @@ PAGES = [
 
  {"slug":"odontopediatria-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
   "kw":"odontopediatría La Palma","service":"Odontopediatría · Ocean Kids",
+  "brand_logo":"/assets/logo-ocean-kids-wordmark-t.png","brand_logo_alt":"Ocean Kids by Ocean Clinik","brand_note":"",
+  "hero_logo":"/assets/logo-ocean-kids-t.png",
   "title":"Odontopediatría en La Palma · Ocean Kids | Dentista de niños sin miedo",
   "desc":"Odontopediatría en La Palma con Ocean Kids: dentista de niños con trato amable para que tu hijo vaya sin miedo. Primera visita en positivo, prevención, revisiones y control del crecimiento. Pide cita en Ocean Clinik La Palma.",
   "h1":"<span class=\"accent\">Ocean Kids</span>: que tu hijo vaya al dentista sin miedo y con una buena experiencia",
@@ -827,6 +831,15 @@ def build(p):
     reviews_h2 = p.get("reviews_h2", "Pacientes que ya confiaron en Ocean Clinik")
     reviews_p = p.get("reviews_p", "Antes de decidir, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han venido a Ocean Clinik.")
 
+    # --- Marca de la barra superior (configurable: ej. logo Ocean Kids) ---
+    brand_logo = p.get("brand_logo","/assets/logo-color.png")
+    brand_logo_alt = p.get("brand_logo_alt","Ocean Clinik · Estudio Dental")
+    brand_note = p.get("brand_note", '<span class="dr"><b>Dr. Claudio Vázquez</b>Dirección clínica</span>')
+    # --- Hero con logo en lugar de foto (ej. Ocean Kids) ---
+    hero_logo = p.get("hero_logo")
+    hero_art_cls = "hero-art hero-logo" if hero_logo else "hero-art"
+    hero_main_src = hero_logo if hero_logo else f'/assets/fotos/{p["img"]}'
+
     # --- Barra fija móvil (el botón izquierdo puede ser Llamar o WhatsApp) ---
     sticky_left = p.get("sticky_left","Llamar")
     sticky_right = p.get("sticky_right","Pedir valoración")
@@ -908,8 +921,8 @@ def build(p):
 <header class="topbar">
   <div class="wrap">
     <a class="brand-lock" href="/" aria-label="Ocean Clinik inicio">
-      <img src="/assets/logo-color.png" alt="Ocean Clinik · Estudio Dental" width="120" height="44">
-      <span class="dr"><b>Dr. Claudio Vázquez</b>Dirección clínica</span>
+      <img src="{brand_logo}" alt="{brand_logo_alt}" height="44" style="height:44px;width:auto">
+      {brand_note}
     </a>
     <div class="topbar-cta">
       <a class="tellink" href="{tel_href}"><svg class="ico"><use href="#ic-phone"/></svg><span>{c["tel"]}</span></a>
@@ -934,8 +947,8 @@ def build(p):
       <div class="promesas">{promesas}</div>
       <div class="social"><span class="avatars"><span>M</span><span>J</span><span>L</span><span>+</span></span> <span><b>+5.000 pacientes</b> ya confían en Ocean Clinik</span></div>
     </div>
-    <div class="hero-art">
-      <div class="main"><img src="/assets/fotos/{p["img"]}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="560" fetchpriority="high"></div>
+    <div class="{hero_art_cls}">
+      <div class="main"><img src="{hero_main_src}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="560" fetchpriority="high"></div>
       <div class="glass rate"><span class="st">{STARS}</span><div><div class="big">4,9</div><small>en Google</small></div></div>
       <div class="glass nap"><b><svg class="ico"><use href="#ic-map"/></svg> {c["addr"]}</b><span>{c["locality"]} {c["pc"]} · {c["hours"]}{nap_note}</span></div>
       <a class="dr-chip" href="#doctor" aria-label="Conoce al Dr. Claudio Vázquez"><img src="/assets/fotos/foto-doctor.jpg" alt="Dr. Claudio Vázquez"><div><b>Dr. Claudio Vázquez</b><span>Conócelo →</span></div></a>

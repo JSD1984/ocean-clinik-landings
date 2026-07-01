@@ -102,6 +102,10 @@ section{padding:84px 0;position:relative}
 .hero-art{position:relative;min-height:440px;animation:rise .8s .2s cubic-bezier(.2,.7,.2,1) both}
 .hero-art .main{position:absolute;inset:8% 0 0 8%;border-radius:30px 30px 30px 60px;overflow:hidden;box-shadow:var(--shadow)}
 .hero-art .main img{width:100%;height:100%;object-fit:cover}
+.hero-art.hero-logo{min-height:auto;display:flex;align-items:center;justify-content:center}
+.hero-art.hero-logo .main{position:static;inset:auto;width:100%;max-width:470px;background:none;box-shadow:none;border-radius:0;overflow:visible;aspect-ratio:auto}
+.hero-art.hero-logo .main img{width:100%;height:auto;object-fit:contain}
+.hero-art.hero-logo .glass,.hero-art.hero-logo .dr-chip{display:none}
 .glass{position:absolute;background:rgba(255,255,255,.72);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);border-radius:18px;box-shadow:var(--shadow-sm);padding:14px 16px}
 .glass.rate{top:2%;left:-2%;display:flex;align-items:center;gap:10px}
 .glass.rate .big{font-family:'Optima','Source Sans 3';font-size:1.5rem;color:var(--blue);font-weight:600;line-height:1}
