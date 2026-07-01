@@ -931,10 +931,10 @@ def build(p):
     reviews_p = p.get("reviews_p", "Antes de decidir, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han venido a Ocean Clinik.")
 
     # --- Marca de la barra superior (configurable: ej. logo Ocean Kids) ---
-    brand_logo = p.get("brand_logo","/assets/logo-color.png")
-    brand_logo_alt = p.get("brand_logo_alt","Ocean Clinik · Estudio Dental")
+    brand_logo = p.get("brand_logo","/assets/logo-ocean-clinik.png")
+    brand_logo_alt = p.get("brand_logo_alt","Ocean Clinik · Salud & Bienestar")
     brand_note = p.get("brand_note", '<span class="dr"><b>Dr. Claudio Vázquez</b>Dirección clínica</span>')
-    brand_mark = p.get("brand_text") or f'<img src="{brand_logo}" alt="{brand_logo_alt}" height="44" style="height:44px;width:auto">'
+    brand_mark = p.get("brand_text") or f'<img src="{brand_logo}" alt="{brand_logo_alt}">'
     # --- Hero con logo en lugar de foto (ej. Ocean Kids) ---
     hero_logo = p.get("hero_logo")
     hero_art_cls = "hero-art hero-logo" if hero_logo else "hero-art"
@@ -1187,7 +1187,7 @@ def build(p):
 <footer>
   <div class="wrap">
     <div>
-      <img class="logo" src="/assets/logo-blanco.png" alt="Ocean Clinik · Estudio Dental" width="106" height="59">
+      <img class="logo" src="/assets/logo-ocean-clinik-blanco.png" alt="Ocean Clinik · Salud & Bienestar">
       <p><b>Ocean Clinik</b> · {c["addr"]}, {c["pc"]} {c["locality"]}</p>
       <p>Dirección clínica: Dr. Claudio Vázquez y equipo</p>
     </div>
