@@ -1194,9 +1194,11 @@ def build(p):
 <footer>
   <div class="wrap">
     <div>
-      <img class="logo" src="/assets/logo-blanco.png" alt="Ocean Clinik · Estudio Dental" width="106" height="59">
-      <p><b>Ocean Clinik</b> · {c["addr"]}, {c["pc"]} {c["locality"]}</p>
-      <p>Dirección clínica: Dr. Claudio Vázquez y equipo</p>
+      <a class="footer-brand" href="{BASE_URL}/" aria-label="Ir a la web de Ocean Clinik · Salud y Bienestar">
+        <img class="logo" src="/assets/logo-ocean-clinik-blanco.png" alt="Ocean Clinik · Salud y Bienestar">
+      </a>
+      <p><b>Ocean Clinik · Salud y Bienestar</b> · {c["addr"]}, {c["pc"]} {c["locality"]}</p>
+      <p class="brand-family"><b>Ocean Clinik · Salud y Bienestar</b> engloba Ocean Clinik · Estudio Dental, <b>Ocean Aesthetic</b> y Ocean Medic. <a href="{BASE_URL}/">Ir a la web principal →</a></p>
     </div>
     <div>
       <h4>Contacto</h4>

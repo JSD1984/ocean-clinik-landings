@@ -324,3 +324,9 @@ body.theme-aesthetic .hero::before{background:linear-gradient(140deg,rgba(229,49
 body.theme-aesthetic .brand-lock .dr b{color:#cf2578}
 .brand-txt{font-family:'Optima','Source Sans 3',Georgia,serif;font-weight:600;font-size:1.3rem;letter-spacing:.02em;color:var(--blue);line-height:1;white-space:nowrap}
 
+
+/* Footer: marca madre corporativa */
+footer .footer-brand{display:inline-block}
+footer img.logo{height:38px;width:auto;margin-bottom:8px}
+footer .brand-family{font-size:.82rem;line-height:1.5;margin-top:8px;opacity:.9}
+footer .brand-family a{color:var(--sky);font-weight:700;text-decoration:none;white-space:nowrap}
