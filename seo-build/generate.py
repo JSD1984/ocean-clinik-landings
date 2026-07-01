@@ -687,6 +687,75 @@ PAGES = [
           ("¿Qué hago si mi hijo tiene dolor dental?","Pide cita cuanto antes o escríbenos por WhatsApp. Valoraremos si hay caries, inflamación, golpe o alguna molestia que necesite atención."),
           ("¿Dónde está Ocean Kids en La Palma?","Ocean Kids está dentro de Ocean Clinik La Palma, en Avda. El Puente 41, 38700 Santa Cruz de La Palma.")]},
 
+ # ---------- MEDICINA ESTÉTICA · OCEAN AESTHETIC ----------
+ {"slug":"arrugas-expresion-tenerife-sur","city":"tenerife-sur","type":"MedicalClinic","img":"foto-estetica-hero.jpg",
+  "kw":"tratamiento arrugas de expresión Tenerife Sur","service":"Arrugas de expresión",
+  "brand_note":'<span class="dr"><b>Ocean Aesthetic</b>Medicina estética</span>',
+  "hero_chip":False,
+  "title":"Tratamiento para arrugas de expresión en Tenerife Sur | Ocean Clinik",
+  "desc":"Suaviza arrugas de frente, entrecejo y patas de gallo con un tratamiento médico-estético personalizado en Ocean Clinik Tenerife Sur. Resultado natural y valoración previa.",
+  "h1":"¿Notas tu rostro más <span class=\"accent\">cansado</span> aunque tú no te sientas así?",
+  "sub":"En Ocean Aesthetic, la medicina estética de Ocean Clinik Tenerife Sur, realizamos tratamientos médico-estéticos para suavizar las arrugas de expresión de frente, entrecejo y patas de gallo.<br><br>Buscamos un resultado natural, elegante y adaptado a tu rostro, con valoración médica previa.",
+  "refuerzo":"Queremos que te digan «qué buena cara tienes», no «qué te has hecho».",
+  "hero_micro":"Te contactamos por WhatsApp o teléfono para tu valoración estética.",
+  "wa_label":"Hablar por WhatsApp",
+  "cta":"Pedir valoración estética",
+  "promesas":["Valoración médica previa","Resultado natural","Enfoque médico-estético","Clínica sanitaria","4,9★ en Google"],
+  "stats":[["4,9★","valoración en Google"],["+5.000","pacientes en Ocean Clinik"],["Sí","valoración médica previa"],["Natural","ese es el objetivo"]],
+  "intent_title":"¿Qué te gustaría suavizar?",
+  "intent":[("ic-search","Frente marcada","Líneas horizontales que aparecen al levantar las cejas.","#cita","Valorar mi frente"),
+            ("ic-shield","Entrecejo","Esa expresión de enfado o tensión entre las cejas.","#cita","Valorar mi entrecejo"),
+            ("ic-smile","Patas de gallo","Arruguitas en el contorno de los ojos al sonreír.","#cita","Valorar mi mirada"),
+            ("ic-heart","Mirada cansada","Aspecto cansado o endurecido aunque descanses bien.","#cita","Suavizar mi mirada"),
+            ("ic-sparkle","No sé qué necesito","Valoramos tu rostro y te decimos qué conviene y qué no.","#cita","Quiero que me orienten")],
+  "prose_h2":"Tratamiento para arrugas de expresión en Tenerife Sur, en Abades",
+  "intro":["Con el paso del tiempo, algunos gestos repetidos pueden hacer que el rostro parezca más cansado, serio o envejecido de lo que realmente te sientes. Las zonas más habituales son la <strong>frente, el entrecejo y las patas de gallo</strong>.",
+           "El objetivo no es transformar tu rostro ni borrar tu expresión. Es <strong>suavizar las arrugas dinámicas</strong>, relajar visualmente la mirada y conseguir un aspecto más fresco, descansado y natural.",
+           "Puede encajar contigo si tienes arrugas de expresión visibles, notas la frente o el entrecejo muy marcados, te dicen que pareces cansado/a y quieres verte mejor <strong>sin un cambio radical</strong>. No es lo tuyo si buscas un cambio exagerado o solo el precio más bajo.",
+           "Trabajamos siempre desde un enfoque <strong>médico-estético</strong>, con valoración previa: primero estudiamos tu rostro y tus expectativas, y después te decimos qué conviene y qué no."],
+  "cards_h2":"Por qué hacerlo en Ocean Clinik Tenerife Sur",
+  "cards":[("ic-shield","Clínica sanitaria, no un centro improvisado","Un entorno médico, con profesionales sanitarios y protocolos, no una estética low cost.","una valoración en una clínica médica"),
+           ("ic-search","Valoración personalizada","Analizamos tu rostro, tus gestos y tus expectativas antes de proponerte nada.","una valoración estética personalizada"),
+           ("ic-heart","Resultado natural","Buscamos suavizar, no cambiarte: que se note que estás mejor, no lo que te has hecho.","un resultado natural para mis arrugas"),
+           ("ic-plan","Enfoque médico-estético","Te decimos qué zonas conviene tratar y cuáles no, con criterio médico.","un enfoque médico para mi caso"),
+           ("ic-clock","Seguimiento posterior","Control después del tratamiento para valorar la evolución y el resultado.","el seguimiento tras el tratamiento")],
+  "doctor_kicker":"Quién te atiende",
+  "doctor_name":"Equipo médico-estético","doctor_badge":"Medicina estética · Ocean Clinik Tenerife Sur",
+  "doctor_img":"foto-estetica-doctora.jpg",
+  "doctor_h2":"Un enfoque médico-estético, no un centro de belleza",
+  "doctor_p":["En estética facial, la diferencia está en el criterio. Por eso valoramos tu caso desde un punto de vista <strong>médico</strong>: estudiamos tu rostro, tus gestos y tu expresión antes de recomendarte nada.",
+              "Nuestro objetivo no es hacerte más tratamientos, sino los que de verdad encajan contigo, buscando siempre un <strong>resultado natural</strong> y proporcionado.",
+              "Trabajamos en una clínica sanitaria, con profesionales cualificados y seguimiento posterior, para que te sientas acompañado/a y seguro/a en todo el proceso."],
+  "doctor_checks":["Valoración médica previa.","Análisis de tu rostro y tus gestos.","Plan personalizado, sin excesos.","Resultado natural y proporcionado.","Profesionales sanitarios.","Seguimiento posterior."],
+  "doctor_cta":"Pedir valoración estética",
+  "pasos_h2":"Cómo trabajamos en Ocean Clinik",
+  "pasos":[("Valoración inicial","Analizamos tu rostro, gestos, expresión y expectativas."),
+           ("Diagnóstico médico-estético","Vemos qué zonas conviene tratar y cuáles no."),
+           ("Plan personalizado","Definimos un tratamiento adaptado a tu anatomía facial."),
+           ("Tratamiento","Procedimiento rápido, realizado por un profesional sanitario."),
+           ("Revisión","Control posterior para valorar evolución y resultado.")],
+  "pasos_cta":"Pedir valoración estética",
+  "form_h2":"Pide tu valoración estética en Tenerife Sur",
+  "form_lead":"Déjanos tus datos y te contactamos para darte una valoración estética personalizada.",
+  "form_name_label":"Nombre",
+  "form_treat_label":"¿Qué te gustaría mejorar?",
+  "form_treatments":["Frente marcada","Entrecejo","Patas de gallo","Mirada cansada","No lo sé, quiero que me orienten"],
+  "form_ideal":["Frente marcada","Entrecejo","Patas de gallo","Mirada cansada","Un resultado natural","Valoración médica previa"],
+  "form_btn":"Quiero mi valoración",
+  "form_micro":"Solo usaremos tus datos para gestionar tu valoración.",
+  "form_ok":"Te contactaremos por WhatsApp o teléfono para tu valoración estética en Ocean Clinik Tenerife Sur.",
+  "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Pedir valoración",
+  "reviews_h2":"Pacientes que ya confiaron en Ocean Clinik",
+  "reviews_p":"Antes de decidirte, es normal querer saber cómo ha sido la experiencia de otras personas. Aquí puedes ver opiniones reales de pacientes de Ocean Clinik.",
+  "faqs":[("¿El resultado queda natural?","Sí. El objetivo es suavizar la expresión, no cambiar tu cara. Buscamos que te veas más descansado/a, no que se note que te has hecho algo."),
+          ("¿Cuándo se empiezan a notar los resultados?","La evolución suele ser progresiva durante los días posteriores al tratamiento. En la valoración te explicamos qué puedes esperar en tu caso."),
+          ("¿Cuánto dura el efecto?","Depende de cada persona, de la zona tratada y de la respuesta individual. Te lo explicamos en la valoración."),
+          ("¿Duele?","Suele ser un procedimiento bien tolerado y rápido. Te explicamos cada paso antes de empezar."),
+          ("¿Puedo hacer vida normal después?","En la mayoría de los casos sí, siguiendo las indicaciones del profesional."),
+          ("¿Necesito una valoración previa?","Sí. Es importante valorar tu rostro y tus expectativas antes de indicar cualquier tratamiento."),
+          ("¿Sirve para todas las arrugas?","No. Hay arrugas de expresión, arrugas estáticas, flacidez o pérdida de volumen. Cada caso requiere un enfoque diferente, y por eso valoramos primero tu rostro."),
+          ("¿Cuánto cuesta el tratamiento?","El precio depende de las zonas a tratar y del plan recomendado para tu caso. Por eso, antes de darte un presupuesto cerrado, hacemos una valoración para indicarte qué necesitas realmente y qué no.")]},
+
  {"slug":"medicina-estetica-la-palma","city":"la-palma","type":"MedicalClinic","img":"foto-facial.jpg",
   "kw":"medicina estética La Palma","service":"Medicina estética facial",
   "title":"Medicina estética en La Palma | Ocean Clinik",
@@ -758,6 +827,7 @@ ACTIVE_SLUGS = {
   "implantes-dentales-la-palma","implantes-dentales-tenerife-sur",
   "ortodoncia-invisible-la-palma","ortodoncia-invisible-tenerife-sur",
   "odontopediatria-la-palma","odontopediatria-tenerife-sur",
+  "arrugas-expresion-tenerife-sur",
 }
 
 # ====== PLANTILLA ======
@@ -812,6 +882,9 @@ def build(p):
     doc_badge = p.get("doctor_badge", f"Dirección clínica · Ocean Clinik {c['name']}")
     doc_ps_html = "".join(f"<p>{x}</p>" for x in doc_ps)
     doc_checks_html = "".join('<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>'+x+'</span></li>' for x in doc_checks)
+    doctor_name = p.get("doctor_name","Dr. Claudio Vázquez")
+    doctor_img = p.get("doctor_img","foto-doctor.jpg")
+    dr_chip_html = (f'<a class="dr-chip" href="#doctor" aria-label="Conoce a {doctor_name}"><img src="/assets/fotos/{doctor_img}" alt="{doctor_name}"><div><b>{doctor_name}</b><span>Conócelo →</span></div></a>') if p.get("hero_chip", True) else ""
 
     # --- Hero extra (refuerzo, microcopy, etiqueta WhatsApp) ---
     refuerzo_html = f'<p class="refuerzo">{p["refuerzo"]}</p>' if p.get("refuerzo") else ""
@@ -975,7 +1048,7 @@ def build(p):
       <div class="main"><img src="{hero_main_src}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="560" fetchpriority="high"></div>
       <div class="glass rate"><span class="st">{STARS}</span><div><div class="big">4,9</div><small>en Google</small></div></div>
       <div class="glass nap"><b><svg class="ico"><use href="#ic-map"/></svg> {c["addr"]}</b><span>{c["locality"]} {c["pc"]} · {c["hours"]}{nap_note}</span></div>
-      <a class="dr-chip" href="#doctor" aria-label="Conoce al Dr. Claudio Vázquez"><img src="/assets/fotos/foto-doctor.jpg" alt="Dr. Claudio Vázquez"><div><b>Dr. Claudio Vázquez</b><span>Conócelo →</span></div></a>
+      {dr_chip_html}
     </div>
   </div>
 </section>
@@ -1009,8 +1082,8 @@ def build(p):
 <section class="feature" id="doctor">
   <div class="wrap grid">
     <div class="ph">
-      <img src="/assets/fotos/foto-doctor.jpg" alt="Dr. Claudio Vázquez, dirección clínica de Ocean Clinik" loading="lazy" width="520" height="650">
-      <div class="badge"><b>Dr. Claudio Vázquez</b><span>{doc_badge}</span></div>
+      <img src="/assets/fotos/{doctor_img}" alt="{doctor_name} — {p['service']} en {c['name']}" loading="lazy" width="520" height="650">
+      <div class="badge"><b>{doctor_name}</b><span>{doc_badge}</span></div>
     </div>
     <div>
       <span class="eyebrow"><svg class="ico"><use href="#ic-team"/></svg> {doc_kicker}</span>
