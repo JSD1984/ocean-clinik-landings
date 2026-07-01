@@ -704,11 +704,11 @@ PAGES = [
   "promesas":["Valoración médica previa","Resultado natural","Enfoque médico-estético","Clínica sanitaria","4,9★ en Google"],
   "stats":[["4,9★","valoración en Google"],["+5.000","pacientes en Ocean Clinik"],["Sí","valoración médica previa"],["Natural","ese es el objetivo"]],
   "intent_title":"¿Qué te gustaría suavizar?",
-  "intent":[("ic-search","Frente marcada","Líneas horizontales que aparecen al levantar las cejas.","#cita","Valorar mi frente"),
-            ("ic-shield","Entrecejo","Esa expresión de enfado o tensión entre las cejas.","#cita","Valorar mi entrecejo"),
-            ("ic-smile","Patas de gallo","Arruguitas en el contorno de los ojos al sonreír.","#cita","Valorar mi mirada"),
-            ("ic-heart","Mirada cansada","Aspecto cansado o endurecido aunque descanses bien.","#cita","Suavizar mi mirada"),
-            ("ic-sparkle","No sé qué necesito","Valoramos tu rostro y te decimos qué conviene y qué no.","#cita","Quiero que me orienten")],
+  "intent":[("ic-search","Frente marcada","Líneas horizontales que aparecen al levantar las cejas.","wa","Consultar por WhatsApp"),
+            ("ic-shield","Entrecejo","Esa expresión de enfado o tensión entre las cejas.","wa","Consultar por WhatsApp"),
+            ("ic-smile","Patas de gallo","Arruguitas en el contorno de los ojos al sonreír.","wa","Consultar por WhatsApp"),
+            ("ic-heart","Mirada cansada","Aspecto cansado o endurecido aunque descanses bien.","wa","Consultar por WhatsApp"),
+            ("ic-sparkle","No sé qué necesito","Valoramos tu rostro y te decimos qué conviene y qué no.","wa","Escríbenos por WhatsApp")],
   "prose_h2":"Tratamiento para arrugas de expresión en Tenerife Sur, en Abades",
   "intro":["Con el paso del tiempo, algunos gestos repetidos pueden hacer que el rostro parezca más cansado, serio o envejecido de lo que realmente te sientes. Las zonas más habituales son la <strong>frente, el entrecejo y las patas de gallo</strong>.",
            "El objetivo no es transformar tu rostro ni borrar tu expresión. Es <strong>suavizar las arrugas dinámicas</strong>, relajar visualmente la mirada y conseguir un aspecto más fresco, descansado y natural.",
@@ -862,9 +862,16 @@ def build(p):
     for it in p.get("intent", default_intent):
         ic,t,d,h = it[0],it[1],it[2],it[3]
         ictcrta = it[4] if len(it)>4 else None
-        href = tel_href if h=="tel" else h
+        extra = ""
+        if h=="tel":
+            href = tel_href
+        elif h=="wa":
+            href = f"https://wa.me/{c.get('wa', WA)}?text=" + urllib.parse.quote(f"Hola, me gustaría una valoración estética. Me interesa: {t}.")
+            extra = ' target="_blank" rel="noopener"'
+        else:
+            href = h
         cta_span = f'<span class="intent-cta">{ictcrta} <svg class="ico"><use href="#ic-arrow"/></svg></span>' if ictcrta else ""
-        intent_html += f'<a href="{href}"><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span>{cta_span}</a>'
+        intent_html += f'<a href="{href}"{extra}><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span>{cta_span}</a>'
     intent_cls = f"grid4 grid4-n{len(p.get('intent', default_intent))}"
 
     # --- Stats (configurable: ej. ortodoncia +30 años) ---
