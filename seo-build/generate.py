@@ -7,7 +7,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # ====== CONFIG (CAMBIAR por datos reales) ======
 BASE_URL = "https://www.oceanclinik.es"          # dominio final (cambiar)
 WA       = "34600000000"                          # WhatsApp real (cambiar)
-REVIEWS  = "https://share.google/U0qKaHg19MunLLRec"  # ficha Google Ocean Clinik (reseñas). Por sede: CITIES[..]["reviews"]
+REVIEWS  = "https://share.google/ND29C2uiRdIEbzk7M"  # ficha Google por defecto. Por sede: CITIES[..]["reviews"]
 EMAIL    = "info@theoceanclinik.com"               # email de contacto (confirmar)
 TEL_LP   = "+34 600 000 000"                       # teléfono La Palma (cambiar)
 TEL_TF   = "+34 600 000 000"                       # teléfono Tenerife Sur (cambiar)
@@ -36,7 +36,7 @@ CITIES = {
     "name": "Tenerife Sur",
     "tel": "922 41 71 95",
     "wa": "34624506503",
-    "reviews": "https://share.google/U0qKaHg19MunLLRec",
+    "reviews": "https://share.google/ND29C2uiRdIEbzk7M",
     "addr": "C. 16 de Mayo, C.C. Abades, Local 5",
     "locality": "Abades",
     "region": "Santa Cruz de Tenerife",
