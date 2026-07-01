@@ -234,7 +234,7 @@ PAGES = [
           ("¿Duele ponerse un implante?","El tratamiento se realiza con anestesia y un protocolo cuidadoso. Te explicamos cada fase antes de empezar para que sepas en todo momento qué va a pasar."),
           ("¿Puedo financiar los implantes?","Sí. Te explicamos las opciones de financiación para que puedas empezar el tratamiento sin renunciar a la mejor solución para tu caso.")]},
 
- {"slug":"ortodoncia-invisible-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
+ {"slug":"ortodoncia-invisible-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-ortodoncia-alineador.jpg",
   "kw":"ortodoncia invisible Tenerife Sur","service":"Ortodoncia invisible",
   "title":"Ortodoncia invisible en Tenerife Sur | +30 años · Ocean Clinik",
   "desc":"Ortodoncia invisible en Tenerife Sur con más de 30 años de experiencia. Alinea tu sonrisa de forma discreta con alineadores transparentes y un plan claro. Pide tu valoración en Ocean Clinik.",
@@ -350,7 +350,7 @@ PAGES = [
           ("¿Puedo dejar la dentadura por algo fijo?","En muchos casos sí. Valoramos tu situación y te explicamos las opciones fijas sobre implantes."),
           ("¿Puedo financiar los implantes?","Sí. Te explicamos las opciones de financiación para que puedas empezar el tratamiento sin renunciar a la mejor solución para tu caso.")]},
 
- {"slug":"ortodoncia-invisible-la-palma","city":"la-palma","type":"Dentist","img":"foto-clinica.jpg",
+ {"slug":"ortodoncia-invisible-la-palma","city":"la-palma","type":"Dentist","img":"foto-ortodoncia-alineador.jpg",
   "kw":"ortodoncia invisible La Palma","service":"Ortodoncia invisible",
   "title":"Ortodoncia invisible en La Palma | +30 años · Ocean Clinik",
   "desc":"Ortodoncia invisible en La Palma con más de 30 años de experiencia. Alinea tu sonrisa de forma discreta con alineadores transparentes y un plan claro. Pide tu valoración en Ocean Clinik.",
