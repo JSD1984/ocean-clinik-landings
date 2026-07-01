@@ -690,7 +690,7 @@ PAGES = [
  # ---------- MEDICINA ESTÉTICA · OCEAN AESTHETIC ----------
  {"slug":"arrugas-expresion-tenerife-sur","city":"tenerife-sur","type":"MedicalClinic","img":"foto-estetica-hero.jpg","theme":"aesthetic",
   "kw":"tratamiento arrugas de expresión Tenerife Sur","service":"Arrugas de expresión",
-  "brand_text":'<span class="brand-txt">Ocean <span style="color:#e5318a">Aesthetic</span></span>',
+  "brand_logo":"/assets/logo-ocean-aesthetic.png","brand_logo_alt":"Ocean Aesthetic · Medicina estética",
   "brand_note":'<span class="dr">Medicina estética</span>',
   "hero_chip":False,
   "title":"Tratamiento para arrugas de expresión en Tenerife Sur | Ocean Clinik",
