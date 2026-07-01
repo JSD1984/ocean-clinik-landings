@@ -696,8 +696,12 @@ PAGES = [
   "title":"Tratamiento para arrugas de expresión en Tenerife Sur | Ocean Clinik",
   "desc":"Suaviza arrugas de frente, entrecejo y patas de gallo con un tratamiento médico-estético personalizado en Ocean Clinik Tenerife Sur. Resultado natural y valoración previa.",
   "h1":"¿Notas tu rostro más <span class=\"accent\">cansado</span> aunque tú no te sientas así?",
-  "sub":"En Ocean Aesthetic, la medicina estética de Ocean Clinik Tenerife Sur, realizamos tratamientos médico-estéticos para suavizar las arrugas de expresión de frente, entrecejo y patas de gallo.<br><br>Buscamos un resultado natural, elegante y adaptado a tu rostro, con valoración médica previa.",
+  "sub":"En Ocean Clinik Tenerife Sur realizamos tratamientos médico-estéticos para suavizar las arrugas de expresión en frente, entrecejo y patas de gallo.<br><br>Buscamos un resultado natural, elegante y adaptado a tu rostro, siempre con valoración médica previa.",
+  "hero_kw":"Tratamiento para arrugas de expresión en Tenerife Sur, Abades.",
   "refuerzo":"Queremos que te digan «qué buena cara tienes», no «qué te has hecho».",
+  "social_avatars":False,"social_text":"Más de <b>5.000 pacientes</b> han confiado en Ocean Clinik",
+  "intent_plain":True,"intent_button":("Quiero valorar mi caso","#cita"),
+  "hide_related":True,
   "hero_micro":"Te contactamos por WhatsApp o teléfono para tu valoración estética.",
   "wa_label":"Hablar por WhatsApp",
   "cta":"Pedir valoración estética",
@@ -748,6 +752,16 @@ PAGES = [
   "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Pedir valoración",
   "reviews_h2":"Pacientes que ya confiaron en Ocean Clinik",
   "reviews_p":"Antes de decidirte, es normal querer saber cómo ha sido la experiencia de otras personas. Aquí puedes ver opiniones reales de pacientes de Ocean Clinik.",
+  "extra_sections":[
+    {"soft":True,"eyebrow":"Criterio médico","h2":"No todos los rostros necesitan lo mismo",
+     "p":["Antes de recomendar cualquier tratamiento, valoramos tu expresión, la fuerza muscular, la simetría facial, la edad, el tipo de arruga y tus expectativas. A veces conviene tratar una zona; otras veces es mejor combinar enfoques o incluso no hacer nada."],
+     "highlight":"La medicina estética bien hecha empieza sabiendo cuándo no tratar."},
+    {"eyebrow":"Resultado natural","h2":"Resultado natural: que se note en ti, no en el tratamiento",
+     "p":["El objetivo no es borrar tu expresión ni dejar una cara rígida. Buscamos suavizar las arrugas dinámicas para que el rostro se vea más descansado, relajado y fresco, manteniendo tu identidad facial."],
+     "bullets":["Sin cambios exagerados.","Sin expresión artificial.","Sin tratamientos innecesarios.","Con valoración previa.","Con seguimiento posterior."]},
+    {"soft":True,"eyebrow":"Presupuesto","h2":"¿Cuánto cuesta el tratamiento?",
+     "p":["El precio depende de las zonas a tratar, la valoración médica y el plan recomendado para tu caso.","No trabajamos con paquetes cerrados sin diagnóstico, porque cada rostro envejece y gesticula de forma diferente.","En la valoración te explicaremos qué zonas conviene tratar, qué resultado puedes esperar y cuál sería el presupuesto personalizado."],
+     "cta":"Pedir valoración y presupuesto personalizado","cta_href":"#cita"}],
   "brand_block":{"eyebrow":"Dentro de Ocean Clinik","h2":"Ocean Aesthetic, medicina estética dentro de los centros Ocean Clinik",
     "p":["<strong>Ocean Aesthetic</strong> es la línea de <strong>medicina estética</strong> de <strong>Ocean Clinik · Salud y Bienestar</strong>, el grupo que reúne bajo un mismo criterio médico la odontología (<strong>Ocean Clinik · Estudio Dental</strong>), la estética facial (<strong>Ocean Aesthetic</strong>) y la salud y el bienestar general (<strong>Ocean Medic</strong>).",
          "Nuestra filosofía es sencilla: <strong>salud y bienestar con criterio médico</strong>. Primero valoramos tu caso, te lo explicamos con claridad y solo recomendamos lo que de verdad encaja contigo, buscando siempre un resultado natural y un trato cercano.",
@@ -862,10 +876,14 @@ def build(p):
       ("ic-search","Vengo de otra clínica y quiero una segunda opinión","Revisamos tu caso y te explicamos alternativas con claridad.","#cita"),
     ]
     intent_title = p.get("intent_title","¿Qué necesitas solucionar?")
+    intent_plain = p.get("intent_plain")
     intent_html = ""
     for it in p.get("intent", default_intent):
         ic,t,d,h = it[0],it[1],it[2],it[3]
         ictcrta = it[4] if len(it)>4 else None
+        if intent_plain:
+            intent_html += f'<div class="intent-card"><span class="icbox"><svg class="ico"><use href="#{ic}"/></svg></span><b>{t}</b><span>{d}</span></div>'
+            continue
         extra = ""
         if h=="tel":
             href = tel_href
@@ -944,6 +962,30 @@ def build(p):
             '<img src="/assets/logo-ocean-clinik.png" alt="Ocean Clinik · Salud y Bienestar" style="height:48px;width:auto;margin:0 auto 18px">'
             f'<span class="eyebrow" style="justify-content:center">{_bb.get("eyebrow","Ocean Clinik · Salud y Bienestar")}</span>'
             f'<h2>{_bb.get("h2","")}</h2>{_bps}</div></section>')
+
+    # --- Línea SEO visible en el hero (opcional) ---
+    hero_kw_html = f'<p class="hero-kw">{p["hero_kw"]}</p>' if p.get("hero_kw") else ""
+    # --- Prueba social (avatares y texto configurables) ---
+    social_avatars_html = '<span class="avatars"><span>M</span><span>J</span><span>L</span><span>+</span></span> ' if p.get("social_avatars", True) else ''
+    social_text = p.get("social_text", '<b>+5.000 pacientes</b> ya confían en Ocean Clinik')
+    # --- Botón único bajo el bloque de intención (opcional) ---
+    intent_button_html = ""
+    if p.get("intent_button"):
+        _il,_ih = p["intent_button"]
+        _ihref = tel_href if _ih=="tel" else (f"https://wa.me/{c.get('wa', WA)}" if _ih=="wa" else _ih)
+        intent_button_html = f'<div style="text-align:center;margin-top:28px"><a class="btn btn-lg" href="{_ihref}">{_il} <svg class="ico"><use href="#ic-arrow"/></svg></a></div>'
+    # --- Secciones extra (bloques de confianza / precio, opcional) ---
+    extra_sections_html = ""
+    for s in p.get("extra_sections", []):
+        _eb = f'<span class="eyebrow" style="justify-content:center">{s["eyebrow"]}</span>' if s.get("eyebrow") else ""
+        _ps = "".join(f"<p>{x}</p>" for x in s.get("p", []))
+        _hl = f'<p class="section-highlight">{s["highlight"]}</p>' if s.get("highlight") else ""
+        _bl = ""
+        if s.get("bullets"):
+            _bl = '<ul class="checks" style="max-width:520px;margin:20px auto 0;text-align:left;display:inline-block">' + "".join('<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg><span>'+b+'</span></li>' for b in s["bullets"]) + '</ul>'
+        _cta = f'<p style="margin-top:24px"><a class="btn" href="{s.get("cta_href","#cita")}">{s["cta"]} <svg class="ico"><use href="#ic-arrow"/></svg></a></p>' if s.get("cta") else ""
+        _cls = "soft" if s.get("soft") else ""
+        extra_sections_html += f'<section class="{_cls}"><div class="wrap prose" style="max-width:820px;text-align:center">{_eb}<h2>{s["h2"]}</h2>{_ps}{_hl}{_bl}{_cta}</div></section>'
     form_treat_label = p.get("form_treat_label", "Tratamiento que te interesa")
     default_ideal = ["Implantes dentales","Ortodoncia invisible","Estética dental","Dolor o urgencia","Segunda opinión","Presupuesto claro"]
     form_ideal_html = "".join(f'<li><svg class="ico"><use href="#ic-check"/></svg> {x}</li>' for x in p.get("form_ideal", default_ideal))
@@ -989,6 +1031,14 @@ def build(p):
         f'<a class="tcard-img" href="/{x["slug"]}/"><div class="ph"><img src="/assets/fotos/{x["img"]}" alt="{x["service"]} en {CITIES[x["city"]]["name"]}" loading="lazy" width="380" height="285"></div>'
         f'<div class="b"><h3>{x["service"]}</h3><span class="go"><svg class="ico"><use href="#ic-arrow"/></svg></span></div></a>'
         for x in rel[:3])
+    if p.get("hide_related"):
+        treat_section_html = ""
+    else:
+        treat_section_html = (f'<section class="treat soft"><div class="wrap">'
+            f'<div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-tooth"/></svg> Más tratamientos</span><h2>Otros tratamientos en {c["name"]}</h2></div>'
+            f'<div class="grid3">{treat}</div>'
+            f'<div class="related" style="margin-top:26px"><div class="links">{related}</div></div>'
+            f'</div></section>')
 
     # JSON-LD @graph
     biz = {
@@ -1059,6 +1109,7 @@ def build(p):
       <span class="rating"><span class="st">{STARS}</span> 4,9 · valoración de pacientes</span>
       <h1>{p["h1"]}</h1>
       <p class="sub">{p["sub"]}</p>
+      {hero_kw_html}
       {refuerzo_html}
       <div class="hero-cta">
         <a class="btn btn-lg" href="#cita">{cta_text} <svg class="ico"><use href="#ic-arrow"/></svg></a>
@@ -1066,7 +1117,7 @@ def build(p):
       </div>
       {hero_micro_html}
       <div class="promesas">{promesas}</div>
-      <div class="social"><span class="avatars"><span>M</span><span>J</span><span>L</span><span>+</span></span> <span><b>+5.000 pacientes</b> ya confían en Ocean Clinik</span></div>
+      <div class="social">{social_avatars_html}<span>{social_text}</span></div>
     </div>
     <div class="{hero_art_cls}">
       <div class="main"><img src="{hero_main_src}" alt="{p["service"]} en {c['name']} — Ocean Clinik" width="540" height="560" fetchpriority="high"></div>
@@ -1081,6 +1132,7 @@ def build(p):
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:22px"><h2>{intent_title}</h2></div>
     <div class="{intent_cls}">{intent_html}</div>
+    {intent_button_html}
   </div>
 </section>
 
@@ -1127,6 +1179,7 @@ def build(p):
   </div>
 </section>
 
+{extra_sections_html}
 <section class="form-sec" id="cita">
   <div class="wrap form-grid">
     <div>
@@ -1197,13 +1250,7 @@ def build(p):
   </div>
 </section>
 
-<section class="treat soft">
-  <div class="wrap">
-    <div class="sec-head"><span class="eyebrow"><svg class="ico"><use href="#ic-tooth"/></svg> Más tratamientos</span><h2>Otros tratamientos en {c['name']}</h2></div>
-    <div class="grid3">{treat}</div>
-    <div class="related" style="margin-top:26px"><div class="links">{related}</div></div>
-  </div>
-</section>
+{treat_section_html}
 </main>
 
 <footer>
