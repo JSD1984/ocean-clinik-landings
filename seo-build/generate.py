@@ -383,33 +383,66 @@ PAGES = [
 
  {"slug":"ortodoncia-invisible-la-palma","city":"la-palma","type":"Dentist","img":"foto-ortodoncia-alineador.jpg",
   "kw":"ortodoncia invisible La Palma","service":"Ortodoncia invisible",
-  "title":"Ortodoncia invisible en La Palma | +30 años · Ocean Clinik",
-  "desc":"Ortodoncia invisible en La Palma con más de 30 años de experiencia. Alinea tu sonrisa de forma discreta con alineadores transparentes y un plan claro. Pide tu valoración en Ocean Clinik.",
-  "h1":"Ortodoncia invisible en <span class=\"accent\">La Palma</span> con más de 30 años de experiencia alineando sonrisas",
-  "sub":"Alineadores transparentes, cómodos y removibles en Santa Cruz de La Palma, en manos de un equipo con <strong>más de 30 años de experiencia</strong> en ortodoncia. Antes de empezar valoramos tu caso, te enseñamos cómo quedaría y te damos un plan claro con la duración estimada y opciones de financiación.",
-  "cta":"Quiero valorar mi ortodoncia",
-  "promesas":["+30 años de experiencia","Discreta y removible","Financiación a medida"],
+  "title":"Ortodoncia invisible en La Palma | Alineadores transparentes | Ocean Clinik",
+  "desc":"Ortodoncia invisible en La Palma, en Santa Cruz de La Palma. Alineadores transparentes, removibles y cómodos. Valoración, plan visual, presupuesto claro y financiación.",
+  "h1":"¿Quieres alinear tus dientes <span class=\"accent\">sin brackets</span> y sin que casi nadie lo note?",
+  "sub":"En Ocean Clinik La Palma valoramos tu caso para saber si la ortodoncia invisible es adecuada para ti.<br><br>Alineadores transparentes, cómodos y removibles en Santa Cruz de La Palma, con un equipo de <strong>más de 30 años de experiencia</strong> en ortodoncia, plan visual antes de empezar y opciones de financiación.",
+  "refuerzo":"Primero estudiamos tu mordida, tus encías y tus objetivos. Después te explicamos si puedes llevar alineadores, cuánto puede durar el tratamiento y qué resultado podemos buscar.",
+  "hero_micro":"Te contactamos por WhatsApp o teléfono para buscar el mejor hueco.",
+  "wa_label":"Hablar por WhatsApp",
+  "cta":"Quiero valorar mi ortodoncia invisible",
+  "promesas":["+30 años de experiencia en ortodoncia","Alineadores transparentes y removibles","Plan visual antes de empezar","Presupuesto claro por escrito","Financiación a medida"],
   "stats":[["+30","años de experiencia"],["+5.000","pacientes atendidos"],["4,9★","valoración media"],["Sí","financiación a medida"]],
+  "intent_title":"¿Qué quieres corregir con ortodoncia invisible?",
+  "intent":[("ic-tooth","Tengo los dientes apiñados","Si tienes los dientes montados, torcidos o cada vez más juntos, valoramos si pueden corregirse con alineadores transparentes.","#cita","Valorar mi apiñamiento"),
+            ("ic-plan","Se me han movido los dientes después de llevar ortodoncia","Muchos pacientes llevaron brackets de jóvenes y con los años notan que los dientes se han vuelto a mover. Podemos valorar si se puede corregir con alineadores.","#cita","Volver a alinear mi sonrisa"),
+            ("ic-smile","Quiero mejorar mi sonrisa sin brackets","Ortodoncia invisible para pacientes que buscan un tratamiento discreto, cómodo y compatible con su vida diaria.","#cita","Saber si soy candidato"),
+            ("ic-search","Tengo espacios entre dientes","Estudiamos si la separación entre tus dientes puede corregirse con alineadores y cuánto tiempo podría durar.","#cita","Valorar mi caso"),
+            ("ic-chat","No sé si necesito ortodoncia o estética dental","Te explicamos si tu caso necesita alineadores, carillas, blanqueamiento o una combinación para conseguir mejor resultado.","#cita","Quiero que me orienten")],
+  "prose_h2":"Ortodoncia invisible en La Palma, en Avda. El Puente",
+  "intro":["Ocean Clinik está en <strong>Avda. El Puente 41</strong>, en Santa Cruz de La Palma.",
+           "Realizamos tratamientos de <strong>ortodoncia invisible en La Palma</strong> para pacientes que quieren alinear sus dientes sin brackets metálicos, con alineadores transparentes, removibles y cómodos.",
+           "Antes de empezar, valoramos tu mordida, tus encías, la posición de tus dientes y el resultado que buscas. No todos los casos necesitan lo mismo, por eso te explicamos si la ortodoncia invisible es adecuada para ti o si conviene combinarla con otro tratamiento de estética dental.",
+           "Si quieres mejorar tu sonrisa, corregir dientes apiñados, cerrar espacios o volver a alinear los dientes después de una ortodoncia antigua, pide una valoración en Ocean Clinik La Palma y te explicaremos tus opciones con claridad."],
+  "cards_h2":"Por qué elegir Ocean Clinik La Palma para tu ortodoncia invisible",
+  "cards":[("ic-search","Estudio antes de empezar","Revisamos mordida, encías, posición dental y expectativas para saber si los alineadores son adecuados para ti.","un estudio de ortodoncia invisible en La Palma"),
+           ("ic-plan","Plan visual del tratamiento","Te enseñamos qué movimientos se buscan, cómo puede evolucionar tu sonrisa y cuánto puede durar el tratamiento.","ver el plan visual de mi ortodoncia"),
+           ("ic-smile","Alineadores discretos y removibles","Apenas se notan y puedes quitártelos para comer y cepillarte, manteniendo una higiene sencilla.","ortodoncia con alineadores transparentes"),
+           ("ic-shield","Seguimiento profesional","Controlamos la evolución del tratamiento para ajustar el plan si es necesario y acompañarte hasta el resultado final.","el seguimiento de mi ortodoncia"),
+           ("ic-card","Presupuesto y financiación","Te damos un presupuesto claro por escrito y opciones de financiación para empezar sin agobios.","un presupuesto de ortodoncia con financiación")],
   "doctor_kicker":"Quién te trata",
-  "doctor_h2":"Ortodoncia con más de 30 años de experiencia",
-  "doctor_p":["La ortodoncia no va solo de poner alineadores: va de <strong>planificar bien el movimiento de los dientes</strong> y controlar cada fase. En Ocean Clinik tratamos la ortodoncia con un equipo que acumula <strong>más de 30 años de experiencia</strong> alineando sonrisas.",
-              "Antes de empezar estudiamos tu mordida y tus encías, te enseñamos el plan y te explicamos qué se puede conseguir de forma realista. El objetivo es que entiendas tu caso y veas el resultado previsto antes de dar el primer paso."],
-  "doctor_checks":["Más de 30 años de experiencia en ortodoncia.","Estudio de mordida y encías.","Plan visual del caso antes de empezar.","Alineadores transparentes y cómodos.","Revisiones de seguimiento.","Opciones de financiación."],
+  "doctor_h2":"Ortodoncia invisible planificada por un equipo con más de 30 años de experiencia",
+  "doctor_p":["La ortodoncia invisible no consiste solo en llevar alineadores transparentes. El resultado depende de un buen diagnóstico, una planificación correcta y un seguimiento profesional durante todo el tratamiento.",
+              "En Ocean Clinik La Palma, tu caso será valorado por un equipo con <strong>más de 30 años de experiencia</strong> en ortodoncia y dirección clínica del <strong>Dr. Claudio Vázquez</strong>.",
+              "Antes de empezar, estudiamos tu mordida, tus encías y la posición de tus dientes. Después te explicamos qué se puede conseguir de forma realista, cuánto puede durar el tratamiento y qué cuidados necesitarás para mantener el resultado."],
+  "doctor_checks":["Más de 30 años de experiencia en ortodoncia.","Estudio de mordida, encías y posición dental.","Plan visual antes de empezar.","Alineadores transparentes y removibles.","Revisiones de seguimiento.","Opciones de financiación.","Retención final para mantener el resultado."],
   "doctor_badge":"Ortodoncia · Ocean Clinik La Palma",
-  "prose_h2":"Ortodoncia invisible en La Palma, con más de 30 años de experiencia",
-  "intro":["La <strong>ortodoncia invisible en La Palma</strong> te permite alinear los dientes sin brackets metálicos, con férulas transparentes que apenas se notan y que puedes quitarte para comer y cepillarte.",
-           "En Ocean Clinik, en Santa Cruz de La Palma, tratamos la ortodoncia con un equipo de <strong>más de 30 años de experiencia</strong>. Valoramos primero tu <strong>mordida, encías y expectativas</strong>: no todas las sonrisas necesitan lo mismo, así que te explicamos si la ortodoncia invisible es la mejor opción para tu caso.",
-           "Antes de empezar te enseñamos el plan: qué movimientos se buscan, cuánto puede durar de forma realista y cómo será el seguimiento hasta el final.",
-           "Tanto si nunca te has tratado como si llevaste ortodoncia de joven y los dientes se han vuelto a mover, pide una valoración y te explicamos tus opciones, con financiación a medida."],
-  "cards":[("ic-smile","Casi invisible","Alineadores transparentes que pasan desapercibidos en tu día a día y al hablar.","ortodoncia invisible en La Palma"),
-           ("ic-plan","Plan visual desde el principio","Te enseñamos qué movimientos se buscan y cómo quedaría tu sonrisa antes de empezar.","ver un plan de ortodoncia de mi caso"),
-           ("ic-heart","Cómoda y removible","Te la quitas para comer y mantienes la higiene de siempre, sin renuncias.","ortodoncia con alineadores removibles"),
-           ("ic-card","Financiación a medida","Un presupuesto claro por escrito y opciones de pago para empezar sin agobios.","ortodoncia invisible con financiación")],
-  "faqs":[("¿La ortodoncia invisible sirve para todos los casos?","Es adecuada para muchos casos, pero no para todos. Por eso valoramos tu mordida y tus encías antes de recomendarla y te decimos con sinceridad si es tu mejor opción."),
-          ("¿Cuánto dura el tratamiento?","Depende de cada caso. Tras el estudio te damos una estimación realista de la duración, sin prometer plazos imposibles."),
-          ("¿Se nota al hablar?","Los alineadores son transparentes y se ajustan a tus dientes, así que pasan muy desapercibidos. Es uno de los motivos por los que tantos pacientes los eligen."),
-          ("¿Puedo quitármela para comer?","Sí. Te la quitas para comer y para cepillarte, y vuelves a ponértela después. Por eso mantienes tu higiene de siempre."),
-          ("¿Cuánto cuesta la ortodoncia invisible en La Palma?","El precio depende de la complejidad del caso. Te damos un presupuesto claro por escrito tras la valoración, con opciones de financiación.")]},
+  "doctor_cta":"Quiero saber si puedo llevar ortodoncia invisible",
+  "pasos_h2":"Cómo será tu valoración de ortodoncia invisible",
+  "pasos":[("Nos cuentas qué quieres mejorar","Dientes apiñados, separados, sonrisa desalineada, mordida incómoda o dientes que se han movido con los años."),
+           ("Revisamos tu boca y tu mordida","Valoramos la posición de tus dientes, encías, mordida y salud dental antes de recomendar alineadores."),
+           ("Te explicamos si eres candidato","No todos los casos son iguales. Te diremos si la ortodoncia invisible es adecuada para ti o si existe una opción mejor."),
+           ("Te enseñamos el plan","Te explicamos los movimientos previstos, la duración aproximada y cómo será el seguimiento."),
+           ("Te damos presupuesto y financiación","Recibirás una propuesta clara por escrito, con opciones de pago si quieres empezar el tratamiento.")],
+  "pasos_cta":"Pedir mi valoración de ortodoncia invisible",
+  "form_h2":"Pide tu valoración de ortodoncia invisible en La Palma",
+  "form_lead":"Déjanos tus datos y te contactamos por WhatsApp o teléfono para buscar el mejor hueco en Ocean Clinik La Palma.",
+  "form_ok":"Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible en Ocean Clinik La Palma.",
+  "form_treat_label":"¿Qué quieres corregir?",
+  "form_treatments":["Dientes apiñados","Dientes separados","Dientes que se han movido tras ortodoncia","Quiero mejorar mi sonrisa","No sé si mi caso sirve para alineadores","Quiero una segunda opinión de ortodoncia"],
+  "form_ideal":["Corregir dientes apiñados","Cerrar espacios entre dientes","Realinear tras una ortodoncia antigua","Mejorar tu sonrisa sin brackets","Un plan visual antes de empezar","Presupuesto y financiación"],
+  "sticky_left_wa":True,"sticky_left":"WhatsApp","sticky_right":"Valorar ortodoncia",
+  "reviews_h2":"Pacientes de La Palma que ya confiaron en Ocean Clinik",
+  "reviews_p":"Antes de empezar una ortodoncia, es normal querer saber cómo ha sido la experiencia de otros pacientes. Aquí puedes ver opiniones reales de personas que ya han confiado en Ocean Clinik La Palma.",
+  "faqs":[("¿La ortodoncia invisible sirve para todos los casos?","No siempre. La ortodoncia invisible puede corregir muchos casos de apiñamiento, separación dental o movimientos leves y moderados, pero primero debemos valorar tu mordida, encías y posición dental. En la valoración te diremos si es adecuada para ti o si existe una alternativa mejor."),
+          ("¿Cuánto dura la ortodoncia invisible?","Depende de la complejidad del caso. Algunos tratamientos son más cortos y otros necesitan más meses de planificación y seguimiento. Tras el estudio te daremos una estimación realista de la duración."),
+          ("¿Se nota la ortodoncia invisible al hablar?","Los alineadores son transparentes y se ajustan a tus dientes, por lo que pasan muy desapercibidos. Al principio puede haber un pequeño periodo de adaptación, pero muchos pacientes hacen vida normal desde el primer día."),
+          ("¿Puedo quitarme los alineadores para comer?","Sí. Los alineadores se retiran para comer y para cepillarte los dientes. Después debes volver a colocarlos siguiendo las indicaciones del equipo para que el tratamiento avance correctamente."),
+          ("¿Cuánto cuesta la ortodoncia invisible en La Palma?","El precio depende de la complejidad del caso, la duración estimada y el número de alineadores necesarios. En Ocean Clinik La Palma te damos un presupuesto claro por escrito después de valorar tu caso."),
+          ("¿Se puede financiar la ortodoncia invisible?","Sí. Ofrecemos opciones de financiación para que puedas adaptar el tratamiento a tu situación."),
+          ("¿Puedo hacer ortodoncia invisible si ya llevé brackets antes?","Sí. Muchos pacientes vienen porque los dientes se han movido años después de llevar brackets. Valoramos tu caso y te explicamos si puede corregirse con alineadores transparentes."),
+          ("¿Qué pasa al terminar el tratamiento?","Al finalizar, normalmente se indica una fase de retención para ayudar a mantener los dientes en la nueva posición. Te explicaremos cómo cuidarla y cuándo usarla."),
+          ("¿Dónde está Ocean Clinik La Palma?","Ocean Clinik La Palma está en Avda. El Puente 41, 38700 Santa Cruz de La Palma.")]},
 
  # ---------- ODONTOPEDIATRÍA · OCEAN KIDS ----------
  {"slug":"odontopediatria-tenerife-sur","city":"tenerife-sur","type":"Dentist","img":"foto-clinica.jpg",
@@ -633,6 +666,8 @@ def build(p):
     pasos_h2 = p.get("pasos_h2", "Cómo será tu primera valoración")
     # --- Formulario: título, etiqueta del select y lista "Ideal si necesitas" ---
     form_h2 = p.get("form_h2", f"Pide tu valoración dental en {c['name']}")
+    form_lead = p.get("form_lead", "Déjanos tus datos y te contactamos por WhatsApp o teléfono para buscar el mejor hueco.")
+    form_ok = p.get("form_ok", "Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible.")
     form_treat_label = p.get("form_treat_label", "Tratamiento que te interesa")
     default_ideal = ["Implantes dentales","Ortodoncia invisible","Estética dental","Dolor o urgencia","Segunda opinión","Presupuesto claro"]
     form_ideal_html = "".join(f'<li><svg class="ico"><use href="#ic-check"/></svg> {x}</li>' for x in p.get("form_ideal", default_ideal))
@@ -811,7 +846,7 @@ def build(p):
     <div>
       <span class="eyebrow"><svg class="ico"><use href="#ic-calendar"/></svg> Pide tu valoración</span>
       <h2>{form_h2}</h2>
-      <p class="lead">Déjanos tus datos y te contactamos por WhatsApp o teléfono para buscar el mejor hueco.</p>
+      <p class="lead">{form_lead}</p>
       <p style="color:#fff;font-weight:700;margin-bottom:8px">Ideal si necesitas:</p>
       <ul>{form_ideal_html}</ul>
     </div>
@@ -846,7 +881,7 @@ def build(p):
         <p class="microcopy" style="text-align:center">{form_micro}</p>
         <p class="alt">¿Prefieres otra vía? <a href="{wa_link}" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:{EMAIL}?subject=Valoraci%C3%B3n%20Ocean%20Clinik%20{c['name'].replace(' ','%20')}">Enviar email</a></p>
       </form>
-      <div class="form-ok" id="form-ok" hidden><b>Gracias. Hemos recibido tu solicitud.</b><br>Te contactaremos por WhatsApp o teléfono para confirmar el mejor hueco disponible.</div>
+      <div class="form-ok" id="form-ok" hidden><b>Gracias. Hemos recibido tu solicitud.</b><br>{form_ok}</div>
     </div>
   </div>
 </section>
