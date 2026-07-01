@@ -15,7 +15,7 @@ TEL_TF   = "+34 600 000 000"                       # teléfono Tenerife Sur (cam
 CITIES = {
   "la-palma": {
     "name": "La Palma",
-    "tel": "626 09 41 10",
+    "tel": "922 41 13 23",
     "wa": "34626094110",
     "email": "lapalma@theoceanclinik.com",
     "addr": "Av. El Puente 41, Bajo, Local 9",
