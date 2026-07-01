@@ -720,7 +720,7 @@ PAGES = [
            ("ic-plan","Enfoque médico-estético","Te decimos qué zonas conviene tratar y cuáles no, con criterio médico.","un enfoque médico para mi caso"),
            ("ic-clock","Seguimiento posterior","Control después del tratamiento para valorar la evolución y el resultado.","el seguimiento tras el tratamiento")],
   "doctor_kicker":"Quién te atiende",
-  "doctor_name":"Equipo médico-estético","doctor_badge":"Medicina estética · Ocean Clinik Tenerife Sur",
+  "doctor_name":"Dra. Iris Guadalupe","doctor_badge":"Medicina estética · Ocean Aesthetic Tenerife Sur",
   "doctor_img":"foto-estetica-doctora.jpg",
   "doctor_h2":"Un enfoque médico-estético, no un centro de belleza",
   "doctor_p":["En estética facial, la diferencia está en el criterio. Por eso valoramos tu caso desde un punto de vista <strong>médico</strong>: estudiamos tu rostro, tus gestos y tu expresión antes de recomendarte nada.",
