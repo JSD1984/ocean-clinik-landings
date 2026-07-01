@@ -7,7 +7,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # ====== CONFIG (CAMBIAR por datos reales) ======
 BASE_URL = "https://www.oceanclinik.es"          # dominio final (cambiar)
 WA       = "34600000000"                          # WhatsApp real (cambiar)
-REVIEWS  = "https://g.page/r/CAMBIAR-POR-TU-ENLACE-GOOGLE"  # enlace reseñas Google (cambiar)
+REVIEWS  = "https://share.google/U0qKaHg19MunLLRec"  # ficha Google Ocean Clinik (reseñas). Por sede: CITIES[..]["reviews"]
 EMAIL    = "info@theoceanclinik.com"               # email de contacto (confirmar)
 TEL_LP   = "+34 600 000 000"                       # teléfono La Palma (cambiar)
 TEL_TF   = "+34 600 000 000"                       # teléfono Tenerife Sur (cambiar)
@@ -762,6 +762,7 @@ ACTIVE_SLUGS = {
 def build(p):
     c = CITIES[p["city"]]
     email = c.get("email", EMAIL)
+    reviews = c.get("reviews", REVIEWS)
     canonical = f"{BASE_URL}/{p['slug']}/"
     og_img = f"{BASE_URL}/assets/fotos/{p['img']}"
     tel_href = "tel:+34" + "".join(ch for ch in c["tel"] if ch.isdigit())[-9:]
@@ -903,7 +904,7 @@ def build(p):
       "address": {"@type":"PostalAddress","streetAddress":c["addr"],"addressLocality":c["locality"],"addressRegion":c.get("region",""),"postalCode":c["pc"],"addressCountry":"ES"},
       "areaServed": [{"@type":"City","name":a} for a in c["area"]],
       "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":x["d"],"opens":x["o"],"closes":x["c"]} for x in c["ohs"]],
-      "sameAs": ["https://CAMBIAR-perfil-google-business"]
+      "sameAs": [reviews]
     }
     faqpage = {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in p["faqs"]]}
     crumbs = {"@type":"BreadcrumbList","itemListElement":[
@@ -1085,7 +1086,7 @@ def build(p):
         <span class="note">Opiniones reales de pacientes que ya han confiado en Ocean Clinik.</span>
       </div>
     </div>
-    <p style="text-align:center;margin-top:22px"><a class="btn ghost" href="{REVIEWS}" target="_blank" rel="noopener">Ver reseñas en Google <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
+    <p style="text-align:center;margin-top:22px"><a class="btn ghost" href="{reviews}" target="_blank" rel="noopener">Ver reseñas en Google <svg class="ico"><use href="#ic-arrow"/></svg></a></p>
   </div>
 </section>
 
@@ -1118,7 +1119,7 @@ def build(p):
         <li><a href="{tel_href}">Teléfono: {c["tel"]}</a></li>
         <li><a href="{wa_link}" target="_blank" rel="noopener">WhatsApp: {("+"+c.get("wa",WA)[:2]+" "+c.get("wa",WA)[2:]) if c.get("wa") else "consultar"}</a></li>
         <li><a href="mailto:{email}">Email: {email}</a></li>
-        <li><a href="{REVIEWS}" target="_blank" rel="noopener">Reseñas en Google</a></li>
+        <li><a href="{reviews}" target="_blank" rel="noopener">Reseñas en Google</a></li>
       </ul>
     </div>
     <div>
