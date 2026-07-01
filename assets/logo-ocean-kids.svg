@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 540" width="620" height="540" role="img" aria-label="Ocean Kids by Ocean Clinik">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&amp;display=swap');
+.wm{font-family:'Baloo 2','Trebuchet MS',sans-serif;font-weight:800}
+.by{font-family:'Baloo 2','Trebuchet MS',sans-serif;font-weight:700;letter-spacing:6px}
+</style>
+
+<g stroke-linecap="round" stroke-linejoin="round">
+  <!-- bubbles -->
+  <circle cx="486" cy="150" r="12" fill="none" stroke="#8fc9dc" stroke-width="3"/>
+  <circle cx="512" cy="120" r="8" fill="none" stroke="#8fc9dc" stroke-width="3"/>
+  <circle cx="470" cy="188" r="6" fill="none" stroke="#8fc9dc" stroke-width="3"/>
+
+  <!-- whale -->
+  <g>
+    <!-- tail -->
+    <path d="M182 196 C150 168 128 150 116 128 C150 142 172 158 190 176 Z" fill="#4c8ea3" stroke="#2f6b7e" stroke-width="4"/>
+    <path d="M182 208 C150 232 130 250 120 272 C152 254 176 236 194 220 Z" fill="#4c8ea3" stroke="#2f6b7e" stroke-width="4"/>
+    <!-- body -->
+    <ellipse cx="312" cy="196" rx="150" ry="94" fill="#4c8ea3" stroke="#2f6b7e" stroke-width="4"/>
+    <!-- belly -->
+    <path d="M198 210 C240 300 430 300 452 214 C420 262 250 268 198 210 Z" fill="#cbe8ee"/>
+    <!-- fin -->
+    <ellipse cx="300" cy="256" rx="34" ry="17" fill="#3f7c90" stroke="#2f6b7e" stroke-width="3" transform="rotate(18 300 256)"/>
+    <!-- spout -->
+    <path d="M412 92 q-6 -22 4 -40 q10 18 4 40 Z" fill="#7fc0d4"/>
+    <path d="M392 100 q-10 -16 -6 -34 q14 14 12 34 Z" fill="#7fc0d4"/>
+    <path d="M432 100 q10 -16 6 -34 q-14 14 -12 34 Z" fill="#7fc0d4"/>
+    <!-- eye + blush + smile -->
+    <circle cx="398" cy="170" r="10" fill="#123a5e"/>
+    <circle cx="401" cy="166" r="3.4" fill="#ffffff"/>
+    <ellipse cx="372" cy="200" rx="15" ry="9" fill="#f2a7a0"/>
+    <path d="M356 210 Q384 232 416 208" fill="none" stroke="#2f6b7e" stroke-width="4"/>
+  </g>
+
+  <!-- wave -->
+  <path d="M120 312 Q205 288 300 310 T486 306" fill="none" stroke="#4c8ea3" stroke-width="9"/>
+  <path d="M132 322 Q210 302 300 320 T474 316" fill="none" stroke="#8fc9dc" stroke-width="5"/>
+
+  <!-- seaweed -->
+  <path d="M452 300 C444 280 464 274 456 254 C450 240 466 236 460 220" fill="none" stroke="#4bbf9a" stroke-width="7"/>
+  <path d="M470 300 C476 284 462 278 470 262" fill="none" stroke="#66cba8" stroke-width="6"/>
+
+  <!-- starfish (scene) -->
+  <g transform="translate(196 296) scale(1.05)">
+    <path d="M0 -22 L6 -6 L23 -6 L9 4 L14 21 L0 11 L-14 21 L-9 4 L-23 -6 L-6 -6 Z" fill="#ef7a5a" stroke="#d85f42" stroke-width="2"/>
+  </g>
+
+  <!-- tooth -->
+  <g>
+    <path d="M300 232 C300 208 366 208 366 232 C370 256 356 276 348 296 C344 308 336 308 332 296 L329 280 C328 275 326 275 325 280 L322 296 C318 308 310 308 306 296 C298 276 296 256 300 232 Z" fill="#ffffff" stroke="#cfe0e6" stroke-width="3"/>
+    <path d="M311 253 Q316 247 321 253" fill="none" stroke="#123a5e" stroke-width="3"/>
+    <path d="M347 253 Q352 247 357 253" fill="none" stroke="#123a5e" stroke-width="3"/>
+    <ellipse cx="312" cy="264" rx="7" ry="4.5" fill="#f6b6ad"/>
+    <ellipse cx="356" cy="264" rx="7" ry="4.5" fill="#f6b6ad"/>
+    <path d="M326 263 Q334 277 342 263 Z" fill="#c94b52"/>
+    <ellipse cx="334" cy="270" rx="5" ry="2.6" fill="#ef7a5a"/>
+  </g>
+</g>
+
+<!-- little wave accent over wordmark -->
+<path d="M250 372 Q311 356 372 372" fill="none" stroke="#3fa8c4" stroke-width="5" stroke-linecap="round"/>
+
+<!-- wordmark -->
+<text x="311" y="446" text-anchor="middle" class="wm" font-size="78">
+  <tspan fill="#123a5e">OCEAN </tspan><tspan fill="#ef7a5a">K</tspan><tspan fill="#34a06b">I</tspan><tspan fill="#f4b64a">D</tspan><tspan fill="#3fa8c4">S</tspan>
+</text>
+
+<line x1="150" y1="482" x2="212" y2="482" stroke="#3fa8c4" stroke-width="3" stroke-linecap="round"/>
+<line x1="410" y1="482" x2="472" y2="482" stroke="#3fa8c4" stroke-width="3" stroke-linecap="round"/>
+<text x="311" y="490" text-anchor="middle" class="by" font-size="22" fill="#123a5e">by OCEAN CLINIK</text>
+
+<g transform="translate(311 516) scale(0.7)">
+  <path d="M0 -20 L5.5 -5.5 L21 -5.5 L8.5 3.5 L13 19 L0 10 L-13 19 L-8.5 3.5 L-21 -5.5 L-5.5 -5.5 Z" fill="#ef7a5a" stroke="#d85f42" stroke-width="2"/>
+</g>
+</svg>
